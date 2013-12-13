@@ -3,10 +3,6 @@
    Form Element Styling
    ========================================================================== */
 
-form {
-  .webfont-regular;  
-}
-
 label {
     display: block;
 }
@@ -15,12 +11,13 @@ input,
 textarea {
     display: inline-block;
     width: 85%;
+    margin: 0;
     padding: 0.25em;
-    border: 1px solid #75787B; /* Gray */
+    .webfont-regular;  
+    border: 1px solid @gray;
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
-    margin: 0;
     vertical-align: top;
 }
 
@@ -29,8 +26,8 @@ input.focus,
 textarea:focus,
 textarea.focus {
     /* Class included for static state examples */
-    border: 1px solid #0072CE; /* Pacific */
-    outline: 1px solid #0072CE; /* Pacific */
+    border: 1px solid @pacific;
+    outline: 1px solid @pacific;
     outline-offset: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -39,15 +36,15 @@ textarea.focus {
 input.error,
 textarea.error {
     /* Class included for static state examples */
-    border: 1px solid #D12124; /* Red Orange */
-    outline: 1px solid #D12124; /* Red Orange */
+    border: 1px solid @redorange;
+    outline: 1px solid @redorange;
 }
 
 input.success,
 textarea.success {
     /* Class included for static state examples */
-    border: 1px solid #2CB34A; /* Red Orange */
-    outline: 1px solid #2CB34A; /* Red Orange */
+    border: 1px solid @green;
+    outline: 1px solid @green;
 }
 
 input + [class^="icon-"],
@@ -59,9 +56,9 @@ textarea + [class^="icon-"] {
 }
 
 .error + [class^="icon-"] {
-    color: #D12124; /* Red Orange */
+    color: @redorange;
 }
 
 .success + [class^="icon-"] {
-    color: #2CB34A; /* Red Orange */
+    color: @green;
 }
