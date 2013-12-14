@@ -4,16 +4,24 @@
    ========================================================================== */
 
 label {
+    @font-size: 16px;
+
     display: block;
+    font-size: unit( @font-size / @base-font-size-px, em );
+    .webfont-regular;
 }
 
 input,
 textarea {
+    @font-size: 16px;
+
     display: inline-block;
-    width: 85%;
+    width: 85%; // 85% leaves room for .error and .success icons
     margin: 0;
-    padding: 0.25em;
-    .webfont-regular;  
+    padding: unit( 4 / @base-font-size-px, em );
+    font-size: unit( @font-size / @base-font-size-px, em );
+    .webfont-regular;
+    background: @white;
     border: 1px solid @gray;
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
@@ -35,24 +43,24 @@ textarea.focus {
 
 input.error,
 textarea.error {
-    /* Class included for static state examples */
     border: 1px solid @redorange;
     outline: 1px solid @redorange;
 }
 
 input.success,
 textarea.success {
-    /* Class included for static state examples */
     border: 1px solid @green;
     outline: 1px solid @green;
 }
 
 input + [class^="icon-"],
 textarea + [class^="icon-"] {
-    margin-left: 4px;
+    @font-size: 20px;
+
     position: relative;
-    top: 3px;
-    font-size: 20px;
+    top: unit( 3px / @font-size, em);
+    margin-left: unit( 4px / @font-size, em);
+    font-size: unit( @font-size / @base-font-size-px, em );
 }
 
 .error + [class^="icon-"] {
