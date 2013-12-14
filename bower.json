@@ -1,7 +1,7 @@
 {
   "name": "fj-forms",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/forms.less",
   "dependencies": {
     "fj-buttons": "git://fake.ghe.domain/flapjack/fj-buttons.git",
