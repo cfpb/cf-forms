@@ -30,9 +30,8 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      main: [
-        'src/vendor/fj-fe/fj.less',
-        'demo/'
+      vendor: [
+        'src/vendor/fj-fe/fj.less'
       ]
     },
 
@@ -134,8 +133,8 @@ module.exports = function(grunt) {
   /**
    * Create custom task aliases and combinations
    */
-  grunt.registerTask('vendor', ['bower', 'clean', 'concat']);
+  grunt.registerTask('vendor', ['clean:vendor', 'bower', 'concat']);
   grunt.registerTask('compile', ['less', 'string-replace']);
-  grunt.registerTask('default', ['clean', 'concat', 'less', 'string-replace']);
+  grunt.registerTask('default', ['concat', 'less', 'string-replace']);
 
 };
