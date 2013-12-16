@@ -4,18 +4,24 @@
    ========================================================================== */
 
 /* topdoc
-  name: Forms
-  description: Basic form styling for the Flapjack front-end framework.
-  modifiers:
-    :focus: Focus state
-    .focus: Focus state
-    .error: Invalid input
-    .success: Validated input
+  name: Single/Multi-Line Text Inputs
   markup:
-    <input placeholder="placeholder text" type="text">
-    <input class="focus" placeholder="placeholder text" type="text">
-    <input class="error" type="text" value="Invalid input"><i class="icon-remove-sign"><span class="jekyll-bug"></span></i>
-    <input class="success" type="text" value="Validated input"><i class="icon-ok-sign"><span class="jekyll-bug"></span></i>
+    <label>Default single-line text input</label>
+    <input placeholder="placeholder text" type="text"><br>
+    <label>Focused single-line text input</label>
+    <input class="focus" placeholder="placeholder text" type="text"><br>
+    <label>Field in error state</label>
+    <input class="error" type="text" value="Invalid input"><i class="icon-remove-sign"><span class="jekyll-bug"></span></i><br>
+    <label>Field in success state</label>
+    <input class="success" type="text" value="Validated input"><i class="icon-ok-sign"><span class="jekyll-bug"></span></i><br>
+    <label>Default multi-line text box</label>
+    <textarea>Example entry</textarea><br>
+    <label>Focused multi-line text box</label>
+    <textarea class="focus">Example entry</textarea><br>
+    <label>Multi-line text box in error state</label>
+    <textarea class="error">Invalid input</textarea><i class="icon-remove-sign"><span class="jekyll-bug"></span></i><br>
+    <label>Multi-line text box in success state</label>
+    <textarea class="success">Validated input</textarea><i class="icon-ok-sign"><span class="jekyll-bug"></span></i>
   tags:
     - forms
 */
@@ -86,3 +92,8 @@ textarea + [class^="icon-"] {
 .success + [class^="icon-"] {
     color: @green;
 }
+
+/* topdoc
+  name: EOF
+  eof: true
+*/

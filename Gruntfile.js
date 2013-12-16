@@ -119,16 +119,11 @@ module.exports = function(grunt) {
     },
 
     topdoc: {
-        usageguides: {
+        component: {
             options: {
                 source: 'demo/static/css/',
-                destination: "demo/demo",
-                template: "node_modules/fj-component-demo/",
-                templateData: {
-                    "title": "<%= pkg.name %> Demo",
-                    "subtitle": "<%= pkg.description %>",
-                    "homeURL": "https://fake.ghe.domain/flapjack/front-end"
-                }
+                destination: "demo/",
+                template: "node_modules/fj-component-demo/component_simple/"
             }
         }
     }
