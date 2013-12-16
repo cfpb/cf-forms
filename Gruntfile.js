@@ -144,7 +144,8 @@ module.exports = function(grunt) {
    * Create custom task aliases and combinations
    */
   grunt.registerTask('vendor', ['clean', 'bower', 'concat']);
-  grunt.registerTask('compile', ['less', 'string-replace']);
+  grunt.registerTask('compile', ['clean', 'concat', 'less', 'string-replace']);
   grunt.registerTask('default', ['clean', 'concat', 'less', 'string-replace']);
+  grunt.registerTask('demo', ['topdoc']);
 
 };
