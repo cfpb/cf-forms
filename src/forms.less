@@ -3,6 +3,23 @@
    Form Element Styling
    ========================================================================== */
 
+/* topdoc
+  name: Forms
+  description: Basic form styling for the Flapjack front-end framework.
+  modifiers:
+    :focus: Focus state
+    .focus: Focus state
+    .error: Invalid input
+    .success: Validated input
+  markup:
+    <input placeholder="placeholder text" type="text">
+    <input class="focus" placeholder="placeholder text" type="text">
+    <input class="error" type="text" value="Invalid input"><i class="icon-remove-sign"><span class="jekyll-bug"></span></i>
+    <input class="success" type="text" value="Validated input"><i class="icon-ok-sign"><span class="jekyll-bug"></span></i>
+  tags:
+    - forms
+*/
+
 label {
     @font-size: 16px;
 
