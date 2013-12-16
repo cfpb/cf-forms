@@ -65,7 +65,7 @@ module.exports = function(grunt) {
     'string-replace': {
       vendor: {
         files: {
-          'src/static/css/': ['demo/static/css/main.css']
+          'demo/static/css/': ['demo/static/css/main.css']
         },
         options: {
           replacements: [{
@@ -133,8 +133,8 @@ module.exports = function(grunt) {
   /**
    * Create custom task aliases and combinations
    */
-  grunt.registerTask('vendor', ['clean:vendor', 'bower', 'concat']);
+  grunt.registerTask('vendor', ['clean', 'bower', 'concat']);
   grunt.registerTask('compile', ['less', 'string-replace']);
-  grunt.registerTask('default', ['concat', 'less', 'string-replace']);
+  grunt.registerTask('default', ['clean', 'concat', 'less', 'string-replace']);
 
 };
