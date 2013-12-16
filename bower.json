@@ -23,4 +23,5 @@
       "css": "css/*.css",
       "fonts": "font/*.*"
     }
+  }
 }
