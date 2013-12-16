@@ -116,6 +116,21 @@ module.exports = function(grunt) {
           }]
         }
       }
+    },
+
+    topdoc: {
+        usageguides: {
+            options: {
+                source: 'demo/static/css',
+                destination: "demo/demo",
+                template: "node_modules/topdoc-theme/",
+                templateData: {
+                    "title": "Flapjack Front-End <%= pkg.name %> Demo",
+                    "subtitle": "<%= pkg.description %>",
+                    "homeURL": "https://fake.ghe.domain/flapjack/front-end"
+                }
+            }
+        }
     }
 
   });
@@ -129,6 +144,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-string-replace');
+  grunt.loadNpmTasks('grunt-topdoc');
 
   /**
    * Create custom task aliases and combinations
