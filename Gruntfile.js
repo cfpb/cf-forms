@@ -90,7 +90,7 @@ module.exports = function(grunt) {
                   filename.indexOf('.ttf') !== -1 ||
                   filename.indexOf('.svg') !== -1)
               {
-                newPath = 'url("static/fonts/'+filename+'")';
+                newPath = 'url("/demo/static/fonts/'+filename+'")';
                 grunt.verbose.writeln('New path:');
                 grunt.verbose.writeln(newPath);
                 grunt.verbose.writeln('--------------');
@@ -99,7 +99,7 @@ module.exports = function(grunt) {
                   filename.indexOf('.gif') !== -1 ||
                   filename.indexOf('.jpg') !== -1)
               {
-                newPath = 'url("static/img/'+filename+'")';
+                newPath = 'url("/demo/static/img/'+filename+'")';
                 grunt.verbose.writeln('New path:');
                 grunt.verbose.writeln(newPath);
                 grunt.verbose.writeln('--------------');
