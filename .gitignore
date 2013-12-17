@@ -43,8 +43,3 @@ Thumbs.db
 node_modules/
 bower_components/
 src/vendor/
-
-# Testing FJ Visuals #
-######################
-fj-component-aid/
-demo/
