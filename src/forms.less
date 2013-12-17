@@ -30,6 +30,23 @@ label {
     - forms
 */
 
+input,
+textarea {
+    @font-size: 16px;
+
+    display: inline-block;
+    width: 85%; // 85% leaves room for .error and .success icons
+    margin: 0;
+    padding: unit( 4 / @base-font-size-px, em );
+    font-size: unit( @font-size / @base-font-size-px, em );
+    background: @white;
+    border: 1px solid @gray;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    vertical-align: top;
+}
+
 input:focus,
 input.focus,
 textarea:focus,
