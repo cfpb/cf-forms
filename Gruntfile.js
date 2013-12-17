@@ -119,18 +119,18 @@ module.exports = function(grunt) {
     },
 
     topdoc: {
-        component: {
-            options: {
-                source: 'demo/static/css/',
-                destination: 'demo/',
-                template: 'node_modules/fj-component-demo/' + ( grunt.option('tpl') || 'raw' ) + '/',
-                templateData: {
-                  family: '<%= pkg.name %>',
-                  title: '<%= pkg.name %> demo',
-                  repo: '<%= pkg.repository.url %>'
-                }
-            }
+      component: {
+        options: {
+          source: 'demo/static/css/',
+          destination: 'demo/',
+          template: 'node_modules/fj-component-demo/' + ( grunt.option('tpl') || 'raw' ) + '/',
+          templateData: {
+            family: '<%= pkg.name %>',
+            title: '<%= pkg.name %> demo',
+            repo: '<%= pkg.repository.url %>'
+          }
         }
+      }
     }
 
   });
