@@ -123,7 +123,11 @@ module.exports = function(grunt) {
             options: {
                 source: 'demo/static/css/',
                 destination: "demo/",
-                template: "node_modules/fj-component-demo/component_simple/"
+                template: "node_modules/fj-component-demo/simple_with_snippets/",
+                templateData: {
+                  title: '<%= pkg.name %> demo',
+                  repo: '<%= pkg.repository.url %>'
+                }
             }
         }
     }

@@ -3,52 +3,32 @@
    Form Element Styling
    ========================================================================== */
 
+label {
+    display: block;
+}
+
 /* topdoc
-  name: Single/Multi-Line Text Inputs
-  markup:
-    <label>Default single-line text input</label>
-    <input placeholder="placeholder text" type="text"><br>
-    <label>Focused single-line text input</label>
-    <input class="focus" placeholder="placeholder text" type="text"><br>
-    <label>Field in error state</label>
-    <input class="error" type="text" value="Invalid input"><i class="icon-remove-sign"><span class="jekyll-bug"></span></i><br>
-    <label>Field in success state</label>
-    <input class="success" type="text" value="Validated input"><i class="icon-ok-sign"><span class="jekyll-bug"></span></i><br>
-    <label>Default multi-line text box</label>
-    <textarea>Example entry</textarea><br>
-    <label>Focused multi-line text box</label>
-    <textarea class="focus">Example entry</textarea><br>
-    <label>Multi-line text box in error state</label>
-    <textarea class="error">Invalid input</textarea><i class="icon-remove-sign"><span class="jekyll-bug"></span></i><br>
-    <label>Multi-line text box in success state</label>
-    <textarea class="success">Validated input</textarea><i class="icon-ok-sign"><span class="jekyll-bug"></span></i>
-  tags:
+    name: Single/Multi-Line Text Inputs
+    patterns:
+    - name: Default single-line text input
+      markup: <input placeholder="placeholder text" type="text">
+    - name: Focused single-line text input
+      markup: <input class="focus" placeholder="placeholder text" type="text">
+    - name: Field in error state
+      markup: <input class="error" type="text" value="Invalid input"><i class="icon-remove-sign"><span class="jekyll-bug"></span></i>
+    - name: Field in success state
+      markup: <input class="success" type="text" value="Validated input"><i class="icon-ok-sign"><span class="jekyll-bug"></span></i>
+    - name: Default multi-line text box
+      markup: <textarea>Example entry</textarea>
+    - name: Focused multi-line text box
+      markup: <textarea class="focus">Example entry</textarea>
+    - name: Multi-line text box in error state
+      markup: <textarea class="error">Invalid input</textarea><i class="icon-remove-sign"><span class="jekyll-bug"></span></i>
+    - name: Multi-line text box in success state
+      markup: <textarea class="success">Validated input</textarea><i class="icon-ok-sign"><span class="jekyll-bug"></span></i>
+    tags:
     - forms
 */
-
-label {
-    @font-size: 16px;
-
-    display: block;
-    font-size: unit( @font-size / @base-font-size-px, em );
-}
-
-input,
-textarea {
-    @font-size: 16px;
-
-    display: inline-block;
-    width: 85%; // 85% leaves room for .error and .success icons
-    margin: 0;
-    padding: unit( 4 / @base-font-size-px, em );
-    font-size: unit( @font-size / @base-font-size-px, em );
-    background: @white;
-    border: 1px solid @gray;
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
-    vertical-align: top;
-}
 
 input:focus,
 input.focus,
