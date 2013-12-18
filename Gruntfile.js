@@ -18,9 +18,9 @@ module.exports = function(grunt) {
           cleanTargetDir: true,
           layout: function(type, component) {
             if (type === 'img') {
-              return path.join('../../demo/static/img');
+              return path.join('../../test-page/static/img');
             } else if (type === 'fonts') {
-              return path.join('../../demo/static/fonts');
+              return path.join('../../test-page/static/fonts');
             } else {
               return path.join(component);
             }
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     },
 
     concat: {
-      fj: {
+      main: {
         src: [
           'src/*.less',
           'src/vendor/fj-*/*.less',
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
           yuicompress: false
         },
         files: {
-          'demo/static/css/main.css': [
+          'test-page/static/css/main.css': [
             'src/vendor/normalize-css/normalize.css',
             'src/vendor/fj-fe/fj.less'
           ]
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
     'string-replace': {
       vendor: {
         files: {
-          'demo/static/css/': ['demo/static/css/main.css']
+          'test-page/static/css/': ['test-page/static/css/main.css']
         },
         options: {
           replacements: [{
@@ -118,15 +118,48 @@ module.exports = function(grunt) {
       }
     },
 
+    copy: {
+      docs_assets: {
+        files:
+        [{
+          expand: true,
+          cwd: 'test-page/',
+          src: ['static/img/**', 'static/fonts/**'],
+          dest: 'docs/'
+        }]
+      },
+      docs: {
+        files:
+        [{
+          expand: true,
+          cwd: 'test-page/',
+          src: ['static/css/main.css'],
+          dest: 'docs/'
+        }]
+      }
+    },
+
     topdoc: {
-      component: {
+      test: {
         options: {
-          source: 'demo/static/css/',
-          destination: 'demo/',
+          source: 'test-page/static/css/',
+          destination: 'test-page/',
           template: 'node_modules/fj-component-demo/' + ( grunt.option('tpl') || 'raw' ) + '/',
           templateData: {
             family: '<%= pkg.name %>',
-            title: '<%= pkg.name %> demo',
+            title: '<%= pkg.name %> test-page',
+            repo: '<%= pkg.repository.url %>'
+          }
+        }
+      },
+      docs: {
+        options: {
+          source: 'docs/static/css/',
+          destination: 'docs/',
+          template: 'node_modules/fj-component-demo/' + ( grunt.option('tpl') || 'code_examples' ) + '/',
+          templateData: {
+            family: '<%= pkg.name %>',
+            title: '<%= pkg.name %> test-page',
             repo: '<%= pkg.repository.url %>'
           }
         }
@@ -141,6 +174,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-string-replace');
   grunt.loadNpmTasks('grunt-topdoc');
@@ -148,9 +182,8 @@ module.exports = function(grunt) {
   /**
    * Create custom task aliases and combinations
    */
-  grunt.registerTask('vendor', ['clean', 'bower', 'concat']);
-  grunt.registerTask('compile', ['clean', 'concat', 'less', 'string-replace']);
-  grunt.registerTask('default', ['clean', 'concat', 'less', 'string-replace']);
-  grunt.registerTask('demo', ['topdoc']);
+  grunt.registerTask('all', ['clean', 'bower', 'copy:docs_assets', 'concat', 'less', 'string-replace', 'copy:docs', 'topdoc:test', 'topdoc:docs']);
+  grunt.registerTask('vendor', ['clean', 'bower', 'copy:docs_assets', 'concat']);
+  grunt.registerTask('default', ['clean', 'concat', 'less', 'string-replace', 'copy:docs', 'topdoc:test', 'topdoc:docs']);
 
 };
