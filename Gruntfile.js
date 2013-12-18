@@ -18,9 +18,9 @@ module.exports = function(grunt) {
           cleanTargetDir: true,
           layout: function(type, component) {
             if (type === 'img') {
-              return path.join('../../test-page/static/img');
+              return path.join('../../demo/static/img');
             } else if (type === 'fonts') {
-              return path.join('../../test-page/static/fonts');
+              return path.join('../../demo/static/fonts');
             } else {
               return path.join(component);
             }
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
           yuicompress: false
         },
         files: {
-          'test-page/static/css/main.css': [
+          'demo/static/css/main.css': [
             'src/vendor/normalize-css/normalize.css',
             'src/vendor/fj-fe/fj.less'
           ]
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
     'string-replace': {
       vendor: {
         files: {
-          'test-page/static/css/': ['test-page/static/css/main.css']
+          'demo/static/css/': ['demo/static/css/main.css']
         },
         options: {
           replacements: [{
@@ -123,7 +123,7 @@ module.exports = function(grunt) {
         files:
         [{
           expand: true,
-          cwd: 'test-page/',
+          cwd: 'demo/',
           src: ['static/img/**', 'static/fonts/**'],
           dest: 'docs/'
         }]
@@ -132,7 +132,7 @@ module.exports = function(grunt) {
         files:
         [{
           expand: true,
-          cwd: 'test-page/',
+          cwd: 'demo/',
           src: ['static/css/main.css'],
           dest: 'docs/'
         }]
@@ -142,12 +142,12 @@ module.exports = function(grunt) {
     topdoc: {
       test: {
         options: {
-          source: 'test-page/static/css/',
-          destination: 'test-page/',
+          source: 'demo/static/css/',
+          destination: 'demo/',
           template: 'node_modules/fj-component-demo/' + ( grunt.option('tpl') || 'raw' ) + '/',
           templateData: {
             family: '<%= pkg.name %>',
-            title: '<%= pkg.name %> test-page',
+            title: '<%= pkg.name %> demo',
             repo: '<%= pkg.repository.url %>'
           }
         }
@@ -159,7 +159,7 @@ module.exports = function(grunt) {
           template: 'node_modules/fj-component-demo/' + ( grunt.option('tpl') || 'code_examples' ) + '/',
           templateData: {
             family: '<%= pkg.name %>',
-            title: '<%= pkg.name %> test-page',
+            title: '<%= pkg.name %> demo',
             repo: '<%= pkg.repository.url %>'
           }
         }
