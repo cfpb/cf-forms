@@ -53,6 +53,7 @@ textarea.focus {
   border-color: #0072ce;
   outline: 1px solid #0072ce;
   outline-offset: 0;
+  -webkit-user-modify: read-write-plaintext-only;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
