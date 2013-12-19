@@ -39,6 +39,7 @@ textarea {
     width: 85%; // 85% leaves room for .error and .success icons
     margin: 0;
     padding: unit( 4 / @base-font-size-px, em );
+    font-family: Arial, sans-serif;
     font-size: unit( @font-size / @base-font-size-px, em );
     background: @white;
     border: 1px solid @gray;
@@ -47,18 +48,22 @@ textarea {
             border-radius: 0;
     vertical-align: top;
     -webkit-appearance: none;
+    -webkit-user-modify: read-write-plaintext-only;
+}
+
+textarea {
+  overflow: auto; // http://css-tricks.com/textarea-tricks/
 }
 
 input:focus,
 input.focus,
 textarea:focus,
 textarea.focus {
-    /* Class included for static state examples */
+    // Class included for static state examples
     border: 1px solid @pacific;
     border-color: @pacific;
     outline: 1px solid @pacific;
     outline-offset: 0;
-    -webkit-user-modify: read-write-plaintext-only;
     -webkit-box-shadow: none;
             box-shadow: none;
 }

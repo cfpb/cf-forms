@@ -95,6 +95,7 @@ textarea {
   width: 85%;
   margin: 0;
   padding: 0.25em;
+  font-family: Arial, sans-serif;
   font-size: 1em;
   background: #ffffff;
   border: 1px solid #75787b;
@@ -103,18 +104,19 @@ textarea {
   border-radius: 0;
   vertical-align: top;
   -webkit-appearance: none;
+  -webkit-user-modify: read-write-plaintext-only;
+}
+textarea {
+  overflow: auto;
 }
 input:focus,
 input.focus,
 textarea:focus,
 textarea.focus {
-  /* Class included for static state examples */
-
   border: 1px solid #0072ce;
   border-color: #0072ce;
   outline: 1px solid #0072ce;
   outline-offset: 0;
-  -webkit-user-modify: read-write-plaintext-only;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
