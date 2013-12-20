@@ -1,6 +1,9 @@
 # fj-forms
 
-Basic form styling for the Flapjack front-end framework.
+Standard form input/textarea elements.
+
+Includes [Font Awesome](http://fontawesome.io/) for icons until the
+[CFPB icon font](https://github.cfpb.gob/adamscott/cfpb-icon-font) is released.
 
 - [Docs](https://fake.ghe.domain/pages/flapjack/fj-forms/docs/index.html)
 - [DPG forms](https://fake.ghe.domain/pages/nicholasw/digital-product-guide/guide/forms/textfield.html)
