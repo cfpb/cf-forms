@@ -161,19 +161,15 @@ textarea + [class^="icon-"] {
 .btn-super {
   padding: 0.83333333333333em 1.66666666666667em;
   /* 15/18 30/18 */
-
   font-size: 1.28571428571429em;
   /* 18px */
-
 }
 .btn-super:hover,
 .btn-super:focus {
   /*background-color: @pacific-80;*/
-
 }
 .btn-super:active {
   /*background-color: @navy-80;*/
-
 }
 /* Disabled Button Styles */
 .btn-disabled,
@@ -183,7 +179,6 @@ textarea + [class^="icon-"] {
   color: #75787b;
   cursor: default;
   /* Fallback for IE/Opera */
-
   cursor: not-allowed;
 }
 /* Simple link with same dimensions as button */
