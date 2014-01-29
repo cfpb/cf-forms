@@ -1,4 +1,4 @@
-If you'd like to contribute to fj-forms, please use the fork-and-pull
+If you'd like to contribute to cf-forms, please use the fork-and-pull
 model:
 
 1. Fork this repository to your personal account.

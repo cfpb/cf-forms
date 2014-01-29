@@ -1,8 +1,8 @@
 {
-  "name": "fj-forms",
+  "name": "cf-forms",
   "description": "Basic form styling for the Flapjack front-end framework.",
   "version": "0.3.7",
-  "homepage": "http://fake.ghe.domain/pages/flapjack/fj-forms",
+  "homepage": "http://fake.ghe.domain/pages/flapjack/cf-forms",
   "author": {
     "name": "Consumer Financial Protection Bureau",
     "email": "michael.morici@cfpb.gov",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://fake.ghe.domain/flapjack/fj-forms.git"
+    "url": "http://fake.ghe.domain/flapjack/cf-forms.git"
   },
   "bugs": {
-    "url": "http://fake.ghe.domain/flapjack/fj-forms/issues"
+    "url": "http://fake.ghe.domain/flapjack/cf-forms/issues"
   },
   "licenses": [
     {
       "type": "Public Domain",
-      "url": "http://fake.ghe.domain/pages/flapjack/fj-forms/blob/master/LICENSE"
+      "url": "http://fake.ghe.domain/pages/flapjack/cf-forms/blob/master/LICENSE"
     }
   ],
   "engines": {
