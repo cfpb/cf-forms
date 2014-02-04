@@ -1,19 +1,18 @@
 {
   "name": "cf-forms",
-  "description": "Basic form styling for the Flapjack front-end framework.",
+  "description": "Standard form input/textarea elements for Capital Framework.",
   "version": "0.4.0",
-  "homepage": "http://fake.ghe.domain/pages/flapjack/cf-forms",
   "author": {
     "name": "Consumer Financial Protection Bureau",
-    "email": "michael.morici@cfpb.gov",
     "url": "http://cfpb.github.io/"
   },
+  "homepage": "https://github.com/cfpb/cf-forms",
   "repository": {
     "type": "git",
-    "url": "http://fake.ghe.domain/flapjack/cf-forms.git"
+    "url": "https://github.com/cfpb/cf-forms.git"
   },
   "bugs": {
-    "url": "http://fake.ghe.domain/flapjack/cf-forms/issues"
+    "url": "http://github.com/cfpb/cf-forms/issues"
   },
   "licenses": [
     {
@@ -37,7 +36,7 @@
     "grunt-contrib-less": "~0.8.3",
     "grunt-string-replace": "latest",
     "grunt-topdoc": "~0.2.0",
-    "fj-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git"
+    "cf-component-demo": "git://github.com/cfpb/fj-component-demo.git"
   },
   "keywords": []
 }
