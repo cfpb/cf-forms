@@ -12,12 +12,12 @@
     "url": "https://github.com/cfpb/cf-forms.git"
   },
   "bugs": {
-    "url": "http://github.com/cfpb/cf-forms/issues"
+    "url": "https://github.com/cfpb/cf-forms/issues"
   },
   "licenses": [
     {
       "type": "Public Domain",
-      "url": "http://fake.ghe.domain/pages/flapjack/cf-forms/blob/master/LICENSE"
+      "url": "https://github.com/cfpb/cf-forms/blob/master/TERMS.md"
     }
   ],
   "engines": {
