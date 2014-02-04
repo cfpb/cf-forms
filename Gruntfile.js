@@ -161,7 +161,7 @@ module.exports = function(grunt) {
           templateData: {
             family: '<%= pkg.name %>',
             title: '<%= pkg.name %> demo',
-            repo: '<%= pkg.repository.url %>'
+            repo: '<%= pkg.homepage %>'
           }
         }
       },
@@ -173,7 +173,7 @@ module.exports = function(grunt) {
           templateData: {
             family: '<%= pkg.name %>',
             title: '<%= pkg.name %> docs',
-            repo: '<%= pkg.repository.url %>'
+            repo: '<%= pkg.homepage %>'
           }
         }
       }
