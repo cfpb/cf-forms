@@ -1,6 +1,7 @@
 {
   "name": "cf-forms",
   "description": "Standard form input/textarea elements for Capital Framework.",
+  "keywords": ["capital-framework", "capital", "forms", "less"],
   "version": "0.4.0",
   "author": {
     "name": "Consumer Financial Protection Bureau",
@@ -11,9 +12,7 @@
     "type": "git",
     "url": "https://github.com/cfpb/cf-forms.git"
   },
-  "bugs": {
-    "url": "https://github.com/cfpb/cf-forms/issues"
-  },
+  "bugs": "https://github.com/cfpb/cf-forms/issues",
   "licenses": [
     {
       "type": "Public Domain",
@@ -37,6 +36,5 @@
     "grunt-string-replace": "latest",
     "grunt-topdoc": "~0.2.0",
     "cf-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git"
-  },
-  "keywords": []
+  }
 }
