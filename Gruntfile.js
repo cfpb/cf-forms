@@ -41,7 +41,6 @@ module.exports = function(grunt) {
           'src/*.less',
           'src/vendor/fj-*/*.less',
           'src/vendor/cf-*/*.less',
-          'src/vendor/ghost/ghost.less',
           'src/vendor/font-awesome/font-awesome.css'
         ],
         dest: 'src/vendor/fj-fe/fj.less',
@@ -158,11 +157,11 @@ module.exports = function(grunt) {
         options: {
           source: 'demo/static/css/',
           destination: 'demo/',
-          template: 'node_modules/fj-component-demo/' + ( grunt.option('tpl') || 'raw' ) + '/',
+          template: 'node_modules/cf-component-demo/' + ( grunt.option('tpl') || 'raw' ) + '/',
           templateData: {
             family: '<%= pkg.name %>',
             title: '<%= pkg.name %> demo',
-            repo: '<%= pkg.repository.url %>'
+            repo: '<%= pkg.homepage %>'
           }
         }
       },
@@ -170,11 +169,11 @@ module.exports = function(grunt) {
         options: {
           source: 'docs/static/css/',
           destination: 'docs/',
-          template: 'node_modules/fj-component-demo/' + ( grunt.option('tpl') || 'code_examples' ) + '/',
+          template: 'node_modules/cf-component-demo/' + ( grunt.option('tpl') || 'code_examples' ) + '/',
           templateData: {
             family: '<%= pkg.name %>',
-            title: '<%= pkg.name %> demo',
-            repo: '<%= pkg.repository.url %>'
+            title: '<%= pkg.name %> docs',
+            repo: '<%= pkg.homepage %>'
           }
         }
       }

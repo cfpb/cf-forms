@@ -16,9 +16,13 @@ label {
       markup: |
         <input class="focus" placeholder="placeholder text" type="text">
     - name: Field in error state
+      codenotes:
+        - 'role="alert"'
+      notes:
+        - 'Use the alert role to mark invalid fields: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role'
       markup: |
         <input class="error" type="text" value="Invalid input">
-        <i class="icon-remove-sign"><span class="jekyll-bug"></span></i>
+        <i class="icon-remove-sign" role="alert"><span class="jekyll-bug"></span></i>
     - name: Field in success state
       markup: |
         <input class="success" type="text" value="Validated input">
@@ -30,9 +34,13 @@ label {
       markup: |
         <textarea class="focus">Example entry</textarea>
     - name: Multi-line text box in error state
+      codenotes:
+        - 'role="alert"'
+      notes:
+        - 'Use the alert role to mark invalid fields: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role'
       markup: |
         <textarea class="error">Invalid input</textarea>
-        <i class="icon-remove-sign"><span class="jekyll-bug"></span></i>
+        <i class="icon-remove-sign" role="alert"><span class="jekyll-bug"></span></i>
     - name: Multi-line text box in success state
       markup: |
         <textarea class="success">Validated input</textarea>
