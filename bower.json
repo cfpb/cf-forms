@@ -14,7 +14,7 @@
     "type": "git",
     "url": "https://github.com/cfpb/cf-forms.git"
   },
-  "license": "https://github.com/cfpb/cf-forms/blob/master/TERMS.md",
+  "license": "https://github.com/cfpb/cf-forms/blob/gh-pages/TERMS.md",
   "main": "src/cf-forms.less",
   "dependencies": {
     "cf-colors": "git://github.com/cfpb/cf-colors.git",

@@ -16,7 +16,7 @@
   "licenses": [
     {
       "type": "Public Domain",
-      "url": "https://github.com/cfpb/cf-forms/blob/master/TERMS.md"
+      "url": "https://github.com/cfpb/cf-forms/blob/gh-pages/TERMS.md"
     }
   ],
   "main": "src/cf-forms.less",
