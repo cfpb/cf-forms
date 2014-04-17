@@ -1,33 +1,4 @@
 {
-  "name": "cf-forms",
-  "version": "0.4.0",
-  "description": "Standard form input/textarea elements for Capital Framework.",
-  "keywords": [
-    "capital-framework",
-    "capital",
-    "forms",
-    "less"
-  ],
-  "author": {
-    "name": "Consumer Financial Protection Bureau",
-    "url": "http://cfpb.github.io/"
-  },
-  "homepage": "https://github.com/cfpb/cf-forms",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cfpb/cf-forms.git"
-  },
-  "bugs": "https://github.com/cfpb/cf-forms/issues",
-  "licenses": [
-    {
-      "type": "Public Domain",
-      "url": "https://github.com/cfpb/cf-forms/blob/gh-pages/TERMS.md"
-    }
-  ],
-  "main": "src/cf-forms.less",
-  "engines": {
-    "node": ">=0.8.0"
-  },
   "devDependencies": {
     "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git",
     "cf-grunt-config": "git://github.com/cfpb/cf-grunt-config.git",
@@ -35,6 +6,7 @@
     "grunt": "latest",
     "jit-grunt": "latest",
     "load-grunt-tasks": "latest",
+    "node.extend": "^1.0.10",
     "time-grunt": "latest"
   }
 }

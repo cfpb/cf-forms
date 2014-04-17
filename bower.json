@@ -1,6 +1,6 @@
 {
   "name": "cf-forms",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Standard form input/textarea elements for Capital Framework.",
   "keywords": ["capital-framework", "capital", "forms", "less"],
   "authors": [
