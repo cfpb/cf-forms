@@ -2005,53 +2005,58 @@ a .icon-flip-vertical:before {
    Capital Framework
    Form Element Styling
    ========================================================================== */
+/* topdoc
+    name: Form labels
+    family: cf-forms
+    patterns:
+    - name: Default label
+      notes:
+        - "Warning, this pattern is still under development."
+      markup: |
+        <label>I am a form label</label>
+    tags:
+    - cf-forms
+*/
 label {
   display: block;
 }
 /* topdoc
-    name: Single/Multi-Line Text Inputs
+    name: Single-line text input
+    notes:
+      - Most other text-based inputs extend styles from here as seen in the CSS to the right.
     family: cf-forms
     patterns:
     - name: Default single-line text input
       markup: |
-        <input placeholder="placeholder text" type="text">
-    - name: Focused single-line text input
+        <input placeholder="placeholder text" type="text" value="">
+    - name: Focused state
       markup: |
-        <input class="focus" placeholder="placeholder text" type="text">
-    - name: Field in error state
-      codenotes:
-        - 'role="alert"'
+        <input class="focus" placeholder="placeholder text" type="text" value="">
+    - name: Error state
       notes:
-        - 'Use the alert role to mark invalid fields: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role'
+        - Please review the notes on form input error icons in the form icons section below.
       markup: |
-        <input class="error" type="text" value="Invalid input">
-        <i class="icon-remove-sign" role="alert"><span class="jekyll-bug"></span></i>
-    - name: Field in success state
-      markup: |
-        <input class="success" type="text" value="Validated input">
-        <i class="icon-ok-sign"><span class="jekyll-bug"></span></i>
-    - name: Default multi-line text box
-      markup: |
-        <textarea>Example entry</textarea>
-    - name: Focused multi-line text box
-      markup: |
-        <textarea class="focus">Example entry</textarea>
-    - name: Multi-line text box in error state
-      codenotes:
-        - 'role="alert"'
+        <input class="error" placeholder="placeholder text" type="text" value="Invalid input">
+        <i class="cf-form_input-icon icon-remove-sign" role="alert">
+          <span class="jekyll-bug"></span>
+        </i>
+    - name: Success state
       notes:
-        - 'Use the alert role to mark invalid fields: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role'
+        - Please review the notes on form input success icons in the form icons section below.
       markup: |
-        <textarea class="error">Invalid input</textarea>
-        <i class="icon-remove-sign" role="alert"><span class="jekyll-bug"></span></i>
-    - name: Multi-line text box in success state
-      markup: |
-        <textarea class="success">Validated input</textarea>
-        <i class="icon-ok-sign"><span class="jekyll-bug"></span></i>
+        <input class="success" placeholder="placeholder text" type="text" value="Validated input">
+        <i class="cf-form_input-icon icon-ok-sign">
+          <span class="jekyll-bug"></span>
+        </i>
     tags:
     - cf-forms
 */
-input,
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
 textarea {
   display: inline-block;
   width: 85%;
@@ -2066,11 +2071,18 @@ textarea {
   -webkit-appearance: none;
   -webkit-user-modify: read-write-plaintext-only;
 }
-textarea {
-  overflow: auto;
-}
-input:focus,
-input.focus,
+input[type="text"]:focus,
+input[type="text"].focus,
+input[type="search"]:focus,
+input[type="search"].focus,
+input[type="email"]:focus,
+input[type="email"].focus,
+input[type="url"]:focus,
+input[type="url"].focus,
+input[type="tel"]:focus,
+input[type="tel"].focus,
+input[type="number"]:focus,
+input[type="number"].focus,
 textarea:focus,
 textarea.focus {
   border: 1px solid #0072ce;
@@ -2080,27 +2092,262 @@ textarea.focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-input.error,
+input[type="text"].error,
+input[type="search"].error,
+input[type="email"].error,
+input[type="url"].error,
+input[type="tel"].error,
+input[type="number"].error,
 textarea.error {
   border: 1px solid #d12124;
   outline: 1px solid #d12124;
 }
-input.success,
+input[type="text"].success,
+input[type="search"].success,
+input[type="email"].success,
+input[type="url"].success,
+input[type="tel"].success,
+input[type="number"].success,
 textarea.success {
   border: 1px solid #2cb34a;
   outline: 1px solid #2cb34a;
 }
-input + [class^="icon-"],
-textarea + [class^="icon-"] {
+/* topdoc
+    name: Single-line search input
+    family: cf-forms
+    patterns:
+    - name: Default single-line search input
+      markup: |
+        <input placeholder="placeholder search text" type="search" value="">
+    - name: Focused state
+      markup: |
+        <input class="focus" placeholder="placeholder search text" type="search" value="">
+    - name: Error state
+      notes:
+        - Please review the notes on form input error icons in the form icons section below.
+      markup: |
+        <input class="error" placeholder="placeholder search text" type="search" value="Invalid input">
+        <i class="cf-form_input-icon icon-remove-sign" role="alert">
+          <span class="jekyll-bug"></span>
+        </i>
+    - name: Success state
+      notes:
+        - Please review the notes on form input success icons in the form icons section below.
+      markup: |
+        <input class="success" placeholder="placeholder search text" type="search" value="Validated input">
+        <i class="cf-form_input-icon icon-ok-sign">
+          <span class="jekyll-bug"></span>
+        </i>
+    tags:
+    - cf-forms
+*/
+/* NOTE: all input[type="search"] styles extend input[type="text"]. */
+/* topdoc
+    name: Single-line email input
+    family: cf-forms
+    patterns:
+    - name: Default single-line email input
+      markup: |
+        <input placeholder="placeholder email text" type="email" value="">
+    - name: Focused state
+      markup: |
+        <input class="focus" placeholder="placeholder email text" type="email" value="">
+    - name: Error state
+      notes:
+        - Please review the notes on form input error icons in the form icons section below.
+      markup: |
+        <input class="error" placeholder="placeholder email text" type="email" value="Invalid input">
+        <i class="cf-form_input-icon icon-remove-sign" role="alert">
+          <span class="jekyll-bug"></span>
+        </i>
+    - name: Success state
+      notes:
+        - Please review the notes on form input success icons in the form icons section below.
+      markup: |
+        <input class="success" placeholder="placeholder email text" type="email" value="Validated input">
+        <i class="cf-form_input-icon icon-ok-sign">
+          <span class="jekyll-bug"></span>
+        </i>
+    tags:
+    - cf-forms
+*/
+/* NOTE: all input[type="email"] styles extend input[type="text"]. */
+/* topdoc
+    name: Single-line url input
+    family: cf-forms
+    patterns:
+    - name: Default single-line url input
+      markup: |
+        <input placeholder="placeholder url text" type="url" value="">
+    - name: Focused state
+      markup: |
+        <input class="focus" placeholder="placeholder url text" type="url" value="">
+    - name: Error state
+      notes:
+        - Please review the notes on form input error icons in the form icons section below.
+      markup: |
+        <input class="error" placeholder="placeholder url text" type="url" value="Invalid input">
+        <i class="cf-form_input-icon icon-remove-sign" role="alert">
+          <span class="jekyll-bug"></span>
+        </i>
+    - name: Success state
+      notes:
+        - Please review the notes on form input success icons in the form icons section below.
+      markup: |
+        <input class="success" placeholder="placeholder url text" type="url" value="Validated input">
+        <i class="cf-form_input-icon icon-ok-sign">
+          <span class="jekyll-bug"></span>
+        </i>
+    tags:
+    - cf-forms
+*/
+/* NOTE: all input[type="url"] styles extend input[type="text"]. */
+/* topdoc
+    name: Single-line tel input
+    family: cf-forms
+    patterns:
+    - name: Default single-line tel input
+      markup: |
+        <input placeholder="placeholder tel text" type="tel" value="">
+    - name: Focused state
+      markup: |
+        <input class="focus" placeholder="placeholder tel text" type="tel" value="">
+    - name: Error state
+      notes:
+        - Please review the notes on form input error icons in the form icons section below.
+      markup: |
+        <input class="error" placeholder="placeholder tel text" type="tel" value="Invalid input">
+        <i class="cf-form_input-icon icon-remove-sign" role="alert">
+          <span class="jekyll-bug"></span>
+        </i>
+    - name: Success state
+      notes:
+        - Please review the notes on form input success icons in the form icons section below.
+      markup: |
+        <input class="success" placeholder="placeholder tel text" type="tel" value="Validated input">
+        <i class="cf-form_input-icon icon-ok-sign">
+          <span class="jekyll-bug"></span>
+        </i>
+    tags:
+    - cf-forms
+*/
+/* NOTE: all input[type="tel"] styles extend input[type="text"]. */
+/* topdoc
+    name: Single-line number input
+    family: cf-forms
+    patterns:
+    - name: Default single-line number input
+      markup: |
+        <input placeholder="placeholder number text" type="number" value="">
+    - name: Focused state
+      markup: |
+        <input class="focus" placeholder="placeholder number text" type="number" value="">
+    - name: Error state
+      notes:
+        - Please review the notes on form input error icons in the form icons section below.
+      markup: |
+        <input class="error" placeholder="placeholder number text" type="number" value="Invalid input">
+        <i class="cf-form_input-icon icon-remove-sign" role="alert">
+          <span class="jekyll-bug"></span>
+        </i>
+    - name: Success state
+      notes:
+        - Please review the notes on form input success icons in the form icons section below.
+      markup: |
+        <input class="success" placeholder="placeholder number text" type="number" value="Validated input">
+        <i class="cf-form_input-icon icon-ok-sign">
+          <span class="jekyll-bug"></span>
+        </i>
+    tags:
+    - cf-forms
+*/
+/* NOTE: all input[type="number"] styles extend input[type="text"]. */
+/* topdoc
+    name: Multiline textarea
+    family: cf-forms
+    patterns:
+    - name: Default multi-line text box
+      markup: |
+        <textarea>Example entry</textarea>
+    - name: Focused multi-line text box
+      markup: |
+        <textarea class="focus">Example entry</textarea>
+    - name: Multi-line text box in error state
+      notes:
+        - Please review the notes on form input error icons in the form icons section below.
+      markup: |
+        <textarea class="error">Invalid input</textarea>
+        <i class="cf-form_input-icon icon-remove-sign" role="alert"><span class="jekyll-bug"></span></i>
+    - name: Multi-line text box in success state
+      notes:
+        - Please review the notes on form input success icons in the form icons section below.
+      markup: |
+        <textarea class="success">Validated input</textarea>
+        <i class="cf-form_input-icon icon-ok-sign"><span class="jekyll-bug"></span></i>
+    tags:
+    - cf-forms
+*/
+/* NOTE: all textarea styles extend input[type="text"]. */
+textarea {
+  overflow: auto;
+}
+/* topdoc
+    name: Form icons
+    family: cf-forms
+    patterns:
+    - name: The .jekyll-bug element
+      codenotes:
+        - |
+          <i class="cf-form_input-icon icon-credit-card">
+            <span class="jekyll-bug"></span>
+          </i>
+      notes:
+        - |
+          Adding the .jekyll-bug element inside of an icon is only necessary
+          when using Jekyll as it tends to ignore empty <i> elements.
+    - name: Form input icons
+      notes:
+        - "Form input icons add small positioning tweaks to Font Awesome icons."
+        - "They are meant to be positioned after a form input."
+      markup: |
+        <input type="text" value="">
+        <i class="cf-form_input-icon icon-credit-card">
+          <span class="jekyll-bug"></span>
+        </i>
+    - name: Form input error icon
+      notes:
+        - |
+          The icon must be placed directly after the form input in the markup
+          and the input must have the class of "error".
+        - 'Use the alert role to mark invalid fields: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role'
+      markup: |
+        <input class="error" placeholder="placeholder search text" type="search" value="Invalid input">
+        <i class="cf-form_input-icon icon-remove-sign" role="alert">
+          <span class="jekyll-bug"></span>
+        </i>
+    - name: Form input success icon
+      notes:
+        - |
+          The icon must be placed directly after the form input in the markup
+          and the input must have the class of "success".
+      markup: |
+        <input class="success" placeholder="placeholder search text" type="search" value="Validated input">
+        <i class="cf-form_input-icon icon-ok-sign">
+          <span class="jekyll-bug"></span>
+        </i>
+    tags:
+    - cf-forms
+*/
+.cf-form_input-icon {
   position: relative;
   top: 0.15em;
   margin-left: 0.2em;
   font-size: 1.25em;
 }
-.error + [class^="icon-"] {
+.error + .cf-form_input-icon {
   color: #d12124;
 }
-.success + [class^="icon-"] {
+.success + .cf-form_input-icon {
   color: #2cb34a;
 }
 /* topdoc
@@ -2488,4 +2735,4 @@ ul {
   name: EOF
   eof: true
 */
-/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22src%2Fvendor%2Fcf-concat%2Fcf.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22%3B%3B%3B%3BAAKA%3BEACI%2CcAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA%2BCJ%3BAACA%3BEAGI%2CqBAAA%3BEACA%2CUAAA%3BEACA%2CSAAA%3BEACA%2CeAAA%3BEACA%2C8BAAA%3BEACA%2CcAAA%3BEACA%2CmBAAA%3BEACA%2CyBAAA%3BEACA%2CwBAAA%3BEACG%2CqBAAA%3BEACK%2CgBAAA%3BEACR%2CmBAAA%3BEACA%2CwBAAA%3BEACA%2C8CAAA%3B%3BAAGJ%3BEACE%2CcAAA%3B%3BAAGF%2CKAAK%3BAACL%2CKAAK%3BAACL%2CQAAQ%3BAACR%2CQAAQ%3BEAEJ%2CyBAAA%3BEACA%2CqBAAA%3BEACA%2C0BAAA%3BEACA%2CiBAAA%3BEACA%2CwBAAA%3BEACQ%2CgBAAA%3B%3BAAGZ%2CKAAK%3BAACL%2CQAAQ%3BEACJ%2CyBAAA%3BEACA%2C0BAAA%3B%3BAAGJ%2CKAAK%3BAACL%2CQAAQ%3BEACJ%2CyBAAA%3BEACA%2C0BAAA%3B%3BAAGJ%2CKAAM%3BAACN%2CQAAS%3BEAGL%2CkBAAA%3BEACA%2CWAAA%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3B%3BAAGJ%2CMAAO%3BEACH%2CcAAA%3B%3BAAGJ%2CQAAS%3BEACL%2CcAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA6IJ%3BEACI%2CcAAA%3BEACA%2CsBAAsB%2CwBAAtB%3BEACA%2CeAAA%3BEACA%2CkBAAA%3B%3BAAGJ%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAACpB%3BAAAK%3BAAAK%3BAAAK%3BAAAK%3BAAAK%3BEACrB%2CaAAA%3BEAxEA%2CaAAa%2CgCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAA0EJ%3BAACA%3BEAII%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAII%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAII%2CkBAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEA%2FFI%2CaAAa%2CuCAAb%3BEACA%2CkBAAA%3BEACA%2CgBAAA%3BEAiGA%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BAACA%3BAACA%3BEArGI%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3BEAsGA%2CmBAAA%3BEACA%2CyBAAA%3B%3BAAGJ%3BAACA%3BEAGI%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAGI%2C2BAAA%3BEACA%2CiBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BEA9HI%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3BEAmIA%2C2BAAA%3BEACA%2CcAAA%3BEACA%2CkBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAkBJ%3BAACA%3BAACA%3BAACA%3BAACA%3BAACA%3BAACA%3BEACI%2CaAAA%3BEACA%2CsBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA8BJ%3BEACI%2CsBAAA%3BEACA%2C2BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3BEACA%2CqBAAA%3B%3BAAEA%2CCAAC%3BAACD%2CCAAC%3BEACG%2C4BAAA%3BEACA%2CcAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAsER%2CCAKI%3BAAJJ%2CEAII%3BAAHJ%2CEAGI%3BEACI%2CwBAAA%3B%3BAAIR%2CGAAI%3BEAEA%2CsBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAiBJ%3BEACI%2CqBAAA%3BEACA%2C8BAAA%3BEACA%2CmBAAA%3BEApVA%2CaAAa%2CgCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAAqVA%2CUAAE%3BAACF%2CUAAE%3BEAlVF%2CaAAa%2CuCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAAoVA%2CUAAE%3BAACF%2CUAAE%3BEA3UF%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA8VJ%3BEACI%2CkBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAoBJ%2COACI%3BAADJ%2COACQ%3BAADR%2COACY%3BAADZ%2COACgB%3BAADhB%2COACoB%3BAADpB%2COACwB%3BAADxB%2COAEI%2CWAAW%3BEACP%2C8BAAA%3B%3BAAHR%2COAMI%2CWAAW%3BEACP%2C6BAAA%22%7D */
+/*# sourceMappingURL=data:application/json,%7B%22version%22%3A3%2C%22sources%22%3A%5B%22src%2Fvendor%2Fcf-concat%2Fcf.less%22%5D%2C%22names%22%3A%5B%5D%2C%22mappings%22%3A%22%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAmBA%3BEACI%2CcAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAoCJ%2CKAAK%3BAAyEL%2CKAAK%3BAAmDL%2CKAAK%3BAAmDL%2CKAAK%3BAAmDL%2CKAAK%3BAAmDL%2CKAAK%3BAA%2BCL%3BEAjUI%2CqBAAA%3BEACA%2CUAAA%3BEACA%2CSAAA%3BEACA%2CeAAA%3BEACA%2C8BAAA%3BEACA%2CcAAA%3BEACA%2CmBAAA%3BEACA%2CyBAAA%3BEACA%2CwBAAA%3BEACG%2CqBAAA%3BEACK%2CgBAAA%3BEACR%2CmBAAA%3BEACA%2CwBAAA%3BEACA%2C8CAAA%3B%3BAAGJ%2CKAAK%2CaAAa%3BAAClB%2CKAAK%2CaAAa%3BAAyDlB%2CKAAK%2CeAAe%3BAACpB%2CKAAK%2CeAAe%3BAAkDpB%2CKAAK%2CcAAc%3BAACnB%2CKAAK%2CcAAc%3BAAkDnB%2CKAAK%2CYAAY%3BAACjB%2CKAAK%2CYAAY%3BAAkDjB%2CKAAK%2CYAAY%3BAACjB%2CKAAK%2CYAAY%3BAAkDjB%2CKAAK%2CeAAe%3BAACpB%2CKAAK%2CeAAe%3BAA%2BCpB%2CQAAQ%3BAACR%2CQAAQ%3BEApTJ%2CyBAAA%3BEACA%2CqBAAA%3BEACA%2C0BAAA%3BEACA%2CiBAAA%3BEACA%2CwBAAA%3BEACQ%2CgBAAA%3B%3BAAGZ%2CKAAK%2CaAAa%3BAAqDlB%2CKAAK%2CeAAe%3BAAmDpB%2CKAAK%2CcAAc%3BAAmDnB%2CKAAK%2CYAAY%3BAAmDjB%2CKAAK%2CYAAY%3BAAmDjB%2CKAAK%2CeAAe%3BAAgDpB%2CQAAQ%3BEAhTJ%2CyBAAA%3BEACA%2C0BAAA%3B%3BAAGJ%2CKAAK%2CaAAa%3BAAoDlB%2CKAAK%2CeAAe%3BAAmDpB%2CKAAK%2CcAAc%3BAAmDnB%2CKAAK%2CYAAY%3BAAmDjB%2CKAAK%2CYAAY%3BAAmDjB%2CKAAK%2CeAAe%3BAAgDpB%2CQAAQ%3BEA%2FSJ%2CyBAAA%3BEACA%2C0BAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA%2BRJ%3BEAEI%2CcAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAoEJ%2CCAAC%3BEAGG%2CkBAAA%3BEACA%2CWAAA%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3B%3BAAGJ%2CMAAO%2CIAAG%3BEACN%2CcAAA%3B%3BAAGJ%2CQAAS%2CIAAG%3BEACR%2CcAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA8IJ%3BEACI%2CcAAA%3BEACA%2CsBAAsB%2CwBAAtB%3BEACA%2CeAAA%3BEACA%2CkBAAA%3B%3BAAGJ%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAAAI%3BAACpB%3BAAAK%3BAAAK%3BAAAK%3BAAAK%3BAAAK%3BEACrB%2CaAAA%3BEAxEA%2CaAAa%2CgCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAA0EJ%3BAACA%3BEAII%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAII%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAII%2CkBAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEA%2FFI%2CaAAa%2CuCAAb%3BEACA%2CkBAAA%3BEACA%2CgBAAA%3BEAiGA%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BAACA%3BAACA%3BEArGI%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3BEAsGA%2CmBAAA%3BEACA%2CyBAAA%3B%3BAAGJ%3BAACA%3BEAGI%2C2BAAA%3BEACA%2CkBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BAACA%3BEAGI%2C2BAAA%3BEACA%2CiBAAA%3BEACA%2CuBAAA%3B%3BAAGJ%3BEA9HI%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3BEAmIA%2C2BAAA%3BEACA%2CcAAA%3BEACA%2CkBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAkBJ%3BAACA%3BAACA%3BAACA%3BAACA%3BAACA%3BAACA%3BEACI%2CaAAA%3BEACA%2CsBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA8BJ%3BEACI%2CsBAAA%3BEACA%2C2BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3BEACA%2CqBAAA%3B%3BAAEA%2CCAAC%3BAACD%2CCAAC%3BEACG%2C4BAAA%3BEACA%2CcAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3B%3BAAGJ%2CCAAC%3BAACD%2CCAAC%3BEACG%2C0BAAA%3BEACA%2C4BAAA%3BEACA%2CcAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAsER%2CCAKI%3BAAJJ%2CEAII%3BAAHJ%2CEAGI%3BEACI%2CwBAAA%3B%3BAAIR%2CGAAI%3BEAEA%2CsBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAiBJ%3BEACI%2CqBAAA%3BEACA%2C8BAAA%3BEACA%2CmBAAA%3BEApVA%2CaAAa%2CgCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAAqVA%2CUAAE%3BAACF%2CUAAE%3BEAlVF%2CaAAa%2CuCAAb%3BEACA%2CkBAAA%3BEACA%2CmBAAA%3B%3BAAoVA%2CUAAE%3BAACF%2CUAAE%3BEA3UF%2CaAAa%2CqCAAb%3BEACA%2CkBAAA%3BEACA%2CiBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAA8VJ%3BEACI%2CkBAAA%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3BAAoBJ%2COACI%3BAADJ%2COACQ%3BAADR%2COACY%3BAADZ%2COACgB%3BAADhB%2COACoB%3BAADpB%2COACwB%3BAADxB%2COAEI%2CWAAW%3BEACP%2C8BAAA%3B%3BAAHR%2COAMI%2CWAAW%3BEACP%2C6BAAA%22%7D */
