@@ -5,84 +5,155 @@
 
 
 /* topdoc
-    name: Form labels
+    name: Input validation styles
     family: cf-forms
     patterns:
-    - name: Default label
+    - name: Default state
+      codenotes:
+        - |
+          Structural cheat sheet:
+          -----------------------
+          .validator[data-state=""]
+          .validator[data-state=""]
+            .validator_icon.validator_icon__invalid
+            .validator_icon.validator_icon__valid
+            .validator_input
       notes:
-        - "Warning, this pattern is still under development."
+        - "Wrap an input with the .validator class, add all validation icons needed
+           and use the data-state attribute to toggle validation states."
       markup: |
-        <label>I am a form label</label>
-    tags:
-    - cf-forms
-*/
-
-label {
-    display: block;
-}
-
-
-/* topdoc
-    name: Single-line text input
-    notes:
-      - Most other text-based inputs extend styles from here as seen in the CSS to the right.
-    family: cf-forms
-    patterns:
-    - name: Default single-line text input
-      markup: |
-        <input placeholder="placeholder text" type="text" value="">
-    - name: Focused state
-      markup: |
-        <input class="focus" placeholder="placeholder text" type="text" value="">
+        <div class="validator" data-state="">
+            <span class="validator_icon validator_icon__invalid cf-icon cf-icon-delete-round"
+                  role="alert">
+                <span class="u-visually-hidden">
+                    Invalid
+                </span>
+            </span>
+            <span class="validator_icon validator_icon__valid cf-icon cf-icon-approved-round"
+                  role="alert">
+                <span class="u-visually-hidden">
+                    Valid
+                </span>
+            </span>
+            <input class="validator_input"
+                   placeholder="placeholder text"
+                   type="text"
+                   value="Default input">
+        </div>
     - name: Error state
+      codenotes:
+        - |
+          .validator[data-state="invalid"]
       notes:
-        - Please review the notes on form input error icons in the form icons section below.
+        - "Simply set the data-state attribute to 'invalid' and the input will
+           style appropriately and the .validator_icon__invalid icon will become
+           visible."
       markup: |
-        <input class="error" placeholder="placeholder text" type="text" value="Invalid input">
-        <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
+        <div class="validator" data-state="invalid">
+            <span class="validator_icon validator_icon__invalid cf-icon cf-icon-delete-round"
+                  role="alert">
+                <span class="u-visually-hidden">
+                    Invalid
+                </span>
+            </span>
+            <span class="validator_icon validator_icon__valid cf-icon cf-icon-approved-round"
+                  role="alert">
+                <span class="u-visually-hidden">
+                    Valid
+                </span>
+            </span>
+            <input class="validator_input"
+                   placeholder="placeholder text"
+                   type="text"
+                   value="Invalid input">
+        </div>
     - name: Success state
+      codenotes:
+        - |
+          .validator[data-state="valid"]
       notes:
-        - Please review the notes on form input success icons in the form icons section below.
+        - "Simply set the data-state attribute to 'valid' and the input will
+           style appropriately and the .validator_icon__valid icon will become
+           visible."
       markup: |
-        <input class="success" placeholder="placeholder text" type="text" value="Validated input">
-        <span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
+        <div class="validator" data-state="valid">
+            <span class="validator_icon validator_icon__invalid cf-icon cf-icon-delete-round"
+                  role="alert">
+                <span class="u-visually-hidden">
+                    Invalid
+                </span>
+            </span>
+            <span class="validator_icon validator_icon__valid cf-icon cf-icon-approved-round"
+                  role="alert">
+                <span class="u-visually-hidden">
+                    Valid
+                </span>
+            </span>
+            <input class="validator_input"
+                   placeholder="placeholder text"
+                   type="text"
+                   value="Valid input">
+        </div>
     tags:
     - cf-forms
 */
 
-input[type="text"] {
-    @font-size: 16px;
+.validator {
+    @icon-font-size: 20px;
 
     display: inline-block;
-    width: 85%; // 85% leaves room for .error and .success icons
-    margin: 0;
-    padding: unit( 4 / @base-font-size-px, em );
-    font-family: Arial, sans-serif;
-    font-size: unit( @font-size / @base-font-size-px, em );
-    background: @white;
-    border: 1px solid @gray;
-    border-radius: 0;
-    vertical-align: top;
-    -webkit-appearance: none;
-    -webkit-user-modify: read-write-plaintext-only;
+    position: relative;
+    padding-right: unit((@icon-font-size + 20px) / @base-font-size-px, em);
+
+    &_input {
+        width: 100%;
+    }
+
+    &_icon {
+        display: none !important;
+        position: absolute;
+        top: unit(4px / @icon-font-size, em);
+        right: 0;
+        font-size: unit(@icon-font-size / @base-font-size-px, em);
+    }
 }
 
-input[type="text"]:focus,
-input[type="text"].focus {
-    // Class included for static state examples
-    border: 1px solid @pacific;
-    border-color: @pacific;
-    outline: 1px solid @pacific;
-    outline-offset: 0;
-    box-shadow: none;
+.validator[data-state="invalid"] {
+    .validator_input {
+        border: 1px solid @redorange;
+        outline: 1px solid @redorange;
+    }
+    .validator_icon__invalid {
+        display: inline !important;
+        color: @redorange;
+    }
 }
 
-input[type="text"].error {
-    border: 1px solid @redorange;
-    outline: 1px solid @redorange;
+.validator[data-state="valid"] {
+    .validator_input {
+        border: 1px solid @green;
+        outline: 1px solid @green;
+    }
+    .validator_icon__valid {
+        display: inline !important;
+        color: @green;
+    }
 }
 
-input[type="text"].success {
+.is-invalid {
+    &,
+    input[type="text"]&,
+    input[type="search"]&,
+    input[type="email"]&,
+    input[type="url"]&,
+    input[type="tel"]&,
+    input[type="number"]& {
+        border: 1px solid @redorange;
+        outline: 1px solid @redorange;
+    }
+}
+
+.input__success {
     border: 1px solid @green;
     outline: 1px solid @green;
 }
@@ -102,7 +173,7 @@ input[type="text"].success {
       notes:
         - Please review the notes on form input error icons in the form icons section below.
       markup: |
-        <input class="error" placeholder="placeholder search text" type="search" value="Invalid input">
+        <input class="is-invalid" placeholder="placeholder search text" type="search" value="Invalid input">
         <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
     - name: Success state
       notes:
@@ -149,7 +220,7 @@ input[type="search"].success {
       notes:
         - Please review the notes on form input error icons in the form icons section below.
       markup: |
-        <input class="error" placeholder="placeholder email text" type="email" value="Invalid input">
+        <input class="is-invalid" placeholder="placeholder email text" type="email" value="Invalid input">
         <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
     - name: Success state
       notes:
@@ -196,7 +267,7 @@ input[type="email"].success {
       notes:
         - Please review the notes on form input error icons in the form icons section below.
       markup: |
-        <input class="error" placeholder="placeholder url text" type="url" value="Invalid input">
+        <input class="is-invalid" placeholder="placeholder url text" type="url" value="Invalid input">
         <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
     - name: Success state
       notes:
@@ -243,7 +314,7 @@ input[type="url"].success {
       notes:
         - Please review the notes on form input error icons in the form icons section below.
       markup: |
-        <input class="error" placeholder="placeholder tel text" type="tel" value="Invalid input">
+        <input class="is-invalid" placeholder="placeholder tel text" type="tel" value="Invalid input">
         <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
     - name: Success state
       notes:
@@ -290,7 +361,7 @@ input[type="tel"].success {
       notes:
         - Please review the notes on form input error icons in the form icons section below.
       markup: |
-        <input class="error" placeholder="placeholder number text" type="number" value="Invalid input">
+        <input class="is-invalid" placeholder="placeholder number text" type="number" value="Invalid input">
         <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
     - name: Success state
       notes:
@@ -337,7 +408,7 @@ input[type="number"].success {
       notes:
         - Please review the notes on form input error icons in the form icons section below.
       markup: |
-        <textarea class="error">Invalid input</textarea>
+        <textarea class="is-invalid">Invalid input</textarea>
         <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
     - name: Multi-line text box in success state
       notes:
@@ -390,7 +461,7 @@ textarea.success {
           and the input must have the class of "error".
         - 'Use the alert role to mark invalid fields: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role'
       markup: |
-        <input class="error" placeholder="placeholder search text" type="search" value="Invalid input">
+        <input class="is-invalid" placeholder="placeholder search text" type="search" value="Invalid input">
         <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
     - name: Form input success icon
       notes:

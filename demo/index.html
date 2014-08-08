@@ -14,34 +14,71 @@
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
   </head>
   <body style="padding:4px;">
-    <div id="form-labels">
+    <div id="input-validation-styles">
       <div>
         <div>
-<label>I am a form label</label>
+<div class="validator" data-state="">
+    <span class="validator_icon validator_icon__invalid cf-icon cf-icon-delete-round"
+          role="alert">
+        <span class="u-visually-hidden">
+            Invalid
+        </span>
+    </span>
+    <span class="validator_icon validator_icon__valid cf-icon cf-icon-approved-round"
+          role="alert">
+        <span class="u-visually-hidden">
+            Valid
+        </span>
+    </span>
+    <input class="validator_input"
+           placeholder="placeholder text"
+           type="text"
+           value="Default input">
+</div>
 </div><br>
       </div>
-    </div>
-    <div id="single-line-text-input">
       <div>
         <div>
-<input placeholder="placeholder text" type="text" value="">
+<div class="validator" data-state="invalid">
+    <span class="validator_icon validator_icon__invalid cf-icon cf-icon-delete-round"
+          role="alert">
+        <span class="u-visually-hidden">
+            Invalid
+        </span>
+    </span>
+    <span class="validator_icon validator_icon__valid cf-icon cf-icon-approved-round"
+          role="alert">
+        <span class="u-visually-hidden">
+            Valid
+        </span>
+    </span>
+    <input class="validator_input"
+           placeholder="placeholder text"
+           type="text"
+           value="Invalid input">
+</div>
 </div><br>
       </div>
       <div>
         <div>
-<input class="focus" placeholder="placeholder text" type="text" value="">
-</div><br>
-      </div>
-      <div>
-        <div>
-<input class="error" placeholder="placeholder text" type="text" value="Invalid input">
-<span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
-</div><br>
-      </div>
-      <div>
-        <div>
-<input class="success" placeholder="placeholder text" type="text" value="Validated input">
-<span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
+<div class="validator" data-state="valid">
+    <span class="validator_icon validator_icon__invalid cf-icon cf-icon-delete-round"
+          role="alert">
+        <span class="u-visually-hidden">
+            Invalid
+        </span>
+    </span>
+    <span class="validator_icon validator_icon__valid cf-icon cf-icon-approved-round"
+          role="alert">
+        <span class="u-visually-hidden">
+            Valid
+        </span>
+    </span>
+    <input class="validator_input"
+           placeholder="placeholder text"
+           type="text"
+           value="Valid input">
+</div>
 </div><br>
       </div>
     </div>
@@ -58,7 +95,7 @@
       </div>
       <div>
         <div>
-<input class="error" placeholder="placeholder search text" type="search" value="Invalid input">
+<input class="is-invalid" placeholder="placeholder search text" type="search" value="Invalid input">
 <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
 </div><br>
       </div>
@@ -82,7 +119,7 @@
       </div>
       <div>
         <div>
-<input class="error" placeholder="placeholder email text" type="email" value="Invalid input">
+<input class="is-invalid" placeholder="placeholder email text" type="email" value="Invalid input">
 <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
 </div><br>
       </div>
@@ -106,7 +143,7 @@
       </div>
       <div>
         <div>
-<input class="error" placeholder="placeholder url text" type="url" value="Invalid input">
+<input class="is-invalid" placeholder="placeholder url text" type="url" value="Invalid input">
 <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
 </div><br>
       </div>
@@ -130,7 +167,7 @@
       </div>
       <div>
         <div>
-<input class="error" placeholder="placeholder tel text" type="tel" value="Invalid input">
+<input class="is-invalid" placeholder="placeholder tel text" type="tel" value="Invalid input">
 <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
 </div><br>
       </div>
@@ -154,7 +191,7 @@
       </div>
       <div>
         <div>
-<input class="error" placeholder="placeholder number text" type="number" value="Invalid input">
+<input class="is-invalid" placeholder="placeholder number text" type="number" value="Invalid input">
 <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
 </div><br>
       </div>
@@ -178,7 +215,7 @@
       </div>
       <div>
         <div>
-<textarea class="error">Invalid input</textarea>
+<textarea class="is-invalid">Invalid input</textarea>
 <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
 </div><br>
       </div>
@@ -198,7 +235,7 @@
       </div>
       <div>
         <div>
-<input class="error" placeholder="placeholder search text" type="search" value="Invalid input">
+<input class="is-invalid" placeholder="placeholder search text" type="search" value="Invalid input">
 <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
 </div><br>
       </div>
