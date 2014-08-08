@@ -17,11 +17,8 @@
   "license": "https://github.com/cfpb/cf-forms/blob/gh-pages/TERMS.md",
   "main": "src/cf-forms.less",
   "dependencies": {
-    "cf-colors": "git://github.com/cfpb/cf-colors.git",
-    "cf-icons": "git://github.com/cfpb/cf-icons.git",
-    "cf-typography": "git://github.com/cfpb/cf-typography.git",
-    "normalize-css": "~3.0.0",
-    "normalize-legacy-addon": "git://github.com/cfpb/normalize-legacy-addon.git#0.1.0"
+    "cf-core": "git://github.com/cfpb/cf-core.git",
+    "cf-icons": "git://github.com/cfpb/cf-icons.git"
   },
   "exportsOverride": {
     "cf-*": {
