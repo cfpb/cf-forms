@@ -15,567 +15,66 @@
       <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-forms docs
       </h1><a href="https://github.com/cfpb/cf-forms" class="docs-repo">view the repository</a>
     </div>
-    <div id="input-validation-styles" class="docs-component">
-      <h2 class="docs-component_header"><span>Input validation styles</span></h2>
+    <div id="input-states" class="docs-component">
+      <h2 class="docs-component_header"><span>Input states</span></h2>
       <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Default state</h3>
-          <section class="docs-pattern_pattern">
-<div class="form-field" data-state="">
-    <span class="form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round"
-          role="alert">
-        <span class="u-visually-hidden">
-            Invalid
-        </span>
-    </span>
-    <span class="form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round"
-          role="alert">
-        <span class="u-visually-hidden">
-            Valid
-        </span>
-    </span>
-    <input class="form-field_input"
-           placeholder="placeholder text"
-           type="text"
-           value="Default input">
-</div>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-field&quot; data-state=&quot;&quot;&gt;
-    &lt;span class=&quot;form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round&quot;
-          role=&quot;alert&quot;&gt;
-        &lt;span class=&quot;u-visually-hidden&quot;&gt;
-            Invalid
-        &lt;/span&gt;
-    &lt;/span&gt;
-    &lt;span class=&quot;form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round&quot;
-          role=&quot;alert&quot;&gt;
-        &lt;span class=&quot;u-visually-hidden&quot;&gt;
-            Valid
-        &lt;/span&gt;
-    &lt;/span&gt;
-    &lt;input class=&quot;form-field_input&quot;
-           placeholder=&quot;placeholder text&quot;
-           type=&quot;text&quot;
-           value=&quot;Default input&quot;&gt;
-&lt;/div&gt;</code></pre>
-            <ul class="docs-codenotes">
-              <li>
-                <pre class="docs-code"><code>Structural cheat sheet:
------------------------
-.form-field[data-state=&quot;&quot;]
-  .form-field_icon.form-field_icon__invalid
-  .form-field_icon.form-field_icon__valid
-  .form-field_input</code></pre>
-              </li>
-            </ul>
-            <ul class="docs-notes">
-              <li>Wrap an input with the .form-field class, add all validation icons needed and use the data-state attribute to toggle validation states.</li>
-            </ul>
-          </footer>
-        </div>
         <div class="docs-pattern">
           <h3 class="docs-pattern_header">Error state</h3>
           <section class="docs-pattern_pattern">
-<div class="form-field" data-state="invalid">
-    <span class="form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round"
-          role="alert">
-        <span class="u-visually-hidden">
-            Invalid
-        </span>
-    </span>
-    <span class="form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round"
-          role="alert">
-        <span class="u-visually-hidden">
-            Valid
-        </span>
-    </span>
-    <input class="form-field_input"
-           placeholder="placeholder text"
-           type="text"
-           value="Invalid input">
-</div>
+<input class="error" type="text" value="Invalid input">
 
           </section>
           <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-field&quot; data-state=&quot;invalid&quot;&gt;
-    &lt;span class=&quot;form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round&quot;
-          role=&quot;alert&quot;&gt;
-        &lt;span class=&quot;u-visually-hidden&quot;&gt;
-            Invalid
-        &lt;/span&gt;
-    &lt;/span&gt;
-    &lt;span class=&quot;form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round&quot;
-          role=&quot;alert&quot;&gt;
-        &lt;span class=&quot;u-visually-hidden&quot;&gt;
-            Valid
-        &lt;/span&gt;
-    &lt;/span&gt;
-    &lt;input class=&quot;form-field_input&quot;
-           placeholder=&quot;placeholder text&quot;
-           type=&quot;text&quot;
-           value=&quot;Invalid input&quot;&gt;
-&lt;/div&gt;</code></pre>
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;error&quot; type=&quot;text&quot; value=&quot;Invalid input&quot;&gt;</code></pre>
             <ul class="docs-codenotes">
               <li>
-                <pre class="docs-code"><code>.form-field[data-state=&quot;invalid&quot;]</code></pre>
+                <pre class="docs-code"><code>.error</code></pre>
               </li>
             </ul>
             <ul class="docs-notes">
-              <li>Simply set the data-state attribute to 'invalid' and the input will style appropriately and the .form-field_icon__invalid icon will become visible.</li>
+              <li>See the 'Form icons' section below for guidance on adding icons to states.</li>
             </ul>
           </footer>
         </div>
         <div class="docs-pattern">
           <h3 class="docs-pattern_header">Success state</h3>
           <section class="docs-pattern_pattern">
-<div class="form-field" data-state="valid">
-    <span class="form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round"
-          role="alert">
-        <span class="u-visually-hidden">
-            Invalid
-        </span>
-    </span>
-    <span class="form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round"
-          role="alert">
-        <span class="u-visually-hidden">
-            Valid
-        </span>
-    </span>
-    <input class="form-field_input"
-           placeholder="placeholder text"
-           type="text"
-           value="Valid input">
-</div>
+<input class="success" type="text" value="Validated input">
 
           </section>
           <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-field&quot; data-state=&quot;valid&quot;&gt;
-    &lt;span class=&quot;form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round&quot;
-          role=&quot;alert&quot;&gt;
-        &lt;span class=&quot;u-visually-hidden&quot;&gt;
-            Invalid
-        &lt;/span&gt;
-    &lt;/span&gt;
-    &lt;span class=&quot;form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round&quot;
-          role=&quot;alert&quot;&gt;
-        &lt;span class=&quot;u-visually-hidden&quot;&gt;
-            Valid
-        &lt;/span&gt;
-    &lt;/span&gt;
-    &lt;input class=&quot;form-field_input&quot;
-           placeholder=&quot;placeholder text&quot;
-           type=&quot;text&quot;
-           value=&quot;Valid input&quot;&gt;
-&lt;/div&gt;</code></pre>
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;success&quot; type=&quot;text&quot; value=&quot;Validated input&quot;&gt;</code></pre>
             <ul class="docs-codenotes">
               <li>
-                <pre class="docs-code"><code>.form-field[data-state=&quot;valid&quot;]</code></pre>
+                <pre class="docs-code"><code>.success</code></pre>
               </li>
             </ul>
             <ul class="docs-notes">
-              <li>Simply set the data-state attribute to 'valid' and the input will style appropriately and the .form-field_icon__valid icon will become visible.</li>
+              <li>See the 'Form icons' section below for guidance on adding icons to states.</li>
             </ul>
           </footer>
         </div>
       </div>
       <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">.form-field {
-  display: inline-block;
-  position: relative;
-  padding-right: 2.5em;
-}
-.form-field_input {
-  width: 100%;
-}
-.form-field_icon {
-  display: none !important;
-  position: absolute;
-  top: 0.2em;
-  right: 0;
-  font-size: 1.25em;
-}
-.form-field[data-state=&quot;valid&quot;] .form-field_input {
-  border: 1px solid #2cb34a;
-  outline: 1px solid #2cb34a;
-}
-.form-field[data-state=&quot;valid&quot;] .form-field_icon__valid {
-  display: inline !important;
-  color: #2cb34a;
-}
-.form-field[data-state=&quot;invalid&quot;] .form-field_input {
+        <pre class="docs-code"><code data-language="css">input[type=&quot;text&quot;].error,
+input[type=&quot;search&quot;].error,
+input[type=&quot;email&quot;].error,
+input[type=&quot;url&quot;].error,
+input[type=&quot;tel&quot;].error,
+input[type=&quot;number&quot;].error,
+textarea.error {
   border: 1px solid #d12124;
   outline: 1px solid #d12124;
 }
-.form-field[data-state=&quot;invalid&quot;] .form-field_icon__invalid {
-  display: inline !important;
-  color: #d12124;
-}
-.is-invalid,
-input[type=&quot;text&quot;].is-invalid,
-input[type=&quot;search&quot;].is-invalid,
-input[type=&quot;email&quot;].is-invalid,
-input[type=&quot;url&quot;].is-invalid,
-input[type=&quot;tel&quot;].is-invalid,
-input[type=&quot;number&quot;].is-invalid {
-  border: 1px solid #d12124;
-  outline: 1px solid #d12124;
-}
-.input__success {
+input[type=&quot;text&quot;].success,
+input[type=&quot;search&quot;].success,
+input[type=&quot;email&quot;].success,
+input[type=&quot;url&quot;].success,
+input[type=&quot;tel&quot;].success,
+input[type=&quot;number&quot;].success,
+textarea.success {
   border: 1px solid #2cb34a;
   outline: 1px solid #2cb34a;
-}</code></pre>
-      </div>
-    </div>
-    <div id="single-line-search-input" class="docs-component">
-      <h2 class="docs-component_header"><span>Single-line search input</span></h2>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Default single-line search input</h3>
-          <section class="docs-pattern_pattern">
-<input placeholder="placeholder search text" type="search" value="">
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;&quot;&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Focused state</h3>
-          <section class="docs-pattern_pattern">
-<input class="focus" placeholder="placeholder search text" type="search" value="">
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;&quot;&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Error state</h3>
-          <section class="docs-pattern_pattern">
-<input class="is-invalid" placeholder="placeholder search text" type="search" value="Invalid input">
-<span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;is-invalid&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;Invalid input&quot;&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-delete-round&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input error icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Success state</h3>
-          <section class="docs-pattern_pattern">
-<input class="success" placeholder="placeholder search text" type="search" value="Validated input">
-<span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;Validated input&quot;&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-approved-round&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input success icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">/* NOTE: all input[type=&quot;search&quot;] styles extend input[type=&quot;text&quot;]. */</code></pre>
-      </div>
-    </div>
-    <div id="single-line-email-input" class="docs-component">
-      <h2 class="docs-component_header"><span>Single-line email input</span></h2>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Default single-line email input</h3>
-          <section class="docs-pattern_pattern">
-<input placeholder="placeholder email text" type="email" value="">
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;&quot;&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Focused state</h3>
-          <section class="docs-pattern_pattern">
-<input class="focus" placeholder="placeholder email text" type="email" value="">
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;&quot;&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Error state</h3>
-          <section class="docs-pattern_pattern">
-<input class="is-invalid" placeholder="placeholder email text" type="email" value="Invalid input">
-<span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;is-invalid&quot; placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;Invalid input&quot;&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-delete-round&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input error icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Success state</h3>
-          <section class="docs-pattern_pattern">
-<input class="success" placeholder="placeholder email text" type="email" value="Validated input">
-<span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;Validated input&quot;&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-approved-round&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input success icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">/* NOTE: all input[type=&quot;email&quot;] styles extend input[type=&quot;text&quot;]. */</code></pre>
-      </div>
-    </div>
-    <div id="single-line-url-input" class="docs-component">
-      <h2 class="docs-component_header"><span>Single-line url input</span></h2>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Default single-line url input</h3>
-          <section class="docs-pattern_pattern">
-<input placeholder="placeholder url text" type="url" value="">
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;&quot;&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Focused state</h3>
-          <section class="docs-pattern_pattern">
-<input class="focus" placeholder="placeholder url text" type="url" value="">
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;&quot;&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Error state</h3>
-          <section class="docs-pattern_pattern">
-<input class="is-invalid" placeholder="placeholder url text" type="url" value="Invalid input">
-<span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;is-invalid&quot; placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;Invalid input&quot;&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-delete-round&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input error icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Success state</h3>
-          <section class="docs-pattern_pattern">
-<input class="success" placeholder="placeholder url text" type="url" value="Validated input">
-<span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;Validated input&quot;&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-approved-round&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input success icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">/* NOTE: all input[type=&quot;url&quot;] styles extend input[type=&quot;text&quot;]. */</code></pre>
-      </div>
-    </div>
-    <div id="single-line-tel-input" class="docs-component">
-      <h2 class="docs-component_header"><span>Single-line tel input</span></h2>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Default single-line tel input</h3>
-          <section class="docs-pattern_pattern">
-<input placeholder="placeholder tel text" type="tel" value="">
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;&quot;&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Focused state</h3>
-          <section class="docs-pattern_pattern">
-<input class="focus" placeholder="placeholder tel text" type="tel" value="">
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;&quot;&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Error state</h3>
-          <section class="docs-pattern_pattern">
-<input class="is-invalid" placeholder="placeholder tel text" type="tel" value="Invalid input">
-<span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;is-invalid&quot; placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;Invalid input&quot;&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-delete-round&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input error icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Success state</h3>
-          <section class="docs-pattern_pattern">
-<input class="success" placeholder="placeholder tel text" type="tel" value="Validated input">
-<span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;Validated input&quot;&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-approved-round&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input success icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">/* NOTE: all input[type=&quot;tel&quot;] styles extend input[type=&quot;text&quot;]. */</code></pre>
-      </div>
-    </div>
-    <div id="single-line-number-input" class="docs-component">
-      <h2 class="docs-component_header"><span>Single-line number input</span></h2>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Default single-line number input</h3>
-          <section class="docs-pattern_pattern">
-<input placeholder="placeholder number text" type="number" value="">
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;&quot;&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Focused state</h3>
-          <section class="docs-pattern_pattern">
-<input class="focus" placeholder="placeholder number text" type="number" value="">
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;&quot;&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Error state</h3>
-          <section class="docs-pattern_pattern">
-<input class="is-invalid" placeholder="placeholder number text" type="number" value="Invalid input">
-<span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;is-invalid&quot; placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;Invalid input&quot;&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-delete-round&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input error icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Success state</h3>
-          <section class="docs-pattern_pattern">
-<input class="success" placeholder="placeholder number text" type="number" value="Validated input">
-<span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;Validated input&quot;&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-approved-round&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input success icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">/* NOTE: all input[type=&quot;number&quot;] styles extend input[type=&quot;text&quot;]. */</code></pre>
-      </div>
-    </div>
-    <div id="multiline-textarea" class="docs-component">
-      <h2 class="docs-component_header"><span>Multiline textarea</span></h2>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Default multi-line text box</h3>
-          <section class="docs-pattern_pattern">
-<textarea>Example entry</textarea>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;textarea&gt;Example entry&lt;/textarea&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Focused multi-line text box</h3>
-          <section class="docs-pattern_pattern">
-<textarea class="focus">Example entry</textarea>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;textarea class=&quot;focus&quot;&gt;Example entry&lt;/textarea&gt;</code></pre>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Multi-line text box in error state</h3>
-          <section class="docs-pattern_pattern">
-<textarea class="is-invalid">Invalid input</textarea>
-<span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;textarea class=&quot;is-invalid&quot;&gt;Invalid input&lt;/textarea&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-delete-round&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input error icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Multi-line text box in success state</h3>
-          <section class="docs-pattern_pattern">
-<textarea class="success">Validated input</textarea>
-<span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;textarea class=&quot;success&quot;&gt;Validated input&lt;/textarea&gt;
-&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-approved-round&quot;&gt;&lt;/span&gt;</code></pre>
-            <ul class="docs-notes">
-              <li>Please review the notes on form input success icons in the form icons section below.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">/* NOTE: all textarea styles extend input[type=&quot;text&quot;]. */
-textarea {
-  overflow: auto;
 }</code></pre>
       </div>
     </div>
@@ -593,45 +92,39 @@ textarea {
             <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input type=&quot;text&quot; value=&quot;&quot;&gt;
 &lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-email&quot;&gt;&lt;/span&gt;</code></pre>
             <ul class="docs-notes">
-              <li>Form input icons add small positioning tweaks to Cappital Framework icons.</li>
-              <li>They are meant to be positioned after a form input.</li>
+              <li>Form input icons add small positioning tweaks to Capital Framework icons.</li>
             </ul>
           </footer>
         </div>
         <div class="docs-pattern">
           <h3 class="docs-pattern_header">Form input error icon</h3>
           <section class="docs-pattern_pattern">
-<input class="is-invalid" placeholder="placeholder search text" type="search" value="Invalid input">
+<input class="error" type="text" value="Invalid input">
 <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
 
           </section>
           <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;is-invalid&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;Invalid input&quot;&gt;
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;error&quot; type=&quot;text&quot; value=&quot;Invalid input&quot;&gt;
 &lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-delete-round&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;</code></pre>
             <ul class="docs-notes">
-              <li>
-The icon must be placed directly after the form input in the markup
-and the input must have the class of &quot;error&quot;.
-</li>
-              <li>Use the alert role to mark invalid fields: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role</li>
+              <li>The icon must be placed directly after the form input in the markup and the input must use the 'error' class.</li>
+              <li>For invalid fields only use the alert role to call attention to fields that need immediate attention: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role</li>
             </ul>
           </footer>
         </div>
         <div class="docs-pattern">
           <h3 class="docs-pattern_header">Form input success icon</h3>
           <section class="docs-pattern_pattern">
-<input class="success" placeholder="placeholder search text" type="search" value="Validated input">
+<input class="success" type="text" value="Validated input">
 <span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
 
           </section>
           <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;Validated input&quot;&gt;
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;success&quot; type=&quot;text&quot; value=&quot;Validated input&quot;&gt;
 &lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-approved-round&quot;&gt;&lt;/span&gt;</code></pre>
             <ul class="docs-notes">
-              <li>
-The icon must be placed directly after the form input in the markup
-and the input must have the class of &quot;success&quot;.
-</li>
+              <li>The icon must be placed directly after the form input in the markup and the input must use the 'error' class.</li>
+              <li>For valid inputs only use the alert role to indicate that a previously invalid input is now valid: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role</li>
             </ul>
           </footer>
         </div>
