@@ -15,6 +15,149 @@
       <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-forms docs
       </h1><a href="https://github.com/cfpb/cf-forms" class="docs-repo">view the repository</a>
     </div>
+    <div id="form-labels" class="docs-component">
+      <h2 class="docs-component_header"><span>Form labels</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Label header</h3>
+          <section class="docs-pattern_pattern">
+<label class="form-label-header">
+    Form label header
+</label>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;label class=&quot;form-label-header&quot;&gt;
+    Form label header
+&lt;/label&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Normal label</h3>
+          <section class="docs-pattern_pattern">
+<label class="form-label">
+    Form label
+</label>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;label class=&quot;form-label&quot;&gt;
+    Form label
+&lt;/label&gt;</code></pre>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Form element nested within a label</h3>
+          <section class="docs-pattern_pattern">
+<label class="form-label">
+    <input type="checkbox">
+    Form label
+</label>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;label class=&quot;form-label&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+    Form label
+&lt;/label&gt;</code></pre>
+            <ul class="docs-notes">
+              <li>When nesting a form input the input will receive a right margin to space it from the label text.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.form-label {
+  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 0.3125em;
+}
+.form-label em,
+.form-label i {
+  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .form-label em,
+.lt-ie9 .form-label i {
+  font-style: normal !important;
+}
+.lt-ie9 .form-label em,
+.lt-ie9 .form-label i {
+  font-style: normal !important;
+}
+.form-label strong,
+.form-label b {
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .form-label strong,
+.lt-ie9 .form-label b {
+  font-weight: normal !important;
+}
+.lt-ie9 .form-label strong,
+.lt-ie9 .form-label b {
+  font-weight: normal !important;
+}
+.form-label em,
+.form-label i {
+  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .form-label em,
+.lt-ie9 .form-label i {
+  font-style: normal !important;
+}
+.lt-ie9 .form-label em,
+.lt-ie9 .form-label i {
+  font-style: normal !important;
+}
+.form-label strong,
+.form-label b {
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .form-label strong,
+.lt-ie9 .form-label b {
+  font-weight: normal !important;
+}
+.lt-ie9 .form-label strong,
+.lt-ie9 .form-label b {
+  font-weight: normal !important;
+}
+.form-label input {
+  margin-right: 0.375em;
+}
+.form-label-header {
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.35714286em;
+  font-size: 0.875em;
+  line-height: 1.57142857;
+  margin-bottom: 0.71428571em;
+}
+.lt-ie9 .form-label-header {
+  font-weight: normal !important;
+}
+.lt-ie9 .form-label-header {
+  font-weight: normal !important;
+}
+.lt-ie9 .form-label-header {
+  font-weight: normal !important;
+}
+.lt-ie9 .form-label-header {
+  font-weight: normal !important;
+}</code></pre>
+      </div>
+    </div>
     <div id="input-states" class="docs-component">
       <h2 class="docs-component_header"><span>Input states</span></h2>
       <div class="docs-patterns">
@@ -143,6 +286,252 @@ textarea.success {
 }
 .success + .cf-form_input-icon {
   color: #2cb34a;
+}</code></pre>
+      </div>
+    </div>
+    <div id="form-input-groups" class="docs-component">
+      <h2 class="docs-component_header"><span>Form input groups</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Horizontal inputs</h3>
+          <section class="docs-pattern_pattern">
+<div class="input-group">
+    <input class="input-group_item" type="text">
+    <input class="input-group_item" type="text">
+</div>
+<br>
+<br>
+<div class="input-group">
+    <select class="input-group_item">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+    </select>
+    <select class="input-group_item">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+        <option value="option4">Option 4</option>
+    </select>
+</div>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;input-group&quot;&gt;
+    &lt;input class=&quot;input-group_item&quot; type=&quot;text&quot;&gt;
+    &lt;input class=&quot;input-group_item&quot; type=&quot;text&quot;&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;div class=&quot;input-group&quot;&gt;
+    &lt;select class=&quot;input-group_item&quot;&gt;
+        &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
+        &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;select class=&quot;input-group_item&quot;&gt;
+        &lt;option value=&quot;option1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;
+        &lt;option value=&quot;option4&quot;&gt;Option 4&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;</code></pre>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.input-group_item,
+.input-group_item[type=&quot;text&quot;] {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+  position: relative;
+  z-index: 1;
+}
+.input-group_item + .input-group_item,
+.input-group_item + .input-group_item[type=&quot;text&quot;],
+.input-group_item[type=&quot;text&quot;] + .input-group_item,
+.input-group_item[type=&quot;text&quot;] + .input-group_item[type=&quot;text&quot;] {
+  margin-left: -0.3125em;
+}
+.input-group_item:focus,
+.input-group_item[type=&quot;text&quot;]:focus {
+  z-index: 2;
+}</code></pre>
+      </div>
+    </div>
+    <div id="form-group" class="docs-component">
+      <h2 class="docs-component_header"><span>Form group</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-codenotes">
+          <li>
+            <pre class="docs-code"><code>Pattern structure
+-----------------
+.form-group
+  .form-group_item</code></pre>
+          </li>
+        </ul>
+        <ul class="docs-notes">
+          <li>A form group is recommended when you need to provide spacing between form elements and between groups of form elements.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">.form-group (block)</h3>
+          <section class="docs-pattern_pattern">
+<div class="form-group">
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+</div>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.form-group</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Provides sizeable margins between groups of form elements.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">.form-group_item (element)</h3>
+          <section class="docs-pattern_pattern">
+<div class="form-group_item">
+    <input type="text">
+</div>
+<div class="form-group_item">
+    <input type="text">
+</div>
+<div class="form-group_item">
+    <input type="text">
+</div>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-group_item&quot;&gt;
+    &lt;input type=&quot;text&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group_item&quot;&gt;
+    &lt;input type=&quot;text&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group_item&quot;&gt;
+    &lt;input type=&quot;text&quot;&gt;
+&lt;/div&gt;</code></pre>
+            <ul class="docs-notes">
+              <li>Provides subtle margins between form elements within the same group.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Real world example</h3>
+          <section class="docs-pattern_pattern">
+<div class="form-group">
+    <label class="form-label-header">Form group</label>
+    <div class="form-group_item">
+        <label class="form-label">Form group item</label>
+        <input type="text">
+    </div>
+    <div class="form-group_item">
+        <label class="form-label">Form group item</label>
+        <input type="text">
+    </div>
+</div>
+<div class="form-group">
+    <label class="form-label-header">Form group</label>
+    <div class="form-group_item">
+        <label class="form-label">Form group item</label>
+        <input type="text">
+    </div>
+    <div class="form-group_item">
+        <label class="form-label">Form group item</label>
+        <input type="text">
+    </div>
+</div>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;form-label-header&quot;&gt;Form group&lt;/label&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;label class=&quot;form-label&quot;&gt;Form group item&lt;/label&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;label class=&quot;form-label&quot;&gt;Form group item&lt;/label&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;form-label-header&quot;&gt;Form group&lt;/label&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;label class=&quot;form-label&quot;&gt;Form group item&lt;/label&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;label class=&quot;form-label&quot;&gt;Form group item&lt;/label&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.form-group + .form-group {
+  margin-top: 1.875em;
+}
+.form-group_item {
+  margin-bottom: 0.9375em;
 }</code></pre>
       </div>
     </div>

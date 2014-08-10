@@ -5,6 +5,49 @@
 
 
 /* topdoc
+  name: Form labels
+  family: cf-forms
+  patterns:
+    - name: Label header
+      markup: |
+        <label class="form-label-header">
+            Form label header
+        </label>
+    - name: Normal label
+      markup: |
+        <label class="form-label">
+            Form label
+        </label>
+    - name: Form element nested within a label
+      markup: |
+        <label class="form-label">
+            <input type="checkbox">
+            Form label
+        </label>
+      notes:
+        - "When nesting a form input the input will receive a right margin to
+          space it from the label text."
+  tags:
+    - cf-forms
+*/
+
+.form-label {
+    .webfont-regular();
+    // 5px is eyeballed to 10px when considering line height.
+    margin-bottom: unit(5px / @base-font-size-px, em);
+
+    & input {
+        margin-right: unit(6px / @base-font-size-px, em);
+    }
+}
+
+.form-label-header {
+    .h5();
+    margin-bottom: unit(10px / @font-size, em);
+}
+
+
+/* topdoc
     name: Input states
     family: cf-forms
     patterns:
@@ -99,6 +142,154 @@ textarea {
 
 .success + .@{cf-forms_input-icon-class} {
     color: @green;
+}
+
+
+/* topdoc
+  name: Form input groups
+  family: cf-forms
+  patterns:
+    - name: Horizontal inputs
+      markup: |
+        <div class="input-group">
+            <input class="input-group_item" type="text">
+            <input class="input-group_item" type="text">
+        </div>
+        <br>
+        <br>
+        <div class="input-group">
+            <select class="input-group_item">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
+            <select class="input-group_item">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
+        </div>
+  tags:
+    - cf-forms
+*/
+
+.input-group {
+
+    &_item,
+    &_item[type="text"] {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 50%;
+        position: relative;
+        // Since an input-group_item can overlap another we need to use z-index
+        // is needed to allow the focused input to pop over unfocused inputs.
+        z-index: 1;
+
+        & + & {
+            margin-left: unit(-5px / @base-font-size-px, em);
+        }
+
+        &:focus {
+            z-index: 2;
+        }
+    }
+
+}
+
+
+/* topdoc
+  name: Form group
+  family: cf-forms
+  notes:
+    - "A form group is recommended when you need to provide spacing between form
+       elements and between groups of form elements."
+  codenotes:
+    - |
+      Pattern structure
+      -----------------
+      .form-group
+        .form-group_item
+  patterns:
+    - name: .form-group (block)
+      markup: |
+        <div class="form-group">
+            <div class="form-group_item">
+                <input type="text">
+            </div>
+            <div class="form-group_item">
+                <input type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group_item">
+                <input type="text">
+            </div>
+            <div class="form-group_item">
+                <input type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group_item">
+                <input type="text">
+            </div>
+            <div class="form-group_item">
+                <input type="text">
+            </div>
+        </div>
+      codenotes:
+        - |
+          .form-group
+      notes:
+        - "Provides sizeable margins between groups of form elements."
+    - name: .form-group_item (element)
+      markup: |
+        <div class="form-group_item">
+            <input type="text">
+        </div>
+        <div class="form-group_item">
+            <input type="text">
+        </div>
+        <div class="form-group_item">
+            <input type="text">
+        </div>
+      notes:
+        - "Provides subtle margins between form elements within the same group."
+    - name: Real world example
+      markup: |
+        <div class="form-group">
+            <label class="form-label-header">Form group</label>
+            <div class="form-group_item">
+                <label class="form-label">Form group item</label>
+                <input type="text">
+            </div>
+            <div class="form-group_item">
+                <label class="form-label">Form group item</label>
+                <input type="text">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label-header">Form group</label>
+            <div class="form-group_item">
+                <label class="form-label">Form group item</label>
+                <input type="text">
+            </div>
+            <div class="form-group_item">
+                <label class="form-label">Form group item</label>
+                <input type="text">
+            </div>
+        </div>
+  tags:
+    - cf-forms
+*/
+
+.form-group + .form-group {
+    margin-top: unit(30px / @base-font-size-px, em);
+}
+
+.form-group_item {
+    margin-bottom: unit(15px / @base-font-size-px, em);
 }
 
 
