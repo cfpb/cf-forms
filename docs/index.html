@@ -21,20 +21,20 @@
         <div class="docs-pattern">
           <h3 class="docs-pattern_header">Default state</h3>
           <section class="docs-pattern_pattern">
-<div class="validator" data-state="">
-    <span class="validator_icon validator_icon__invalid cf-icon cf-icon-delete-round"
+<div class="form-field" data-state="">
+    <span class="form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round"
           role="alert">
         <span class="u-visually-hidden">
             Invalid
         </span>
     </span>
-    <span class="validator_icon validator_icon__valid cf-icon cf-icon-approved-round"
+    <span class="form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round"
           role="alert">
         <span class="u-visually-hidden">
             Valid
         </span>
     </span>
-    <input class="validator_input"
+    <input class="form-field_input"
            placeholder="placeholder text"
            type="text"
            value="Default input">
@@ -42,20 +42,20 @@
 
           </section>
           <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;validator&quot; data-state=&quot;&quot;&gt;
-    &lt;span class=&quot;validator_icon validator_icon__invalid cf-icon cf-icon-delete-round&quot;
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-field&quot; data-state=&quot;&quot;&gt;
+    &lt;span class=&quot;form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round&quot;
           role=&quot;alert&quot;&gt;
         &lt;span class=&quot;u-visually-hidden&quot;&gt;
             Invalid
         &lt;/span&gt;
     &lt;/span&gt;
-    &lt;span class=&quot;validator_icon validator_icon__valid cf-icon cf-icon-approved-round&quot;
+    &lt;span class=&quot;form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round&quot;
           role=&quot;alert&quot;&gt;
         &lt;span class=&quot;u-visually-hidden&quot;&gt;
             Valid
         &lt;/span&gt;
     &lt;/span&gt;
-    &lt;input class=&quot;validator_input&quot;
+    &lt;input class=&quot;form-field_input&quot;
            placeholder=&quot;placeholder text&quot;
            type=&quot;text&quot;
            value=&quot;Default input&quot;&gt;
@@ -64,35 +64,34 @@
               <li>
                 <pre class="docs-code"><code>Structural cheat sheet:
 -----------------------
-.validator[data-state=&quot;&quot;]
-.validator[data-state=&quot;&quot;]
-  .validator_icon.validator_icon__invalid
-  .validator_icon.validator_icon__valid
-  .validator_input</code></pre>
+.form-field[data-state=&quot;&quot;]
+  .form-field_icon.form-field_icon__invalid
+  .form-field_icon.form-field_icon__valid
+  .form-field_input</code></pre>
               </li>
             </ul>
             <ul class="docs-notes">
-              <li>Wrap an input with the .validator class, add all validation icons needed and use the data-state attribute to toggle validation states.</li>
+              <li>Wrap an input with the .form-field class, add all validation icons needed and use the data-state attribute to toggle validation states.</li>
             </ul>
           </footer>
         </div>
         <div class="docs-pattern">
           <h3 class="docs-pattern_header">Error state</h3>
           <section class="docs-pattern_pattern">
-<div class="validator" data-state="invalid">
-    <span class="validator_icon validator_icon__invalid cf-icon cf-icon-delete-round"
+<div class="form-field" data-state="invalid">
+    <span class="form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round"
           role="alert">
         <span class="u-visually-hidden">
             Invalid
         </span>
     </span>
-    <span class="validator_icon validator_icon__valid cf-icon cf-icon-approved-round"
+    <span class="form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round"
           role="alert">
         <span class="u-visually-hidden">
             Valid
         </span>
     </span>
-    <input class="validator_input"
+    <input class="form-field_input"
            placeholder="placeholder text"
            type="text"
            value="Invalid input">
@@ -100,51 +99,51 @@
 
           </section>
           <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;validator&quot; data-state=&quot;invalid&quot;&gt;
-    &lt;span class=&quot;validator_icon validator_icon__invalid cf-icon cf-icon-delete-round&quot;
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-field&quot; data-state=&quot;invalid&quot;&gt;
+    &lt;span class=&quot;form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round&quot;
           role=&quot;alert&quot;&gt;
         &lt;span class=&quot;u-visually-hidden&quot;&gt;
             Invalid
         &lt;/span&gt;
     &lt;/span&gt;
-    &lt;span class=&quot;validator_icon validator_icon__valid cf-icon cf-icon-approved-round&quot;
+    &lt;span class=&quot;form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round&quot;
           role=&quot;alert&quot;&gt;
         &lt;span class=&quot;u-visually-hidden&quot;&gt;
             Valid
         &lt;/span&gt;
     &lt;/span&gt;
-    &lt;input class=&quot;validator_input&quot;
+    &lt;input class=&quot;form-field_input&quot;
            placeholder=&quot;placeholder text&quot;
            type=&quot;text&quot;
            value=&quot;Invalid input&quot;&gt;
 &lt;/div&gt;</code></pre>
             <ul class="docs-codenotes">
               <li>
-                <pre class="docs-code"><code>.validator[data-state=&quot;invalid&quot;]</code></pre>
+                <pre class="docs-code"><code>.form-field[data-state=&quot;invalid&quot;]</code></pre>
               </li>
             </ul>
             <ul class="docs-notes">
-              <li>Simply set the data-state attribute to 'invalid' and the input will style appropriately and the .validator_icon__invalid icon will become visible.</li>
+              <li>Simply set the data-state attribute to 'invalid' and the input will style appropriately and the .form-field_icon__invalid icon will become visible.</li>
             </ul>
           </footer>
         </div>
         <div class="docs-pattern">
           <h3 class="docs-pattern_header">Success state</h3>
           <section class="docs-pattern_pattern">
-<div class="validator" data-state="valid">
-    <span class="validator_icon validator_icon__invalid cf-icon cf-icon-delete-round"
+<div class="form-field" data-state="valid">
+    <span class="form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round"
           role="alert">
         <span class="u-visually-hidden">
             Invalid
         </span>
     </span>
-    <span class="validator_icon validator_icon__valid cf-icon cf-icon-approved-round"
+    <span class="form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round"
           role="alert">
         <span class="u-visually-hidden">
             Valid
         </span>
     </span>
-    <input class="validator_input"
+    <input class="form-field_input"
            placeholder="placeholder text"
            type="text"
            value="Valid input">
@@ -152,66 +151,66 @@
 
           </section>
           <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;validator&quot; data-state=&quot;valid&quot;&gt;
-    &lt;span class=&quot;validator_icon validator_icon__invalid cf-icon cf-icon-delete-round&quot;
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-field&quot; data-state=&quot;valid&quot;&gt;
+    &lt;span class=&quot;form-field_icon form-field_icon__invalid cf-icon cf-icon-delete-round&quot;
           role=&quot;alert&quot;&gt;
         &lt;span class=&quot;u-visually-hidden&quot;&gt;
             Invalid
         &lt;/span&gt;
     &lt;/span&gt;
-    &lt;span class=&quot;validator_icon validator_icon__valid cf-icon cf-icon-approved-round&quot;
+    &lt;span class=&quot;form-field_icon form-field_icon__valid cf-icon cf-icon-approved-round&quot;
           role=&quot;alert&quot;&gt;
         &lt;span class=&quot;u-visually-hidden&quot;&gt;
             Valid
         &lt;/span&gt;
     &lt;/span&gt;
-    &lt;input class=&quot;validator_input&quot;
+    &lt;input class=&quot;form-field_input&quot;
            placeholder=&quot;placeholder text&quot;
            type=&quot;text&quot;
            value=&quot;Valid input&quot;&gt;
 &lt;/div&gt;</code></pre>
             <ul class="docs-codenotes">
               <li>
-                <pre class="docs-code"><code>.validator[data-state=&quot;valid&quot;]</code></pre>
+                <pre class="docs-code"><code>.form-field[data-state=&quot;valid&quot;]</code></pre>
               </li>
             </ul>
             <ul class="docs-notes">
-              <li>Simply set the data-state attribute to 'valid' and the input will style appropriately and the .validator_icon__valid icon will become visible.</li>
+              <li>Simply set the data-state attribute to 'valid' and the input will style appropriately and the .form-field_icon__valid icon will become visible.</li>
             </ul>
           </footer>
         </div>
       </div>
       <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">.validator {
+        <pre class="docs-code"><code data-language="css">.form-field {
   display: inline-block;
   position: relative;
   padding-right: 2.5em;
 }
-.validator_input {
+.form-field_input {
   width: 100%;
 }
-.validator_icon {
+.form-field_icon {
   display: none !important;
   position: absolute;
   top: 0.2em;
   right: 0;
   font-size: 1.25em;
 }
-.validator[data-state=&quot;invalid&quot;] .validator_input {
-  border: 1px solid #d12124;
-  outline: 1px solid #d12124;
-}
-.validator[data-state=&quot;invalid&quot;] .validator_icon__invalid {
-  display: inline !important;
-  color: #d12124;
-}
-.validator[data-state=&quot;valid&quot;] .validator_input {
+.form-field[data-state=&quot;valid&quot;] .form-field_input {
   border: 1px solid #2cb34a;
   outline: 1px solid #2cb34a;
 }
-.validator[data-state=&quot;valid&quot;] .validator_icon__valid {
+.form-field[data-state=&quot;valid&quot;] .form-field_icon__valid {
   display: inline !important;
   color: #2cb34a;
+}
+.form-field[data-state=&quot;invalid&quot;] .form-field_input {
+  border: 1px solid #d12124;
+  outline: 1px solid #d12124;
+}
+.form-field[data-state=&quot;invalid&quot;] .form-field_icon__invalid {
+  display: inline !important;
+  color: #d12124;
 }
 .is-invalid,
 input[type=&quot;text&quot;].is-invalid,
