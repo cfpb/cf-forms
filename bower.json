@@ -1,6 +1,6 @@
 {
   "name": "cf-forms",
-  "version": "0.5.0",
+  "version": "1.0.0",
   "description": "Standard form input/textarea elements for Capital Framework.",
   "keywords": ["capital-framework", "capital", "forms", "less"],
   "authors": [
@@ -17,11 +17,8 @@
   "license": "https://github.com/cfpb/cf-forms/blob/gh-pages/TERMS.md",
   "main": "src/cf-forms.less",
   "dependencies": {
-    "cf-colors": "git://github.com/cfpb/cf-colors.git",
-    "cf-typography": "git://github.com/cfpb/cf-typography.git",
-    "font-awesome": "~3.2.1",
-    "normalize-css": "~3.0.0",
-    "normalize-legacy-addon": "git://github.com/cfpb/normalize-legacy-addon.git#0.1.0"
+    "cf-core": "git://github.com/cfpb/cf-core.git",
+    "cf-icons": "git://github.com/cfpb/cf-icons.git"
   },
   "exportsOverride": {
     "cf-*": {

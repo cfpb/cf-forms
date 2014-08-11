@@ -5,157 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>cf-forms docs</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="static/demo/demo.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic">
+    <link rel="stylesheet" type="text/css" href="static/docs/brackets.css">
+    <link rel="stylesheet" type="text/css" href="static/docs/docs.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <link rel="stylesheet" type="text/css" href="static/demo/brackets.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header class="demo_header">
-        <h1 class="h5">cf-forms docs</h1>
-      </header>
-      <ul class="demo-component-list">
-        <li id="form-labels" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Form labels</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default label</h3>
-                <ul class="demo_notes">
-                  <li>Warning, this pattern is still under development.</li>
-                </ul>
-              </header>
-              <section>
-<label>I am a form label</label>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;label&gt;I am a form label&lt;/label&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">label {
-  display: block;
+    <div class="docs-masthead">
+      <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-forms docs
+      </h1><a href="https://github.com/cfpb/cf-forms" class="docs-repo">view the repository</a>
+    </div>
+    <div id="form-labels" class="docs-component">
+      <h2 class="docs-component_header"><span>Form labels</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Label header</h3>
+          <section class="docs-pattern_pattern">
+<label class="form-label-header">
+    Form label header
+</label>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;label class=&quot;form-label-header&quot;&gt;
+    Form label header
+&lt;/label&gt;</code></pre>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.form-label-header {
+  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.35714286em;
+  font-size: 0.875em;
+  line-height: 1.57142857;
+  margin-bottom: 0.71428571em;
+}
+.lt-ie9 .form-label-header {
+  font-weight: normal !important;
+}
+.lt-ie9 .form-label-header {
+  font-weight: normal !important;
+}
+.lt-ie9 .form-label-header {
+  font-weight: normal !important;
+}
+.lt-ie9 .form-label-header {
+  font-weight: normal !important;
 }</code></pre>
-          </div>
-        </li>
-        <li id="single-line-text-input" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Single-line text input</h1>
-          <ul class="demo_notes">
-            <li>Most other text-based inputs extend styles from here as seen in the CSS to the right.</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default single-line text input</h3>
-              </header>
-              <section>
-<input placeholder="placeholder text" type="text" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input placeholder=&quot;placeholder text&quot; type=&quot;text&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused state</h3>
-              </header>
-              <section>
-<input class="focus" placeholder="placeholder text" type="text" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder text&quot; type=&quot;text&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Error state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input error icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="error" placeholder="placeholder text" type="text" value="Invalid input">
-<i class="cf-form_input-icon icon-remove-sign" role="alert">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;error&quot; placeholder=&quot;placeholder text&quot; type=&quot;text&quot; value=&quot;Invalid input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-remove-sign&quot; role=&quot;alert&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Success state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input success icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="success" placeholder="placeholder text" type="text" value="Validated input">
-<i class="cf-form_input-icon icon-ok-sign">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder text&quot; type=&quot;text&quot; value=&quot;Validated input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-ok-sign&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">input[type=&quot;text&quot;],
-input[type=&quot;search&quot;],
-input[type=&quot;email&quot;],
-input[type=&quot;url&quot;],
-input[type=&quot;tel&quot;],
-input[type=&quot;number&quot;],
-textarea {
-  display: inline-block;
-  width: 85%;
-  margin: 0;
-  padding: 0.25em;
-  font-family: Arial, sans-serif;
-  font-size: 1em;
-  background: #ffffff;
-  border: 1px solid #75787b;
-  border-radius: 0;
-  vertical-align: top;
-  -webkit-appearance: none;
-  -webkit-user-modify: read-write-plaintext-only;
-}
-input[type=&quot;text&quot;]:focus,
-input[type=&quot;text&quot;].focus,
-input[type=&quot;search&quot;]:focus,
-input[type=&quot;search&quot;].focus,
-input[type=&quot;email&quot;]:focus,
-input[type=&quot;email&quot;].focus,
-input[type=&quot;url&quot;]:focus,
-input[type=&quot;url&quot;].focus,
-input[type=&quot;tel&quot;]:focus,
-input[type=&quot;tel&quot;].focus,
-input[type=&quot;number&quot;]:focus,
-input[type=&quot;number&quot;].focus,
-textarea:focus,
-textarea.focus {
-  border: 1px solid #0072ce;
-  border-color: #0072ce;
-  outline: 1px solid #0072ce;
-  outline-offset: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-input[type=&quot;text&quot;].error,
+      </div>
+    </div>
+    <div id="input-states" class="docs-component">
+      <h2 class="docs-component_header"><span>Input states</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Error state</h3>
+          <section class="docs-pattern_pattern">
+<input class="error" type="text" value="Invalid input">
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;error&quot; type=&quot;text&quot; value=&quot;Invalid input&quot;&gt;</code></pre>
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.error</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>See the 'Form icons' section below for guidance on adding icons to states.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Success state</h3>
+          <section class="docs-pattern_pattern">
+<input class="success" type="text" value="Validated input">
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;success&quot; type=&quot;text&quot; value=&quot;Validated input&quot;&gt;</code></pre>
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.success</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>See the 'Form icons' section below for guidance on adding icons to states.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">input[type=&quot;text&quot;].error,
 input[type=&quot;search&quot;].error,
 input[type=&quot;email&quot;].error,
 input[type=&quot;url&quot;].error,
 input[type=&quot;tel&quot;].error,
 input[type=&quot;number&quot;].error,
+select[multiple].error,
 textarea.error {
   border: 1px solid #d12124;
   outline: 1px solid #d12124;
@@ -166,521 +118,68 @@ input[type=&quot;email&quot;].success,
 input[type=&quot;url&quot;].success,
 input[type=&quot;tel&quot;].success,
 input[type=&quot;number&quot;].success,
+select[multiple].success,
 textarea.success {
   border: 1px solid #2cb34a;
   outline: 1px solid #2cb34a;
 }</code></pre>
-          </div>
-        </li>
-        <li id="single-line-search-input" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Single-line search input</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default single-line search input</h3>
-              </header>
-              <section>
-<input placeholder="placeholder search text" type="search" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused state</h3>
-              </header>
-              <section>
-<input class="focus" placeholder="placeholder search text" type="search" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Error state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input error icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="error" placeholder="placeholder search text" type="search" value="Invalid input">
-<i class="cf-form_input-icon icon-remove-sign" role="alert">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;error&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;Invalid input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-remove-sign&quot; role=&quot;alert&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Success state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input success icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="success" placeholder="placeholder search text" type="search" value="Validated input">
-<i class="cf-form_input-icon icon-ok-sign">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;Validated input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-ok-sign&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">/* NOTE: all input[type=&quot;search&quot;] styles extend input[type=&quot;text&quot;]. */</code></pre>
-          </div>
-        </li>
-        <li id="single-line-email-input" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Single-line email input</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default single-line email input</h3>
-              </header>
-              <section>
-<input placeholder="placeholder email text" type="email" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused state</h3>
-              </header>
-              <section>
-<input class="focus" placeholder="placeholder email text" type="email" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Error state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input error icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="error" placeholder="placeholder email text" type="email" value="Invalid input">
-<i class="cf-form_input-icon icon-remove-sign" role="alert">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;error&quot; placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;Invalid input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-remove-sign&quot; role=&quot;alert&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Success state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input success icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="success" placeholder="placeholder email text" type="email" value="Validated input">
-<i class="cf-form_input-icon icon-ok-sign">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder email text&quot; type=&quot;email&quot; value=&quot;Validated input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-ok-sign&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">/* NOTE: all input[type=&quot;email&quot;] styles extend input[type=&quot;text&quot;]. */</code></pre>
-          </div>
-        </li>
-        <li id="single-line-url-input" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Single-line url input</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default single-line url input</h3>
-              </header>
-              <section>
-<input placeholder="placeholder url text" type="url" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused state</h3>
-              </header>
-              <section>
-<input class="focus" placeholder="placeholder url text" type="url" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Error state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input error icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="error" placeholder="placeholder url text" type="url" value="Invalid input">
-<i class="cf-form_input-icon icon-remove-sign" role="alert">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;error&quot; placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;Invalid input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-remove-sign&quot; role=&quot;alert&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Success state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input success icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="success" placeholder="placeholder url text" type="url" value="Validated input">
-<i class="cf-form_input-icon icon-ok-sign">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder url text&quot; type=&quot;url&quot; value=&quot;Validated input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-ok-sign&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">/* NOTE: all input[type=&quot;url&quot;] styles extend input[type=&quot;text&quot;]. */</code></pre>
-          </div>
-        </li>
-        <li id="single-line-tel-input" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Single-line tel input</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default single-line tel input</h3>
-              </header>
-              <section>
-<input placeholder="placeholder tel text" type="tel" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused state</h3>
-              </header>
-              <section>
-<input class="focus" placeholder="placeholder tel text" type="tel" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Error state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input error icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="error" placeholder="placeholder tel text" type="tel" value="Invalid input">
-<i class="cf-form_input-icon icon-remove-sign" role="alert">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;error&quot; placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;Invalid input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-remove-sign&quot; role=&quot;alert&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Success state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input success icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="success" placeholder="placeholder tel text" type="tel" value="Validated input">
-<i class="cf-form_input-icon icon-ok-sign">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder tel text&quot; type=&quot;tel&quot; value=&quot;Validated input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-ok-sign&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">/* NOTE: all input[type=&quot;tel&quot;] styles extend input[type=&quot;text&quot;]. */</code></pre>
-          </div>
-        </li>
-        <li id="single-line-number-input" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Single-line number input</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default single-line number input</h3>
-              </header>
-              <section>
-<input placeholder="placeholder number text" type="number" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused state</h3>
-              </header>
-              <section>
-<input class="focus" placeholder="placeholder number text" type="number" value="">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;focus&quot; placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Error state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input error icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="error" placeholder="placeholder number text" type="number" value="Invalid input">
-<i class="cf-form_input-icon icon-remove-sign" role="alert">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;error&quot; placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;Invalid input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-remove-sign&quot; role=&quot;alert&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Success state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input success icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<input class="success" placeholder="placeholder number text" type="number" value="Validated input">
-<i class="cf-form_input-icon icon-ok-sign">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder number text&quot; type=&quot;number&quot; value=&quot;Validated input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-ok-sign&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">/* NOTE: all input[type=&quot;number&quot;] styles extend input[type=&quot;text&quot;]. */</code></pre>
-          </div>
-        </li>
-        <li id="multiline-textarea" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Multiline textarea</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default multi-line text box</h3>
-              </header>
-              <section>
-<textarea>Example entry</textarea>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;textarea&gt;Example entry&lt;/textarea&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused multi-line text box</h3>
-              </header>
-              <section>
-<textarea class="focus">Example entry</textarea>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;textarea class=&quot;focus&quot;&gt;Example entry&lt;/textarea&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Multi-line text box in error state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input error icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<textarea class="error">Invalid input</textarea>
-<i class="cf-form_input-icon icon-remove-sign" role="alert"><span class="jekyll-bug"></span></i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;textarea class=&quot;error&quot;&gt;Invalid input&lt;/textarea&gt;
-&lt;i class=&quot;cf-form_input-icon icon-remove-sign&quot; role=&quot;alert&quot;&gt;&lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Multi-line text box in success state</h3>
-                <ul class="demo_notes">
-                  <li>Please review the notes on form input success icons in the form icons section below.</li>
-                </ul>
-              </header>
-              <section>
-<textarea class="success">Validated input</textarea>
-<i class="cf-form_input-icon icon-ok-sign"><span class="jekyll-bug"></span></i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;textarea class=&quot;success&quot;&gt;Validated input&lt;/textarea&gt;
-&lt;i class=&quot;cf-form_input-icon icon-ok-sign&quot;&gt;&lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">/* NOTE: all textarea styles extend input[type=&quot;text&quot;]. */
-textarea {
-  overflow: auto;
-}</code></pre>
-          </div>
-        </li>
-        <li id="form-icons" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Form icons</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>The .jekyll-bug element</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>&lt;i class=&quot;cf-form_input-icon icon-credit-card&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>
-Adding the .jekyll-bug element inside of an icon is only necessary
-when using Jekyll as it tends to ignore empty &lt;i&gt; elements.
-</li>
-                </ul>
-              </header>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Form input icons</h3>
-                <ul class="demo_notes">
-                  <li>Form input icons add small positioning tweaks to Font Awesome icons.</li>
-                  <li>They are meant to be positioned after a form input.</li>
-                </ul>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="form-icons" class="docs-component">
+      <h2 class="docs-component_header"><span>Form icons</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Form input icons</h3>
+          <section class="docs-pattern_pattern">
 <input type="text" value="">
-<i class="cf-form_input-icon icon-credit-card">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input type=&quot;text&quot; value=&quot;&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-credit-card&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Form input error icon</h3>
-                <ul class="demo_notes">
-                  <li>
-The icon must be placed directly after the form input in the markup
-and the input must have the class of &quot;error&quot;.
-</li>
-                  <li>Use the alert role to mark invalid fields: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role</li>
-                </ul>
-              </header>
-              <section>
-<input class="error" placeholder="placeholder search text" type="search" value="Invalid input">
-<i class="cf-form_input-icon icon-remove-sign" role="alert">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;error&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;Invalid input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-remove-sign&quot; role=&quot;alert&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Form input success icon</h3>
-                <ul class="demo_notes">
-                  <li>
-The icon must be placed directly after the form input in the markup
-and the input must have the class of &quot;success&quot;.
-</li>
-                </ul>
-              </header>
-              <section>
-<input class="success" placeholder="placeholder search text" type="search" value="Validated input">
-<i class="cf-form_input-icon icon-ok-sign">
-  <span class="jekyll-bug"></span>
-</i>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;input class=&quot;success&quot; placeholder=&quot;placeholder search text&quot; type=&quot;search&quot; value=&quot;Validated input&quot;&gt;
-&lt;i class=&quot;cf-form_input-icon icon-ok-sign&quot;&gt;
-  &lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;
-&lt;/i&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.cf-form_input-icon {
+<span class="cf-form_input-icon cf-icon cf-icon-email"></span>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input type=&quot;text&quot; value=&quot;&quot;&gt;
+&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-email&quot;&gt;&lt;/span&gt;</code></pre>
+            <ul class="docs-notes">
+              <li>Form input icons add small positioning tweaks to Capital Framework icons.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Form input error icon</h3>
+          <section class="docs-pattern_pattern">
+<input class="error" type="text" value="Invalid input">
+<span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;error&quot; type=&quot;text&quot; value=&quot;Invalid input&quot;&gt;
+&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-delete-round&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;</code></pre>
+            <ul class="docs-notes">
+              <li>The icon must be placed directly after the form input in the markup and the input must use the 'error' class.</li>
+              <li>For invalid fields only use the alert role to call attention to fields that need immediate attention: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Form input success icon</h3>
+          <section class="docs-pattern_pattern">
+<input class="success" type="text" value="Validated input">
+<span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;success&quot; type=&quot;text&quot; value=&quot;Validated input&quot;&gt;
+&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-approved-round&quot;&gt;&lt;/span&gt;</code></pre>
+            <ul class="docs-notes">
+              <li>The icon must be placed directly after the form input in the markup and the input must use the 'error' class.</li>
+              <li>For valid inputs only use the alert role to indicate that a previously invalid input is now valid: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.cf-form_input-icon {
   position: relative;
-  top: 0.15em;
+  top: 0.2em;
   margin-left: 0.2em;
   font-size: 1.25em;
 }
@@ -690,13 +189,171 @@ and the input must have the class of &quot;success&quot;.
 .success + .cf-form_input-icon {
   color: #2cb34a;
 }</code></pre>
-          </div>
-        </li>
-      </ul>
-      <footer class="wrapper-footer">
-        <h4><a href="https://github.com/cfpb/cf-forms">View the repository</a></h4>
-      </footer>
+      </div>
     </div>
-    <script src="static/demo/main.min.js"></script>
+    <div id="form-group" class="docs-component">
+      <h2 class="docs-component_header"><span>Form group</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-codenotes">
+          <li>
+            <pre class="docs-code"><code>Pattern structure
+-----------------
+.form-group
+  .form-group_item</code></pre>
+          </li>
+        </ul>
+        <ul class="docs-notes">
+          <li>A form group is recommended when you need to provide spacing between form elements and between groups of form elements.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">.form-group (block)</h3>
+          <section class="docs-pattern_pattern">
+<div class="form-group">
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+</div>
+<div class="form-group">
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+    <div class="form-group_item">
+        <input type="text">
+    </div>
+</div>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.form-group</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>Provides sizeable margins between groups of form elements.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">.form-group_item (element)</h3>
+          <section class="docs-pattern_pattern">
+<div class="form-group_item">
+    <input type="text">
+</div>
+<div class="form-group_item">
+    <input type="text">
+</div>
+<div class="form-group_item">
+    <input type="text">
+</div>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-group_item&quot;&gt;
+    &lt;input type=&quot;text&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group_item&quot;&gt;
+    &lt;input type=&quot;text&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group_item&quot;&gt;
+    &lt;input type=&quot;text&quot;&gt;
+&lt;/div&gt;</code></pre>
+            <ul class="docs-notes">
+              <li>Provides subtle margins between form elements within the same group.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Real world example</h3>
+          <section class="docs-pattern_pattern">
+<div class="form-group">
+    <label class="form-label-header">Form group</label>
+    <div class="form-group_item">
+        <input type="text" value="Form group item">
+    </div>
+    <div class="form-group_item">
+        <input type="text" value="Form group item">
+    </div>
+</div>
+<div class="form-group">
+    <label class="form-label-header">Form group</label>
+    <div class="form-group_item">
+        <input type="text" value="Form group item">
+    </div>
+    <div class="form-group_item">
+        <input type="text" value="Form group item">
+    </div>
+</div>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;form-label-header&quot;&gt;Form group&lt;/label&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;Form group item&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;Form group item&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;form-label-header&quot;&gt;Form group&lt;/label&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;Form group item&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group_item&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;Form group item&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.form-group + .form-group {
+  margin-top: 1.875em;
+}
+.form-group_item {
+  margin-bottom: 0.9375em;
+}</code></pre>
+      </div>
+    </div>
+    <script src="static/docs/main.min.js"></script>
   </body>
 </html>
