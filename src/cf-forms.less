@@ -13,33 +13,9 @@
         <label class="form-label-header">
             Form label header
         </label>
-    - name: Normal label
-      markup: |
-        <label class="form-label">
-            Form label
-        </label>
-    - name: Form element nested within a label
-      markup: |
-        <label class="form-label">
-            <input type="checkbox">
-            Form label
-        </label>
-      notes:
-        - "When nesting a form input the input will receive a right margin to
-          space it from the label text."
   tags:
     - cf-forms
 */
-
-.form-label {
-    .webfont-regular();
-    // 5px is eyeballed to 10px when considering line height.
-    margin-bottom: unit(5px / @base-font-size-px, em);
-
-    & input {
-        margin-right: unit(6px / @base-font-size-px, em);
-    }
-}
 
 .form-label-header {
     .h5();
@@ -131,9 +107,9 @@ textarea {
     @font-size: 20px;
 
     position: relative;
-    top: unit( 3px / @font-size, em);
-    margin-left: unit( 4px / @font-size, em);
-    font-size: unit( @font-size / @base-font-size-px, em );
+    top: unit(4px / @font-size, em);
+    margin-left: unit(4px / @font-size, em);
+    font-size: unit(@font-size / @base-font-size-px, em);
 }
 
 .error + .@{cf-forms_input-icon-class} {
