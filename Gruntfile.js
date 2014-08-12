@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 
       // Set whether or not to include html5shiv for demoing a component.
       // Only necessary if component patterns include new HTML5 elements
-      // html5Shiv: false,
+      // html5Shiv: true,
 
       // Set whether you'd like to use a JS hack to force a redraw in the browser
       // to avoid an IE8 bug where fonts do not appear or appear as boxes on load.
