@@ -12,6 +12,18 @@
     <title>cf-forms demo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
+<!--[if lt IE 9]>
+    <script>
+      var cfHead = document.getElementsByTagName('head')[0],
+        cfStyle = document.createElement('style');
+      cfStyle.type = 'text/css';
+      cfStyle.styleSheet.cssText = ':before,:after{content:none !important}';
+      cfHead.appendChild(cfStyle);
+      setTimeout(function(){
+        cfHead.removeChild(cfStyle);
+      }, 300);
+      
+    </script><![endif]-->
   </head>
   <body style="padding:4px;">
     <div id="form-labels">
@@ -124,14 +136,6 @@
 <!--
 Add custom demo HTML here
 -->
-
-<!--
-Since we have only style text-based input let's do a quick check ot make sure
-that other form input types are not affected.
--->
-<hr><br>
-<input type="checkbox">
-<input type="radio">
 </div>
   </body>
 </html>
