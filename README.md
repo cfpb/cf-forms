@@ -1,6 +1,6 @@
 # cf-forms
 
-[![Dependency Status](https://gemnasium.com/cfpb/cf-pagination.svg)](https://gemnasium.com/cfpb/cf-forms)
+[![Dependency Status](https://gemnasium.com/cfpb/cf-forms.svg)](https://gemnasium.com/cfpb/cf-forms)
 
 Enhanced form styles.
 This component can be used by itself, but it was made for Capital Framework,
