@@ -2,6 +2,23 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 1.1.0 - 2014-09-11
+
+### Added
+- New .input__super pattern.
+- New .input-with-btn pattern.
+- New .btn-inside-input pattern.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Nothing.
+
+
 ## 1.0.1 - 2014-09-02
 
 ### Added
