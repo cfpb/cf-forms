@@ -314,6 +314,68 @@ textarea {
 
 
 /* topdoc
+  name: Button inside input
+  family: cf-forms
+  patterns:
+    - name: Default button inside of an default input
+      markup: |
+        <div class="btn-inside-input">
+            <input type="text"
+                   value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable.">
+            <button class="btn btn__link btn__secondary">
+                Clear
+                <span class="cf-icon cf-icon-delete"></span>
+            </button>
+        </div>
+    - name: Super button inside of a super input
+      markup: |
+        <div class="btn-inside-input">
+            <input class="input__super"
+                   type="text"
+                   value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable.">
+            <button class="btn btn__super btn__link btn__secondary">
+                Clear
+                <span class="cf-icon cf-icon-delete"></span>
+            </button>
+        </div>
+  tags:
+    - cf-forms
+*/
+
+.btn-inside-input {
+
+    position: relative;
+    
+    input[type="text"],
+    input[type="search"],
+    input[type="email"],
+    input[type="url"],
+    input[type="tel"],
+    input[type="number"] {
+        box-sizing: border-box;
+        width: 100%;
+        padding-right: unit(65px / @btn-font-size, em);
+
+        &.input__super {
+            padding-right: unit(90px / @super-btn-font-size, em);
+        }
+    }
+    
+    .btn {
+        .u-link__no-border();
+        position: absolute;
+        right: unit(15px / @btn-font-size, em);
+        top: 0;
+        
+        &__super {
+            right: unit(15px / @super-btn-font-size, em);
+        }
+    }
+
+}
+
+
+/* topdoc
   name: EOF
   eof: true
 */
