@@ -18,6 +18,8 @@
   "main": "src/cf-forms.less",
   "dependencies": {
     "cf-core": "git://github.com/cfpb/cf-core.git",
+    "cf-buttons": "git://github.com/cfpb/cf-buttons.git",
+    "cf-grid": "git://github.com/cfpb/cf-grid.git",
     "cf-icons": "git://github.com/cfpb/cf-icons.git"
   },
   "exportsOverride": {
