@@ -1,3 +1,4 @@
+
 # cf-forms
 
 [![Dependency Status](https://gemnasium.com/cfpb/cf-forms.svg)](https://gemnasium.com/cfpb/cf-forms)
@@ -18,7 +19,7 @@ Release notes are recorded in the [CHANGELOG](CHANGELOG.md) and on the
 If you would like to take advantage of more components or if you're new to
 Capital Framework, we encourage you to [start here](http://cfpb.github.io/capital-framework/).
 
-(Docs and demo built with the excellent [Topdoc](https://github.com/topcoat/topdoc/).)
+![](screenshot.png)
 
 
 ## How to use this component
@@ -31,7 +32,7 @@ Detailed instructions can be found in the Capital Framework
 
 We welcome your feedback and contributions.
 
-- [Find out about contributing](http://cfpb.github.io/capital-framework/contributing/)
+- [Find out about contributing](CONTRIBUTING.md)
 - File a bug using this [handy template](https://github.com/cfpb/cf-forms/issues/new?body=%23%23%20URL%0D%0D%0D%23%23%20Actual%20Behavior%0D%0D%0D%23%23%20Expected%20Behavior%0D%0D%0D%23%23%20Steps%20to%20Reproduce%0D%0D%0D%23%23%20Screenshot&labels=bug)
 
 
