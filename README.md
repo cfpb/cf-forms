@@ -1,4 +1,3 @@
-
 # cf-forms
 
 [![Dependency Status](https://gemnasium.com/cfpb/cf-forms.svg)](https://gemnasium.com/cfpb/cf-forms)
