@@ -4,24 +4,24 @@
    Form Element Styling
    ========================================================================== */
 /* topdoc
-    name: Theme variables
-    family: cf-forms
-    notes:
-      - "The following color and sizing variables are exposed, allowing you to
-         easily override them before compiling."
-    patterns:
-    - name: Colors
-      codenotes:
-        - |
-          @input-error
-          @input-success
-    - name: Sizing
-      codenotes:
-        - |
-          @input__super-font-size
-    tags:
-    - cf-forms
-    - less
+  name: Theme variables
+  family: cf-forms
+  notes:
+    - "The following color and sizing variables are exposed, allowing you to
+       easily override them before compiling."
+  patterns:
+  - name: Colors
+    codenotes:
+      - |
+        @input-error
+        @input-success
+  - name: Sizing
+    codenotes:
+      - |
+        @input__super-font-size
+  tags:
+  - cf-forms
+  - less
 */
 /* topdoc
   name: Form labels
