@@ -1,6 +1,6 @@
 {
   "name": "cf-forms",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Enhanced form styles for Capital Framework.",
   "keywords": ["capital-framework", "capital", "forms", "less"],
   "authors": [
@@ -17,10 +17,10 @@
   "license": "https://github.com/cfpb/cf-forms/blob/gh-pages/TERMS.md",
   "main": "src/cf-forms.less",
   "dependencies": {
-    "cf-core": "git://github.com/cfpb/cf-core.git",
-    "cf-buttons": "git://github.com/cfpb/cf-buttons.git",
-    "cf-grid": "git://github.com/cfpb/cf-grid.git",
-    "cf-icons": "git://github.com/cfpb/cf-icons.git"
+    "cf-core": "latest",
+    "cf-buttons": "latest",
+    "cf-grid": "latest",
+    "cf-icons": "latest"
   },
   "exportsOverride": {
     "cf-*": {

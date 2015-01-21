@@ -15,11 +15,6 @@
     <link rel="stylesheet" type="text/css" href="static/docs/brackets.css">
     <link rel="stylesheet" type="text/css" href="static/docs/docs.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <script>
-      // Confirm availability of JS and remove no-js class from html
-      var docElement = document.documentElement;
-      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
-    </script>
   </head>
   <body>
     <div class="docs-sidebar-wrapper">
@@ -27,6 +22,37 @@
         <div class="docs-masthead">
           <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-forms docs
           </h1><a href="https://github.com/cfpb/cf-forms" class="docs-repo">view the repository</a>
+        </div>
+        <div id="theme-variables" class="docs-component">
+          <h2 class="docs-component_header"><span>Theme variables</span></h2>
+          <div class="docs-component_intro">
+            <ul class="docs-notes">
+              <li>The following color and sizing variables are exposed, allowing you to easily override them before compiling.</li>
+            </ul>
+          </div>
+          <div class="docs-patterns">
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Colors</h3>
+              <footer class="docs-pattern_footer">
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>@input-error
+@input-success</code></pre>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Sizing</h3>
+              <footer class="docs-pattern_footer">
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>@input__super-font-size</code></pre>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+          </div>
         </div>
         <div id="form-labels" class="docs-component">
           <h2 class="docs-component_header"><span>Form labels</span></h2>
@@ -160,8 +186,8 @@ input[type=&quot;tel&quot;].error,
 input[type=&quot;number&quot;].error,
 select[multiple].error,
 textarea.error {
-  border: 1px solid #d12124;
-  outline: 1px solid #d12124;
+  border: 1px solid #ea130b;
+  outline: 1px solid #ea130b;
 }
 input[type=&quot;text&quot;].success,
 input[type=&quot;search&quot;].success,
@@ -171,8 +197,8 @@ input[type=&quot;tel&quot;].success,
 input[type=&quot;number&quot;].success,
 select[multiple].success,
 textarea.success {
-  border: 1px solid #2cb34a;
-  outline: 1px solid #2cb34a;
+  border: 1px solid #009d38;
+  outline: 1px solid #009d38;
 }</code></pre>
           </div>
         </div>
@@ -247,10 +273,10 @@ textarea.success {
   font-size: 1.25em;
 }
 .error + .cf-form_input-icon {
-  color: #d12124;
+  color: #ea130b;
 }
 .success + .cf-form_input-icon {
-  color: #2cb34a;
+  color: #009d38;
 }</code></pre>
           </div>
         </div>
@@ -514,9 +540,6 @@ textarea.success {
     width: 75%;
     border-right-width: 0;
   }
-  .ie .input-with-btn_input {
-    margin-right: -0.26em;
-  }
   .lt-ie8 .input-with-btn_input {
     display: inline;
     margin-right: 0;
@@ -536,9 +559,6 @@ textarea.success {
     vertical-align: top;
     width: 83.33333333%;
     border-right-width: 0;
-  }
-  .ie .input-with-btn_input {
-    margin-right: -0.26em;
   }
   .lt-ie8 .input-with-btn_input {
     display: inline;
@@ -568,9 +588,6 @@ textarea.success {
     vertical-align: top;
     width: 25%;
   }
-  .ie .input-with-btn_btn {
-    margin-right: -0.26em;
-  }
   .lt-ie8 .input-with-btn_btn {
     display: inline;
     margin-right: 0;
@@ -589,9 +606,6 @@ textarea.success {
     margin-right: -0.25em;
     vertical-align: top;
     width: 16.66666667%;
-  }
-  .ie .input-with-btn_btn {
-    margin-right: -0.26em;
   }
   .lt-ie8 .input-with-btn_btn {
     display: inline;

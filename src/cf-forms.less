@@ -5,6 +5,41 @@
 
 
 /* topdoc
+    name: Theme variables
+    family: cf-forms
+    notes:
+      - "The following color and sizing variables are exposed, allowing you to
+         easily override them before compiling."
+    patterns:
+    - name: Colors
+      codenotes:
+        - |
+          @input-error
+          @input-success
+    - name: Sizing
+      codenotes:
+        - |
+          @input__super-font-size
+    tags:
+    - cf-forms
+    - less
+*/
+
+// Color variables
+
+// .error
+@input-error:                   #ea130b;
+
+// .success
+@input-success:                 #009d38;
+
+// Sizing variables
+
+// .input__super
+@input__super-font-size:        18px;
+
+
+/* topdoc
   name: Form labels
   family: cf-forms
   patterns:
@@ -44,8 +79,8 @@
     &[type="url"],
     &[type="tel"],
     &[type="number"] {
-        padding: unit( 10px / @super-btn-font-size, em );
-        font-size: unit( @super-btn-font-size / @base-font-size-px, em );
+        padding: unit( 10px / @input__super-font-size, em );
+        font-size: unit( @input__super-font-size / @base-font-size-px, em );
     }
 }
 
@@ -83,12 +118,12 @@ input[type="number"],
 select[multiple],
 textarea {
     &.error {
-        border: 1px solid @redorange;
-        outline: 1px solid @redorange;
+        border: 1px solid @input-error;
+        outline: 1px solid @input-error;
     }
     &.success {
-        border: 1px solid @green;
-        outline: 1px solid @green;
+        border: 1px solid @input-success;
+        outline: 1px solid @input-success;
     }
 }
 
@@ -140,11 +175,11 @@ textarea {
 }
 
 .error + .@{cf-forms_input-icon-class} {
-    color: @redorange;
+    color: @input-error;
 }
 
 .success + .@{cf-forms_input-icon-class} {
-    color: @green;
+    color: @input-success;
 }
 
 
