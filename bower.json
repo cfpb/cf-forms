@@ -17,10 +17,10 @@
   "license": "https://github.com/cfpb/cf-forms/blob/gh-pages/TERMS.md",
   "main": "src/cf-forms.less",
   "dependencies": {
-    "cf-core": "latest",
-    "cf-buttons": "latest",
-    "cf-grid": "latest",
-    "cf-icons": "latest"
+    "cf-core": "cfpb/cf-core#1.0",
+    "cf-buttons": "cfpb/cf-buttons#1.0",
+    "cf-grid": "cfpb/cf-grid#1.0",
+    "cf-icons": "cfpb/cf-icons#1.0"
   },
   "exportsOverride": {
     "cf-*": {
