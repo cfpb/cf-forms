@@ -1,5 +1,6 @@
 # cf-forms
 
+[![Build Status](https://img.shields.io/travis/cfpb/cf-forms.svg)](https://travis-ci.org/cfpb/cf-forms) 
 [![Dependency Status](https://gemnasium.com/cfpb/cf-forms.svg)](https://gemnasium.com/cfpb/cf-forms)
 
 Enhanced form styles.
