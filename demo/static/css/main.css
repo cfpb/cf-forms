@@ -56,7 +56,7 @@
   patterns:
     - name: .input__super
       markup: |
-        <input class="input__super" type="text" value="Super input"></input>
+        <input class="input__super" type="text" value="Super input" title="Test input"></input>
         <button class="btn btn__super">Super</button>
       notes:
         - "An input that matches the height of a super button."
@@ -83,7 +83,7 @@
         - "See the 'Form icons' section below for guidance on adding icons to
            states."
       markup: |
-        <input class="error" type="text" value="Invalid input">
+        <input class="error" type="text" value="Invalid input" title="Test input">
     - name: Success state
       codenotes:
         - .success
@@ -91,7 +91,7 @@
         - "See the 'Form icons' section below for guidance on adding icons to
            states."
       markup: |
-        <input class="success" type="text" value="Validated input">
+        <input class="success" type="text" value="Validated input" title="Test input">
     tags:
     - cf-forms
 */
@@ -126,7 +126,7 @@ textarea.success {
         - "Form input icons add small positioning tweaks to Capital Framework
           icons."
       markup: |
-        <input type="text" value="">
+        <input type="text" value="" title="Test input">
         <span class="cf-form_input-icon cf-icon cf-icon-email"></span>
     - name: Form input error icon
       notes:
@@ -136,7 +136,7 @@ textarea.success {
            fields that need immediate attention:
            https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role"
       markup: |
-        <input class="error" type="text" value="Invalid input">
+        <input class="error" type="text" value="Invalid input" title="Test input">
         <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
     - name: Form input success icon
       notes:
@@ -146,7 +146,7 @@ textarea.success {
            previously invalid input is now valid:
            https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role"
       markup: |
-        <input class="success" type="text" value="Validated input">
+        <input class="success" type="text" value="Validated input" title="Test input">
         <span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
     tags:
     - cf-forms
@@ -180,26 +180,26 @@ textarea.success {
       markup: |
         <div class="form-group">
             <div class="form-group_item">
-                <input type="text">
+                <input type="text" title="Test input">
             </div>
             <div class="form-group_item">
-                <input type="text">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="form-group_item">
-                <input type="text">
-            </div>
-            <div class="form-group_item">
-                <input type="text">
+                <input type="text" title="Test input">
             </div>
         </div>
         <div class="form-group">
             <div class="form-group_item">
-                <input type="text">
+                <input type="text" title="Test input">
             </div>
             <div class="form-group_item">
-                <input type="text">
+                <input type="text" title="Test input">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group_item">
+                <input type="text" title="Test input">
+            </div>
+            <div class="form-group_item">
+                <input type="text" title="Test input">
             </div>
         </div>
       codenotes:
@@ -210,13 +210,13 @@ textarea.success {
     - name: .form-group_item (element)
       markup: |
         <div class="form-group_item">
-            <input type="text">
+            <input type="text" title="Test input">
         </div>
         <div class="form-group_item">
-            <input type="text">
+            <input type="text" title="Test input">
         </div>
         <div class="form-group_item">
-            <input type="text">
+            <input type="text" title="Test input">
         </div>
       notes:
         - "Provides subtle margins between form elements within the same group."
@@ -225,19 +225,19 @@ textarea.success {
         <div class="form-group">
             <label class="form-label-header">Form group</label>
             <div class="form-group_item">
-                <input type="text" value="Form group item">
+                <input type="text" value="Form group item" title="Test input">
             </div>
             <div class="form-group_item">
-                <input type="text" value="Form group item">
+                <input type="text" value="Form group item" title="Test input">
             </div>
         </div>
         <div class="form-group">
             <label class="form-label-header">Form group</label>
             <div class="form-group_item">
-                <input type="text" value="Form group item">
+                <input type="text" value="Form group item" title="Test input">
             </div>
             <div class="form-group_item">
-                <input type="text" value="Form group item">
+                <input type="text" value="Form group item" title="Test input">
             </div>
         </div>
   tags:
@@ -257,7 +257,7 @@ textarea.success {
       markup: |
         <div class="input-with-btn">
             <div class="input-with-btn_input">
-                <input type="text">
+                <input type="text" title="Test input">
             </div>
             <div class="input-with-btn_btn">
                 <button class="btn">Search</button>
@@ -267,7 +267,7 @@ textarea.success {
       markup: |
         <div class="input-with-btn">
             <div class="input-with-btn_input">
-                <input class="input__super" type="text">
+                <input class="input__super" type="text" title="Test input">
             </div>
             <div class="input-with-btn_btn">
                 <button class="btn btn__super">Search</button>
@@ -392,7 +392,7 @@ textarea.success {
       markup: |
         <div class="btn-inside-input">
             <input type="text"
-                   value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable.">
+                   value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable." title="Test input">
             <button class="btn btn__link btn__secondary">
                 Clear
                 <span class="cf-icon cf-icon-delete"></span>
@@ -403,7 +403,7 @@ textarea.success {
         <div class="btn-inside-input">
             <input class="input__super"
                    type="text"
-                   value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable.">
+                   value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable." title="Test input">
             <button class="btn btn__super btn__link btn__secondary">
                 Clear
                 <span class="cf-icon cf-icon-delete"></span>
@@ -440,9 +440,13 @@ textarea.success {
   position: absolute;
   right: 1.07142857em;
   top: 0;
+  /* pa11y fails unless the background color is explicitly set */
 }
 .btn-inside-input .btn__super {
   right: 0.83333333em;
+}
+.btn-inside-input .btn__link.btn__secondary {
+  background-color: #fff;
 }
 /* topdoc
   name: EOF
@@ -453,75 +457,75 @@ textarea.success {
    Button Styling
    ========================================================================== */
 /* topdoc
-    name: Theme variables
-    family: cf-buttons
+  name: Theme variables
+  family: cf-buttons
+  notes:
+    - "The following color and sizing variables are exposed, allowing you to
+       easily override them before compiling."
+  patterns:
+  - name: Colors
+    codenotes:
+      - |
+        @btn-text
+        @btn-bg
+        @btn-bg-hover
+        @btn-bg-active
+        @btn__secondary-text
+        @btn__secondary-bg
+        @btn__secondary-bg-hover
+        @btn__secondary-bg-active
+        @btn__warning-text
+        @btn__warning-bg
+        @btn__warning-bg-hover
+        @btn__warning-bg-active
+        @btn__disabled-text
+        @btn__disabled-bg
+        @btn__disabled-outline
+  - name: Sizing
+    codenotes:
+      - |
+        @btn-font-size
+        @btn-v-padding
+        @btn-v-padding-modifier-ie
+        @super-btn-font-size
     notes:
-      - "The following color and sizing variables are exposed, allowing you to
-         easily override them before compiling."
-    patterns:
-    - name: Colors
-      codenotes:
-        - |
-          @btn-text
-          @btn-bg
-          @btn-bg-hover
-          @btn-bg-active
-          @btn__secondary-text
-          @btn__secondary-bg
-          @btn__secondary-bg-hover
-          @btn__secondary-bg-active
-          @btn__warning-text
-          @btn__warning-bg
-          @btn__warning-bg-hover
-          @btn__warning-bg-active
-          @btn__disabled-text
-          @btn__disabled-bg
-          @btn__disabled-outline
-    - name: Sizing
-      codenotes:
-        - |
-          @btn-font-size
-          @btn-v-padding
-          @btn-v-padding-modifier-ie
-          @super-btn-font-size
-      notes:
-        - "@btn-v-padding-modifier-ie is used to fix the vertical padding bug in
-           IE for <button>'s and <inputs>'s across various .btn styles.
-           We should revisit this after adding normalize.css to see if this is
-           still needed."
-    tags:
-    - cf-buttons
-    - less
+      - "@btn-v-padding-modifier-ie is used to fix the vertical padding bug in
+         IE for <button>'s and <inputs>'s across various .btn styles.
+         We should revisit this after adding normalize.css to see if this is
+         still needed."
+  tags:
+  - cf-buttons
+  - less
 */
 /* topdoc
-    name: Default button
-    family: cf-buttons
-    notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for
-         demonstration purposes only and should not be used in production."
-    patterns:
-    - name: Default state
-      markup: |
-        <a href="#" class="btn">Anchor Tag</a>
-        <button class="btn">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn">
-    - name: Hovered state
-      markup: |
-        <a href="#" class="btn hover">Anchor Tag</a>
-        <button class="btn hover">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn hover">
-    - name: Focused state
-      markup: |
-        <a href="#" class="btn focus">Anchor Tag</a>
-        <button class="btn focus">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn focus">
-    - name: Active state
-      markup: |
-        <a href="#" class="btn active">Anchor Tag</a>
-        <button class="btn active">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn active">
-    tags:
-    - cf-buttons
+  name: Default button
+  family: cf-buttons
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for
+       demonstration purposes only and should not be used in production."
+  patterns:
+  - name: Default state
+    markup: |
+      <a href="#" class="btn">Anchor Tag</a>
+      <button class="btn">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn">
+  - name: Hovered state
+    markup: |
+      <a href="#" class="btn hover">Anchor Tag</a>
+      <button class="btn hover">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn hover">
+  - name: Focused state
+    markup: |
+      <a href="#" class="btn focus">Anchor Tag</a>
+      <button class="btn focus">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn focus">
+  - name: Active state
+    markup: |
+      <a href="#" class="btn active">Anchor Tag</a>
+      <button class="btn active">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn active">
+  tags:
+  - cf-buttons
 */
 .btn {
   display: inline-block;
@@ -540,8 +544,8 @@ textarea.success {
   line-height: normal;
   text-decoration: none;
   cursor: pointer;
-  -webkit-transition: .1s;
-  transition: .1s;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
   -webkit-appearance: none;
 }
 .lt-ie9 .btn {
@@ -584,34 +588,34 @@ input.btn::-moz-focus-inner {
   padding-bottom: 0.45714286em;
 }
 /* topdoc
-    name: Secondary button
-    family: cf-buttons
-    notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for
-         demonstration purposes only and should not be used in production."
-    patterns:
-    - name: Default state
-      markup: |
-        <a href="#" class="btn btn__secondary">Anchor Tag</a>
-        <button class="btn btn__secondary">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__secondary">
-    - name: Hovered state
-      markup: |
-        <a href="#" class="btn btn__secondary hover">Anchor Tag</a>
-        <button class="btn btn__secondary hover">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__secondary hover">
-    - name: Focused state
-      markup: |
-        <a href="#" class="btn btn__secondary focus">Anchor Tag</a>
-        <button class="btn btn__secondary focus">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__secondary focus">
-    - name: Active state
-      markup: |
-        <a href="#" class="btn btn__secondary active">Anchor Tag</a>
-        <button class="btn btn__secondary active">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__secondary active">
-    tags:
-    - cf-buttons
+  name: Secondary button
+  family: cf-buttons
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for
+       demonstration purposes only and should not be used in production."
+  patterns:
+  - name: Default state
+    markup: |
+      <a href="#" class="btn btn__secondary">Anchor Tag</a>
+      <button class="btn btn__secondary">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__secondary">
+  - name: Hovered state
+    markup: |
+      <a href="#" class="btn btn__secondary hover">Anchor Tag</a>
+      <button class="btn btn__secondary hover">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__secondary hover">
+  - name: Focused state
+    markup: |
+      <a href="#" class="btn btn__secondary focus">Anchor Tag</a>
+      <button class="btn btn__secondary focus">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__secondary focus">
+  - name: Active state
+    markup: |
+      <a href="#" class="btn btn__secondary active">Anchor Tag</a>
+      <button class="btn btn__secondary active">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__secondary active">
+  tags:
+  - cf-buttons
 */
 .btn__secondary,
 .btn__secondary:link,
@@ -633,34 +637,34 @@ input.btn::-moz-focus-inner {
   background-color: #5b3b57;
 }
 /* topdoc
-    name: Destructive action button
-    family: cf-buttons
-    notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for
-         demonstration purposes only and should not be used in production."
-    patterns:
-    - name: Default state
-      markup: |
-        <a href="#" class="btn btn__warning">Anchor Tag</a>
-        <button class="btn btn__warning">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__warning">
-    - name: Hovered state
-      markup: |
-        <a href="#" class="btn btn__warning hover">Anchor Tag</a>
-        <button class="btn btn__warning hover">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__warning hover">
-    - name: Focused state
-      markup: |
-        <a href="#" class="btn btn__warning focus">Anchor Tag</a>
-        <button class="btn btn__warning focus">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__warning focus">
-    - name: Active state
-      markup: |
-        <a href="#" class="btn btn__warning active">Anchor Tag</a>
-        <button class="btn btn__warning active">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__warning active">
-    tags:
-    - cf-buttons
+  name: Destructive action button
+  family: cf-buttons
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for
+       demonstration purposes only and should not be used in production."
+  patterns:
+  - name: Default state
+    markup: |
+      <a href="#" class="btn btn__warning">Anchor Tag</a>
+      <button class="btn btn__warning">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__warning">
+  - name: Hovered state
+    markup: |
+      <a href="#" class="btn btn__warning hover">Anchor Tag</a>
+      <button class="btn btn__warning hover">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__warning hover">
+  - name: Focused state
+    markup: |
+      <a href="#" class="btn btn__warning focus">Anchor Tag</a>
+      <button class="btn btn__warning focus">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__warning focus">
+  - name: Active state
+    markup: |
+      <a href="#" class="btn btn__warning active">Anchor Tag</a>
+      <button class="btn btn__warning active">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__warning active">
+  tags:
+  - cf-buttons
 */
 .btn__warning,
 .btn__warning:link,
@@ -682,26 +686,26 @@ input.btn::-moz-focus-inner {
   background-color: #a10d08;
 }
 /* topdoc
-    name: Disabled button
-    family: cf-buttons
-    notes:
-      - "Disabled buttons do not contain separate hover and active states since
-         they should not be interacted with."
-      - "Note that the .focus class is for demonstration purposes only and
-         should not be used in production."
-    patterns:
-    - name: Default/hovered/active state
-      markup: |
-        <a href="#" class="btn btn__disabled">Anchor Tag</a>
-        <button class="btn btn__disabled">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__disabled">
-    - name: Focused state
-      markup: |
-        <a href="#" class="btn btn__disabled focus">Anchor Tag</a>
-        <button class="btn btn__disabled focus">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__disabled focus">
-    tags:
-    - cf-buttons
+  name: Disabled button
+  family: cf-buttons
+  notes:
+    - "Disabled buttons do not contain separate hover and active states since
+       they should not be interacted with."
+    - "Note that the .focus class is for demonstration purposes only and
+       should not be used in production."
+  patterns:
+  - name: Default/hovered/active state
+    markup: |
+      <a href="#" class="btn btn__disabled">Anchor Tag</a>
+      <button class="btn btn__disabled">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__disabled">
+  - name: Focused state
+    markup: |
+      <a href="#" class="btn btn__disabled focus">Anchor Tag</a>
+      <button class="btn btn__disabled focus">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__disabled focus">
+  tags:
+  - cf-buttons
 */
 .btn__disabled,
 .btn__disabled:link,
@@ -722,31 +726,31 @@ input.btn::-moz-focus-inner {
   outline-color: #7d7d7d;
 }
 /* topdoc
-    name: Super button
-    family: cf-buttons
-    patterns:
-    - name: Default state
-      markup: |
-        <a href="#" class="btn btn__super">Anchor Tag</a>
-        <button class="btn btn__super">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__super">
-    - name: Hovered state
-      markup: |
-        <a href="#" class="btn btn__super hover">Anchor Tag</a>
-        <button class="btn btn__super hover">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__super hover">
-    - name: Focused state
-      markup: |
-        <a href="#" class="btn btn__super focus">Anchor Tag</a>
-        <button class="btn btn__super focus">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__super focus">
-    - name: Active state
-      markup: |
-        <a href="#" class="btn btn__super active">Anchor Tag</a>
-        <button class="btn btn__super active">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__super active">
-    tags:
-    - cf-buttons
+  name: Super button
+  family: cf-buttons
+  patterns:
+  - name: Default state
+    markup: |
+      <a href="#" class="btn btn__super">Anchor Tag</a>
+      <button class="btn btn__super">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__super">
+  - name: Hovered state
+    markup: |
+      <a href="#" class="btn btn__super hover">Anchor Tag</a>
+      <button class="btn btn__super hover">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__super hover">
+  - name: Focused state
+    markup: |
+      <a href="#" class="btn btn__super focus">Anchor Tag</a>
+      <button class="btn btn__super focus">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__super focus">
+  - name: Active state
+    markup: |
+      <a href="#" class="btn btn__super active">Anchor Tag</a>
+      <button class="btn btn__super active">Button Tag</button>
+      <input type="submit" value="Input Tag" class="btn btn__super active">
+  tags:
+  - cf-buttons
 */
 .btn__super {
   padding: 0.61111111em 1.61111111em;
@@ -761,105 +765,105 @@ input.btn::-moz-focus-inner {
   padding-bottom: 0.66666667em;
 }
 /* topdoc
-    name: Button with icons
-    family: cf-buttons
-    patterns:
-    - name: Button icon left
-      markup: |
-        <a href="#" class="btn">
-            <span class="btn_icon__left cf-icon cf-icon-left"></span>
-            Anchor Tag
-        </a>
-        <button class="btn">
-            <span class="btn_icon__left cf-icon cf-icon-left"></span>
-            Button Tag
-        </button>
-        <br>
-        <br>
-        <a href="#" class="btn btn__secondary">
-            <span class="btn_icon__left cf-icon cf-icon-left"></span>
-            Anchor Tag
-        </a>
-        <button class="btn btn__secondary">
-            <span class="btn_icon__left cf-icon cf-icon-left"></span>
-            Button Tag
-        </button>
-        <br>
-        <br>
-        <a href="#" class="btn btn__warning">
-            <span class="btn_icon__left cf-icon cf-icon-left"></span>
-            Anchor Tag
-        </a>
-        <button class="btn btn__warning">
-            <span class="btn_icon__left cf-icon cf-icon-left"></span>
-            Button Tag
-        </button>
-        <br>
-        <br>
-        <a href="#" class="btn btn__disabled">
-            <span class="btn_icon__left cf-icon cf-icon-left"></span>
-            Anchor Tag
-        </a>
-        <button class="btn btn__disabled">
-            <span class="btn_icon__left cf-icon cf-icon-left"></span>
-            Button Tag
-        </button>
-    - name: Button icon right
-      markup: |
-        <a href="#" class="btn">
-            Anchor Tag
-            <span class="btn_icon__right cf-icon cf-icon-right"></span>
-        </a>
-        <button class="btn">
-            Button Tag
-            <span class="btn_icon__right cf-icon cf-icon-right"></span>
-        </button>
-        <br>
-        <br>
-        <a href="#" class="btn btn__secondary">
-            Anchor Tag
-            <span class="btn_icon__right cf-icon cf-icon-right"></span>
-        </a>
-        <button class="btn btn__secondary">
-            Button Tag
-            <span class="btn_icon__right cf-icon cf-icon-right"></span>
-        </button>
-        <br>
-        <br>
-        <a href="#" class="btn btn__warning">
-            Anchor Tag
-            <span class="btn_icon__right cf-icon cf-icon-right"></span>
-        </a>
-        <button class="btn btn__warning">
-            Button Tag
-            <span class="btn_icon__right cf-icon cf-icon-right"></span>
-        </button>
-        <br>
-        <br>
-        <a href="#" class="btn btn__disabled">
-            Anchor Tag
-            <span class="btn_icon__right cf-icon cf-icon-right"></span>
-        </a>
-        <button class="btn btn__disabled">
-            Button Tag
-            <span class="btn_icon__right cf-icon cf-icon-right"></span>
-        </button>
-    - name: Just an icon
-      markup: |
-        <a href="#" class="btn">
-            <span class="u-visually-hidden">Search</span>
-            <span class="cf-icon cf-icon-search"></span>
-        </a>
-        <button class="btn">
-            <span class="u-visually-hidden">Search</span>
-            <span class="cf-icon cf-icon-search"></span>
-        </button>
-      notes:
-        - "For accessibility please use the .u-visually-hidden utility class
-           to add hidden text for screen readers."
-    tags:
-    - cf-buttons
-    - fj-icons
+  name: Button with icons
+  family: cf-buttons
+  patterns:
+  - name: Button icon left
+    markup: |
+      <a href="#" class="btn">
+          <span class="btn_icon__left cf-icon cf-icon-left"></span>
+          Anchor Tag
+      </a>
+      <button class="btn">
+          <span class="btn_icon__left cf-icon cf-icon-left"></span>
+          Button Tag
+      </button>
+      <br>
+      <br>
+      <a href="#" class="btn btn__secondary">
+          <span class="btn_icon__left cf-icon cf-icon-left"></span>
+          Anchor Tag
+      </a>
+      <button class="btn btn__secondary">
+          <span class="btn_icon__left cf-icon cf-icon-left"></span>
+          Button Tag
+      </button>
+      <br>
+      <br>
+      <a href="#" class="btn btn__warning">
+          <span class="btn_icon__left cf-icon cf-icon-left"></span>
+          Anchor Tag
+      </a>
+      <button class="btn btn__warning">
+          <span class="btn_icon__left cf-icon cf-icon-left"></span>
+          Button Tag
+      </button>
+      <br>
+      <br>
+      <a href="#" class="btn btn__disabled">
+          <span class="btn_icon__left cf-icon cf-icon-left"></span>
+          Anchor Tag
+      </a>
+      <button class="btn btn__disabled">
+          <span class="btn_icon__left cf-icon cf-icon-left"></span>
+          Button Tag
+      </button>
+  - name: Button icon right
+    markup: |
+      <a href="#" class="btn">
+          Anchor Tag
+          <span class="btn_icon__right cf-icon cf-icon-right"></span>
+      </a>
+      <button class="btn">
+          Button Tag
+          <span class="btn_icon__right cf-icon cf-icon-right"></span>
+      </button>
+      <br>
+      <br>
+      <a href="#" class="btn btn__secondary">
+          Anchor Tag
+          <span class="btn_icon__right cf-icon cf-icon-right"></span>
+      </a>
+      <button class="btn btn__secondary">
+          Button Tag
+          <span class="btn_icon__right cf-icon cf-icon-right"></span>
+      </button>
+      <br>
+      <br>
+      <a href="#" class="btn btn__warning">
+          Anchor Tag
+          <span class="btn_icon__right cf-icon cf-icon-right"></span>
+      </a>
+      <button class="btn btn__warning">
+          Button Tag
+          <span class="btn_icon__right cf-icon cf-icon-right"></span>
+      </button>
+      <br>
+      <br>
+      <a href="#" class="btn btn__disabled">
+          Anchor Tag
+          <span class="btn_icon__right cf-icon cf-icon-right"></span>
+      </a>
+      <button class="btn btn__disabled">
+          Button Tag
+          <span class="btn_icon__right cf-icon cf-icon-right"></span>
+      </button>
+  - name: Just an icon
+    markup: |
+      <a href="#" class="btn">
+          <span class="u-visually-hidden">Search</span>
+          <span class="cf-icon cf-icon-search"></span>
+      </a>
+      <button class="btn">
+          <span class="u-visually-hidden">Search</span>
+          <span class="cf-icon cf-icon-search"></span>
+      </button>
+    notes:
+      - "For accessibility please use the .u-visually-hidden utility class
+         to add hidden text for screen readers."
+  tags:
+  - cf-buttons
+  - fj-icons
 */
 .btn_icon__left {
   padding: 0 0.75em 0 0;
@@ -899,41 +903,41 @@ input.btn::-moz-focus-inner {
   border-left-color: rgba(100, 100, 100, 0.4);
 }
 /* topdoc
-    name: Button group modifiers
-    family: cf-buttons
-    patterns:
-    - name: Default buttons in a button group
-      markup: |
-        <a href="#" class="btn btn__grouped-first">Anchor 1</a>
-        <a href="#" class="btn btn__grouped">Anchor 2</a>
-        <a href="#" class="btn btn__grouped-last">Anchor 3</a>
-        <br>
-        <br>
-        <button class="btn btn__grouped-first">Button 1</button>
-        <button class="btn btn__grouped">Button 2</button>
-        <button class="btn btn__grouped-last">Button 3</button>
-        <br>
-        <br>
-        <input type="button" value="Input 1" class="btn btn__grouped-first">
-        <input type="button" value="Input 2" class="btn btn__grouped">
-        <input type="button" value="Input 3" class="btn btn__grouped-last">
-    - name: Super buttons in a button group
-      markup: |
-        <a href="#" class="btn btn__grouped-first btn__super">Anchor 1</a>
-        <a href="#" class="btn btn__grouped btn__super">Anchor 2</a>
-        <a href="#" class="btn btn__grouped-last btn__super">Anchor 3</a>
-        <br>
-        <br>
-        <button class="btn btn__grouped-first btn__super">Button 1</button>
-        <button class="btn btn__grouped btn__super">Button 2</button>
-        <button class="btn btn__grouped-last btn__super">Button 3</button>
-        <br>
-        <br>
-        <input type="button" value="Input 1" class="btn btn__grouped-first btn__super">
-        <input type="button" value="Input 2" class="btn btn__grouped btn__super">
-        <input type="button" value="Input 3" class="btn btn__grouped-last btn__super">
-    tags:
-    - cf-buttons
+  name: Button group modifiers
+  family: cf-buttons
+  patterns:
+  - name: Default buttons in a button group
+    markup: |
+      <a href="#" class="btn btn__grouped-first">Anchor 1</a>
+      <a href="#" class="btn btn__grouped">Anchor 2</a>
+      <a href="#" class="btn btn__grouped-last">Anchor 3</a>
+      <br>
+      <br>
+      <button class="btn btn__grouped-first">Button 1</button>
+      <button class="btn btn__grouped">Button 2</button>
+      <button class="btn btn__grouped-last">Button 3</button>
+      <br>
+      <br>
+      <input type="button" value="Input 1" class="btn btn__grouped-first">
+      <input type="button" value="Input 2" class="btn btn__grouped">
+      <input type="button" value="Input 3" class="btn btn__grouped-last">
+  - name: Super buttons in a button group
+    markup: |
+      <a href="#" class="btn btn__grouped-first btn__super">Anchor 1</a>
+      <a href="#" class="btn btn__grouped btn__super">Anchor 2</a>
+      <a href="#" class="btn btn__grouped-last btn__super">Anchor 3</a>
+      <br>
+      <br>
+      <button class="btn btn__grouped-first btn__super">Button 1</button>
+      <button class="btn btn__grouped btn__super">Button 2</button>
+      <button class="btn btn__grouped-last btn__super">Button 3</button>
+      <br>
+      <br>
+      <input type="button" value="Input 1" class="btn btn__grouped-first btn__super">
+      <input type="button" value="Input 2" class="btn btn__grouped btn__super">
+      <input type="button" value="Input 3" class="btn btn__grouped-last btn__super">
+  tags:
+  - cf-buttons
 */
 .btn__grouped {
   border-radius: 0;
@@ -963,77 +967,77 @@ input.btn::-moz-focus-inner {
   margin-left: -0.16666667em;
 }
 /* topdoc
-    name: Compound button
-    family: cf-buttons
-    notes:
-      - "This pattern requires combining .btn__grouped modifiers with
-         the .btn__compound-action modifier."
-      - "Note that the .visited, .hover, .focus, .active classes are for
-         demonstration purposes only and should not be used in production."
-    patterns:
-    - name: All button styles
-      markup: |
-        <a href="#" class="btn btn__grouped-first">Anchor</a>
-        <a href="#" class="btn btn__grouped-last btn__compound-action">
-            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-        </a>
-        <br>
-        <br>
-        <button class="btn btn__grouped-first">Button</button>
-        <button class="btn btn__grouped-last btn__compound-action">
-            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-        </button>
-        <br>
-        <br>
-        <a href="#" class="btn btn__grouped-first btn__secondary">Anchor</a>
-        <a href="#" class="btn btn__grouped-last btn__secondary btn__compound-action">
-            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-        </a>
-        <br>
-        <br>
-        <button class="btn btn__grouped-first btn__secondary">Button</button>
-        <button class="btn btn__grouped-last btn__secondary btn__compound-action">
-            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-        </button>
-        <br>
-        <br>
-        <a href="#" class="btn btn__grouped-first btn__warning">Anchor</a>
-        <a href="#" class="btn btn__grouped-last btn__warning btn__compound-action">
-            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-        </a>
-        <br>
-        <br>
-        <button class="btn btn__grouped-first btn__warning">Button</button>
-        <button class="btn btn__grouped-last btn__warning btn__compound-action">
-            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-        </button>
-        <br>
-        <br>
-        <a href="#" class="btn btn__grouped-first btn__disabled">Anchor</a>
-        <a href="#" class="btn btn__grouped-last btn__disabled btn__compound-action">
-            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-        </a>
-        <br>
-        <br>
-        <button class="btn btn__grouped-first btn__disabled">Button</button>
-        <button class="btn btn__grouped-last btn__disabled btn__compound-action">
-            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-        </button>
-        <br>
-        <br>
-        <a href="#" class="btn btn__grouped-first btn__super">Anchor</a>
-        <a href="#" class="btn btn__grouped-last btn__super btn__compound-action">
-            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-        </a>
-        <br>
-        <br>
-        <button class="btn btn__grouped-first btn__super">Button</button>
-        <button class="btn btn__grouped-last btn__super btn__compound-action">
-            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-        </button>
-    tags:
-    - cf-buttons
-    - fj-icons
+  name: Compound button
+  family: cf-buttons
+  notes:
+    - "This pattern requires combining .btn__grouped modifiers with
+       the .btn__compound-action modifier."
+    - "Note that the .visited, .hover, .focus, .active classes are for
+       demonstration purposes only and should not be used in production."
+  patterns:
+  - name: All button styles
+    markup: |
+      <a href="#" class="btn btn__grouped-first">Anchor</a>
+      <a href="#" class="btn btn__grouped-last btn__compound-action">
+          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+      </a>
+      <br>
+      <br>
+      <button class="btn btn__grouped-first">Button</button>
+      <button class="btn btn__grouped-last btn__compound-action">
+          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+      </button>
+      <br>
+      <br>
+      <a href="#" class="btn btn__grouped-first btn__secondary">Anchor</a>
+      <a href="#" class="btn btn__grouped-last btn__secondary btn__compound-action">
+          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+      </a>
+      <br>
+      <br>
+      <button class="btn btn__grouped-first btn__secondary">Button</button>
+      <button class="btn btn__grouped-last btn__secondary btn__compound-action">
+          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+      </button>
+      <br>
+      <br>
+      <a href="#" class="btn btn__grouped-first btn__warning">Anchor</a>
+      <a href="#" class="btn btn__grouped-last btn__warning btn__compound-action">
+          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+      </a>
+      <br>
+      <br>
+      <button class="btn btn__grouped-first btn__warning">Button</button>
+      <button class="btn btn__grouped-last btn__warning btn__compound-action">
+          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+      </button>
+      <br>
+      <br>
+      <a href="#" class="btn btn__grouped-first btn__disabled">Anchor</a>
+      <a href="#" class="btn btn__grouped-last btn__disabled btn__compound-action">
+          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+      </a>
+      <br>
+      <br>
+      <button class="btn btn__grouped-first btn__disabled">Button</button>
+      <button class="btn btn__grouped-last btn__disabled btn__compound-action">
+          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+      </button>
+      <br>
+      <br>
+      <a href="#" class="btn btn__grouped-first btn__super">Anchor</a>
+      <a href="#" class="btn btn__grouped-last btn__super btn__compound-action">
+          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+      </a>
+      <br>
+      <br>
+      <button class="btn btn__grouped-first btn__super">Button</button>
+      <button class="btn btn__grouped-last btn__super btn__compound-action">
+          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+      </button>
+  tags:
+  - cf-buttons
+  - fj-icons
 */
 .btn__compound-action,
 .btn__compound-action:link,
@@ -1072,34 +1076,34 @@ input.btn::-moz-focus-inner {
   padding-right: 1.22222222em;
 }
 /* topdoc
-    name: Button link
-    family: cf-buttons
-    notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for
-         demonstration purposes only and should not be used in production."
-    patterns:
-    - name: Default state
-      markup: |
-        <a href="#" class="btn btn__link">Anchor Tag</a>
-        <button class="btn btn__link">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link">
-    - name: Hovered state
-      markup: |
-        <a href="#" class="btn btn__link hover">Anchor Tag</a>
-        <button class="btn btn__link hover">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link hover">
-    - name: Focused state
-      markup: |
-        <a href="#" class="btn btn__link focus">Anchor Tag</a>
-        <button class="btn btn__link focus">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link focus">
-    - name: Active state
-      markup: |
-        <a href="#" class="btn btn__link active">Anchor Tag</a>
-        <button class="btn btn__link active">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link active">
-    tags:
-    - cf-buttons
+  name: Button link
+  family: cf-buttons
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for
+       demonstration purposes only and should not be used in production."
+  patterns:
+  - name: Default state
+    markup: |
+      <a href="#" class="btn btn__link">Anchor Tag</a>
+      <button class="btn btn__link">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link">
+  - name: Hovered state
+    markup: |
+      <a href="#" class="btn btn__link hover">Anchor Tag</a>
+      <button class="btn btn__link hover">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link hover">
+  - name: Focused state
+    markup: |
+      <a href="#" class="btn btn__link focus">Anchor Tag</a>
+      <button class="btn btn__link focus">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link focus">
+  - name: Active state
+    markup: |
+      <a href="#" class="btn btn__link active">Anchor Tag</a>
+      <button class="btn btn__link active">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link active">
+  tags:
+  - cf-buttons
 */
 .btn__link {
   padding: 0;
@@ -1110,9 +1114,9 @@ input.btn::-moz-focus-inner {
 .btn__link,
 .btn__link:link,
 .btn__link:visited {
-  border-bottom-color: #c7336e;
+  border-bottom-color: #cf447c;
   background-color: transparent;
-  color: #c7336e;
+  color: #cf447c;
 }
 .btn__link:hover,
 .btn__link.hover {
@@ -1137,34 +1141,34 @@ input.btn::-moz-focus-inner {
   padding: 0;
 }
 /* topdoc
-    name: Secondary button link
-    family: cf-buttons
-    notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for
-         demonstration purposes only and should not be used in production."
-    patterns:
-    - name: Default state
-      markup: |
-        <a href="#" class="btn btn__link btn__secondary">Anchor Tag</a>
-        <button class="btn btn__link btn__secondary">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link btn__secondary">
-    - name: Hovered state
-      markup: |
-        <a href="#" class="btn btn__link btn__secondary hover">Anchor Tag</a>
-        <button class="btn btn__link btn__secondary hover">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link btn__secondary hover">
-    - name: Focused state
-      markup: |
-        <a href="#" class="btn btn__link btn__secondary focus">Anchor Tag</a>
-        <button class="btn btn__link btn__secondary focus">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link btn__secondary focus">
-    - name: Active state
-      markup: |
-        <a href="#" class="btn btn__link btn__secondary active">Anchor Tag</a>
-        <button class="btn btn__link btn__secondary active">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link btn__secondary active">
-    tags:
-    - cf-buttons
+  name: Secondary button link
+  family: cf-buttons
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for
+       demonstration purposes only and should not be used in production."
+  patterns:
+  - name: Default state
+    markup: |
+      <a href="#" class="btn btn__link btn__secondary">Anchor Tag</a>
+      <button class="btn btn__link btn__secondary">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link btn__secondary">
+  - name: Hovered state
+    markup: |
+      <a href="#" class="btn btn__link btn__secondary hover">Anchor Tag</a>
+      <button class="btn btn__link btn__secondary hover">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link btn__secondary hover">
+  - name: Focused state
+    markup: |
+      <a href="#" class="btn btn__link btn__secondary focus">Anchor Tag</a>
+      <button class="btn btn__link btn__secondary focus">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link btn__secondary focus">
+  - name: Active state
+    markup: |
+      <a href="#" class="btn btn__link btn__secondary active">Anchor Tag</a>
+      <button class="btn btn__link btn__secondary active">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link btn__secondary active">
+  tags:
+  - cf-buttons
 */
 .btn__link.btn__secondary,
 .btn__link.btn__secondary:link,
@@ -1188,34 +1192,34 @@ input.btn::-moz-focus-inner {
   color: #5b3b57;
 }
 /* topdoc
-    name: Destructive action button link
-    family: cf-buttons
-    notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for
-         demonstration purposes only and should not be used in production."
-    patterns:
-    - name: Default state
-      markup: |
-        <a href="#" class="btn btn__link btn__warning">Anchor Tag</a>
-        <button class="btn btn__link btn__warning">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link btn__warning">
-    - name: Hovered state
-      markup: |
-        <a href="#" class="btn btn__link btn__warning hover">Anchor Tag</a>
-        <button class="btn btn__link btn__warning hover">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link btn__warning hover">
-    - name: Focused state
-      markup: |
-        <a href="#" class="btn btn__link btn__warning focus">Anchor Tag</a>
-        <button class="btn btn__link btn__warning focus">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link btn__warning focus">
-    - name: Active state
-      markup: |
-        <a href="#" class="btn btn__link btn__warning active">Anchor Tag</a>
-        <button class="btn btn__link btn__warning active">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn__link btn__warning active">
-    tags:
-    - cf-buttons
+  name: Destructive action button link
+  family: cf-buttons
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for
+       demonstration purposes only and should not be used in production."
+  patterns:
+  - name: Default state
+    markup: |
+      <a href="#" class="btn btn__link btn__warning">Anchor Tag</a>
+      <button class="btn btn__link btn__warning">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link btn__warning">
+  - name: Hovered state
+    markup: |
+      <a href="#" class="btn btn__link btn__warning hover">Anchor Tag</a>
+      <button class="btn btn__link btn__warning hover">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link btn__warning hover">
+  - name: Focused state
+    markup: |
+      <a href="#" class="btn btn__link btn__warning focus">Anchor Tag</a>
+      <button class="btn btn__link btn__warning focus">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link btn__warning focus">
+  - name: Active state
+    markup: |
+      <a href="#" class="btn btn__link btn__warning active">Anchor Tag</a>
+      <button class="btn btn__link btn__warning active">Button Tag</button>
+      <input type="button" value="Input Tag" class="btn btn__link btn__warning active">
+  tags:
+  - cf-buttons
 */
 .btn__link.btn__warning,
 .btn__link.btn__warning:link,
@@ -1247,12 +1251,13 @@ input.btn::-moz-focus-inner {
    Grid mixins
    ========================================================================== */
 /* topdoc
-  name: "Global Less variables"
+  name: Less variables
   notes:
-    - "The following variables are default values used in creating grids.
-      They can be overridden in your application's stylesheet.
-      Most mixins allows you to override these values by passing them arguments."
-  family: "cf-grid"
+    - "The following variables are exposed,
+       allowing you to easily override them before compiling.
+       Most mixins allows you to further override these values by passing them
+       arguments."
+  family: cf-grid
   patterns:
     - codenotes:
         - "@grid_box-sizing-polyfill-path: '/cf-grid/custom-demo/static/css';"
@@ -1276,25 +1281,25 @@ input.btn::-moz-focus-inner {
       notes:
         - "Gives column blocks a background color if set to true."
   tags:
-    - "cf-grid"
+    - cf-grid
 */
 /* topdoc
-  name: "Wrapper"
+  name: Wrapper
   notes:
     - "Wrappers are centered containers with a max-width and fixed gutters
-      that match the gutter widths of columns."
+       that match the gutter widths of columns."
     - "To support IE 6/7, ensure that the path to boxsizing.htc is set using
-      the @grid_box-sizing-polyfill-path Less variable.
-      Read more: https://github.com/Schepp/box-sizing-polyfill."
-  family: "cf-grid"
+       the @grid_box-sizing-polyfill-path Less variable.
+       Read more: https://github.com/Schepp/box-sizing-polyfill."
+  family: cf-grid
   patterns:
-    - name: "Less mixin"
+    - name: Less mixin
       codenotes:
         - ".grid_wrapper( @grid_wrapper-width: @grid_wrapper-width )"
       notes:
         - "You can create wrappers with different max-widths by passing a pixel
-          value into the mixin."
-    - name: "Usage"
+           value into the mixin."
+    - name: Usage
       codenotes:
         - |
           .main-wrapper {
@@ -1311,19 +1316,19 @@ input.btn::-moz-focus-inner {
               This container is the same except it has a wider max-width.
           </div>
   tags:
-    - "cf-grid"
+    - cf-grid
 */
 /* topdoc
-  name: "Columns"
-  family: "cf-grid"
+  name: Columns
+  family: cf-grid
   patterns:
-    - name: "Less mixin"
+    - name: Less mixin
       codenotes:
         - ".grid_column( @columns: 1; @total: @grid_total-columns; @prefix: 0; @suffix: 0 )"
       notes:
         - "Computes column widths and prefix/suffix padding."
         - "CSS borders are used for fixed gutters."
-    - name: "Usage"
+    - name: Usage
       codenotes:
         - |
           .main-wrapper {
@@ -1337,20 +1342,20 @@ input.btn::-moz-focus-inner {
               <div class="half">I am half of my parent.</div>
               <div class="half">I am half of my parent.</div>
           </div>
-    - name: "This is a placeholder for documenting prefix and suffix"
+    - name: This is a placeholder for documenting prefix and suffix
       codenotes:
         - "..."
   tags:
-    - "cf-grid"
+    - cf-grid
 */
 /* topdoc
-  name: "Push and Pull mixins for source ordering"
-  family: "cf-grid"
+  name: Push and Pull mixins for source ordering
+  family: cf-grid
   patterns:
     - codenotes:
         - ".push( @offset: 1, @grid_total-columns: @grid_total-columns )"
         - ".pull( @offset: 1, @grid_total-columns: @grid_total-columns )"
-    - name: "Usage"
+    - name: Usage
       codenotes:
         - |
           .first {
@@ -1367,10 +1372,10 @@ input.btn::-moz-focus-inner {
               <div class="first">I am second in the markup but appear before .second.</div>
           </div>
   tags:
-    - "cf-grid"
+    - cf-grid
 */
 /* topdoc
-  name: "Nested columns"
+  name: Nested columns
   notes:
     - "Since all cf-grid columns have left and right gutters you will notice
       undesireable offsetting when nesting columns.
@@ -1387,12 +1392,12 @@ input.btn::-moz-focus-inner {
       To clarify, if you have a 12 column grid and place 24 columns inside
       of a wrapper cf-grid columns will automaitcally stack into 2 'rows'
       of 12."
-  family: "cf-grid"
+  family: cf-grid
   patterns:
-    - name: "Less mixin"
+    - name: Less mixin
       codenotes:
         - ".grid_nested-col-group()"
-    - name: "Usage"
+    - name: Usage
       codenotes:
         - |
           .main-wrapper {
@@ -1420,7 +1425,7 @@ input.btn::-moz-focus-inner {
               </div>
           </div>
   tags:
-    - "cf-grid"
+    - cf-grid
 */
 /* topdoc
   name: EOF
@@ -1447,6 +1452,11 @@ input.btn::-moz-focus-inner {
         - "@cf-icon-ie7-support: true;"
       notes:
         - "More on IE7 support can be found in the 'IE7 Support' section."
+    - name: Icon border color
+      codenotes:
+        - "@cf-border-color: #eee;"
+      notes:
+        - "Used in .cf-icon__border"
   tags:
     - cf-icons
 */
@@ -1485,6 +1495,7 @@ input.btn::-moz-focus-inner {
   font-weight: normal;
   font-style: normal;
 }
+.cf-icon,
 .cf-icon {
   font-family: 'CFPB Minicons';
   display: inline-block;
@@ -1492,6 +1503,194 @@ input.btn::-moz-focus-inner {
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
+}
+/* topdoc
+  name: Icon character variables
+  family: cf-icons
+  patterns:
+    - name: Less variables for icons
+      codenotes:
+        - "@cf-icon-left:                       '\e000';"
+        - "@cf-icon-left-round:                 '\e001';"
+      notes:
+        - "These variables for fonts are used for adding icons in
+          Less files."
+        - "See the less file for the full list."
+  tags:
+    - cf-icons
+  notes:
+       - "Inspired by Font Awesome"
+*/
+/* topdoc
+    name: Helper classes for icon sizes
+    family: cf-icons
+    patterns:
+        - name: Large icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__lg"></span>
+        - name: 2x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__2x"></span>
+        - name: 3x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__3x"></span>
+        - name: 4x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__4x"></span>
+        - name: 5x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__5x"></span>
+    notes:
+       - "MIT Licensed by Font Awesome"
+*/
+.cf-icon__lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.cf-icon__2x {
+  font-size: 2em;
+}
+.cf-icon__3x {
+  font-size: 3em;
+}
+.cf-icon__4x {
+  font-size: 4em;
+}
+.cf-icon__5x {
+  font-size: 5em;
+}
+/* topdoc
+    name: Mixin classes
+    family: cf-icons
+    patterns:
+        - name: Icon rotation mixin
+          codenotes:
+            - ".@{cf-icon-prefix}__rotate-90  { .cf-icon__rotate(90deg, 1);  }"
+          notes:
+            - "First parameter is @degrees."
+            - "Second parameter is @rotation"
+        - name: Icon flip mixin
+          codenotes:
+            - ".@{cf-icon-prefix}__flip-horizontal { .cf-icon__flip(-1, 1, 0); }"
+            - ".@{cf-icon-prefix}__flip-vertical   { .cf-icon__flip(1, -1, 2); }"
+          notes:
+            - "First parameter is for number of horizontal flips"
+            - "Second parameter is for number of vertical flips"
+            - "Third parameter is for rotation"
+    notes:
+       - "MIT Licensed by Font Awesome"
+*/
+/* topdoc
+    name: Helper classes for modified icons
+    family: cf-icons
+    patterns:
+        - name: Bordered icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__border"></span>
+          notes:
+            - "Border color set by @cf-icon-border-color"
+        - name: Rotated icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__rotate-90"></span>
+            <span class="cf-icon cf-icon-update cf-icon__rotate-180"></span>
+            <span class="cf-icon cf-icon-update cf-icon__rotate-270"></span>
+        - name: Flipped icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__flip-horizontal"></span>
+            <span class="cf-icon cf-icon-update cf-icon__flip-vertical"></span>
+    notes:
+       - "MIT Licensed by Font Awesome"
+*/
+.cf-icon__border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em;
+}
+.cf-icon__rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.cf-icon__rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.cf-icon__rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.cf-icon__flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.cf-icon__flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+:root .cf-icon__rotate-90,
+:root .cf-icon__rotate-180,
+:root .cf-icon__rotate-270,
+:root .cf-icon__flip-horizontal,
+:root .cf-icon__flip-vertical {
+  -webkit-filter: none;
+  filter: none;
+}
+/* topdoc
+    name: Helper classes for animated icons
+    family: cf-icons
+    patterns:
+        - name: Spinning icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__spin"></span>
+        - name: Pulsing icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__pulse"></span>
+        - name: Flipped icons
+          markup: |
+            <span class="cf-icon cf-icon-phone cf-icon__flip-horizontal"></span>
+            <span class="cf-icon cf-icon-phone cf-icon__flip-vertical"></span>
+    notes:
+       - "MIT Licensed by Font Awesome"
+*/
+.cf-icon__spin {
+  -webkit-animation: cf-spin 2s infinite linear;
+  animation: cf-spin 2s infinite linear;
+}
+.cf-icon__pulse {
+  -webkit-animation: cf-spin 1s infinite steps(8);
+  animation: cf-spin 1s infinite steps(8);
+}
+@-webkit-keyframes cf-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes cf-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
 }
 /* topdoc
     name: Navigation icons
@@ -1985,6 +2184,10 @@ input.btn::-moz-focus-inner {
         markup: |
           <span class="cf-icon cf-icon-upload"></span>
           <span class="cf-icon cf-icon-upload-round"></span>
+      - name: download
+        markup: |
+          <span class="cf-icon cf-icon-download"></span>
+          <span class="cf-icon cf-icon-download-round"></span>
       - name: copy
         markup: |
           <span class="cf-icon cf-icon-copy"></span>
@@ -2579,6 +2782,14 @@ input.btn::-moz-focus-inner {
         markup: |
           <span class="cf-icon cf-icon-play"></span>
           <span class="cf-icon cf-icon-play-round"></span>
+      - name: history
+        markup: |
+          <span class="cf-icon cf-icon-history"></span>
+          <span class="cf-icon cf-icon-history-round"></span>
+      - name: table of contents
+        markup: |
+          <span class="cf-icon cf-icon-table-of-contents"></span>
+          <span class="cf-icon cf-icon-table-of-contents-round"></span>
       - name: newspaper
         markup: |
           <span class="cf-icon cf-icon-newspaper"></span>
@@ -2615,6 +2826,22 @@ input.btn::-moz-focus-inner {
         markup: |
           <span class="cf-icon cf-icon-date"></span>
           <span class="cf-icon cf-icon-date-round"></span>
+      - name: closing-quote
+        markup: |
+          <span class="cf-icon cf-icon-closing-quote"></span>
+          <span class="cf-icon cf-icon-closing-quote-round"></span>
+      - name: livestream
+        markup: |
+          <span class="cf-icon cf-icon-livestream"></span>
+          <span class="cf-icon cf-icon-livestream-round"></span>
+      - name: parents
+        markup: |
+          <span class="cf-icon cf-icon-parents"></span>
+          <span class="cf-icon cf-icon-parents-round"></span>
+      - name: servicemembers
+        markup: |
+          <span class="cf-icon cf-icon-servicemembers"></span>
+          <span class="cf-icon cf-icon-servicemembers-round"></span>
     tags:
       - cf-icons
 */
@@ -2870,6 +3097,30 @@ input.btn::-moz-focus-inner {
 .lt-ie8 .cf-icon-play-round {
   *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e641');
 }
+.cf-icon-history:before {
+  content: "\e642";
+}
+.lt-ie8 .cf-icon-history {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e642');
+}
+.cf-icon-history-round:before {
+  content: "\e643";
+}
+.lt-ie8 .cf-icon-history-round {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e643');
+}
+.cf-icon-table-of-contents:before {
+  content: "\e644";
+}
+.lt-ie8 .cf-icon-table-of-contents {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e644');
+}
+.cf-icon-table-of-contents-round:before {
+  content: "\e645";
+}
+.lt-ie8 .cf-icon-table-of-contents-round {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e645');
+}
 .cf-icon-newspaper:before {
   content: "\e700";
 }
@@ -2978,6 +3229,54 @@ input.btn::-moz-focus-inner {
 .lt-ie8 .cf-icon-date-round {
   *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e719');
 }
+.cf-icon-closing-quote:before {
+  content: "\e720";
+}
+.lt-ie8 .cf-icon-closing-quote {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e720');
+}
+.cf-icon-closing-quote-round:before {
+  content: "\e721";
+}
+.lt-ie8 .cf-icon-closing-quote-round {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e721');
+}
+.cf-icon-livestream:before {
+  content: "\e722";
+}
+.lt-ie8 .cf-icon-livestream {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e722');
+}
+.cf-icon-livestream-round:before {
+  content: "\e723";
+}
+.lt-ie8 .cf-icon-livestream-round {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e723');
+}
+.cf-icon-parents:before {
+  content: "\e724";
+}
+.lt-ie8 .cf-icon-parents {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e724');
+}
+.cf-icon-parents-round:before {
+  content: "\e725";
+}
+.lt-ie8 .cf-icon-parents-round {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e725');
+}
+.cf-icon-servicemembers:before {
+  content: "\e726";
+}
+.lt-ie8 .cf-icon-servicemembers {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e726');
+}
+.cf-icon-servicemembers-round:before {
+  content: "\e727";
+}
+.lt-ie8 .cf-icon-servicemembers-round {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e727');
+}
 /* topdoc
   name: EOF
   eof: true
@@ -2986,11 +3285,11 @@ input.btn::-moz-focus-inner {
    Capital Framework
    Core Less file
    ========================================================================== */
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
  */
 html {
   font-family: sans-serif;
@@ -3052,7 +3351,7 @@ audio:not([controls]) {
 }
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
  */
 [hidden],
 template {
@@ -3067,7 +3366,8 @@ a {
   background-color: transparent;
 }
 /**
- * Improve readability when focused and also mouse hovered in all browsers.
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
  */
 a:active,
 a:hover {
@@ -3157,8 +3457,8 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -3283,16 +3583,17 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
-  /* 2 */
+  /* 1 */
+  -moz-box-sizing: content-box;
+  /* 1 */
   box-sizing: content-box;
+  /* 2 */
 }
 /**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
@@ -3545,23 +3846,44 @@ input[type="radio"] {
 }
 /* ==========================================================================
    Capital Framework
-   Color variables
-   ========================================================================== */
-/* ==========================================================================
-   Capital Framework
    Less variables
    ========================================================================== */
 /* topdoc
-  name: Less variables
+  name: Theme variables
   family: cf-core
+  notes:
+    - "The following color and sizing variables are exposed, allowing you to
+       easily override them before compiling."
   patterns:
-    - name: Font sizes
+    - name: Sizing
       codenotes:
-        - "@base-font-size-px: 16px;"
-        - "@base-line-height-px: 22px;"
-        - "@base-line-height: unit(@base-line-height-px / @base-font-size-px);"
-        - "@mobile-max: 599px;"
-        - "@tablet-min: 600px;"
+        - |
+          @base-font-size-px
+          @base-line-height-px
+          @base-line-height
+          @mobile-max
+          @tablet-min
+    - name: Colors
+      codenotes:
+        - |
+          @text
+          @link-text
+          @link-underline
+          @link-text-visited
+          @link-underline-visited
+          @link-text-hover
+          @link-underline-hover
+          @link-text-active
+          @link-underline-active
+          @thead-text
+          @thead-bg
+          @td-bg
+          @td-bg-alt
+          @input-bg
+          @input-border
+          @input-border-focus
+          @input-placeholder
+          @figure__bordered
   tags:
     - cf-core
 */
@@ -3635,8 +3957,8 @@ input[type="radio"] {
     - cf-core
 */
 /* topdoc
-    name: EOF
-    eof: true
+  name: EOF
+  eof: true
 */
 /* ==========================================================================
    Capital Framework
@@ -4058,46 +4380,46 @@ input[type="radio"] {
   patterns:
     - name: Percent-based
       markup: |
-        <div class="u-w100pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w100pct</code>
         </div>
-        <div class="u-w90pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w90pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w90pct</code>
         </div>
-        <div class="u-w80pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w80pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w80pct</code>
         </div>
-        <div class="u-w70pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w70pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w70pct</code>
         </div>
-        <div class="u-w60pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w60pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w60pct</code>
         </div>
-        <div class="u-w50pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w50pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w50pct</code>
         </div>
-        <div class="u-w40pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w40pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w40pct</code>
         </div>
-        <div class="u-w30pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w30pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w30pct</code>
         </div>
-        <div class="u-w20pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w20pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w20pct</code>
         </div>
-        <div class="u-w10pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w10pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w10pct</code>
         </div>
-        <div class="u-w75pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w75pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w75pct</code>
         </div>
-        <div class="u-w25pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w25pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w25pct</code>
         </div>
-        <div class="u-w66pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w66pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w66pct</code>
         </div>
-        <div class="u-w33pct" style="background: #DBEDD4; margin-bottom: 1px;">
+        <div class="u-w33pct" style="background: #f4edf3; margin-bottom: 1px;">
             <code>.u-w33pct</code>
         </div>
       notes:
@@ -4378,15 +4700,19 @@ small {
       markup: |
         <h6>Example heading element</h6>
         <p class="h6">A non-heading element</p>
+    - name: Subheader
+      markup: |
+        <h1 class="subheader">Example subheader that's kinda long</h1>
+        <p class="subheader">Example subheader that's kinda long</p>
     - name: Super header
       markup: |
-        <h1 class="superheader">Example super heading</h1>
-        <p class="superheader">Example super heading</p>
+        <h1 class="superheader">Example super header</h1>
+        <p class="superheader">Example super header</p>
   tags:
     - cf-core
 */
 body {
-  color: #101820;
+  color: #5b3b57;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 100%;
   line-height: 1.375;
@@ -4694,6 +5020,35 @@ h6,
   font-size: 0.75em;
   line-height: 1.83333333;
 }
+.subheader {
+  margin-top: 0;
+  margin-bottom: 1.16666667em;
+  font-size: 1.125em;
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.22222222;
+}
+.subheader em,
+.subheader i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .subheader em,
+.lt-ie9 .subheader i {
+  font-style: normal !important;
+}
+.subheader strong,
+.subheader b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .subheader strong,
+.lt-ie9 .subheader b {
+  font-weight: normal !important;
+}
 .superheader {
   margin-bottom: 0.1875em;
   font-size: 3em;
@@ -4755,20 +5110,20 @@ figure {
 a {
   border-width: 0;
   border-style: dotted;
-  border-color: #0072ce;
-  color: #0072ce;
+  border-color: #c7336e;
+  color: #c7336e;
   text-decoration: none;
 }
 a:visited,
 a.visited {
-  border-color: #005e5d;
-  color: #005e5d;
+  border-color: #cf447c;
+  color: #cf447c;
 }
 a:hover,
 a.hover {
   border-style: solid;
-  border-color: #7fb8e6;
-  color: #7fb8e6;
+  border-color: #9e2958;
+  color: #9e2958;
 }
 a:focus,
 a.focus {
@@ -4778,8 +5133,8 @@ a.focus {
 a:active,
 a.active {
   border-style: solid;
-  border-color: #002d72;
-  color: #002d72;
+  border-color: #8a234c;
+  color: #8a234c;
 }
 /* topdoc
   name: Underlined links
@@ -4963,16 +5318,16 @@ table b {
 th,
 td {
   padding: 0.75em 0.9375em;
-  background: #f8f8f8;
+  background: #eee4ed;
 }
 thead th,
 thead td {
   color: #ffffff;
-  background: #43484e;
+  background: #5b3b57;
 }
 tbody > tr:nth-child(odd) > th,
 tbody > tr:nth-child(odd) > td {
-  background: #f1f2f2;
+  background: #f4edf3;
 }
 .compact-table th,
 .compact-table td {
@@ -5018,182 +5373,6 @@ blockquote {
 @media only all and (min-width: 37.5em) {
   blockquote {
     margin: 1.75em 2.5em;
-  }
-}
-/* topdoc
-  name: Pull quote
-  family: cf-core
-  patterns:
-    - name: Default pull quote
-      markup: |
-        <aside class="pull-quote">
-            <div class="pull-quote_body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum!
-            </div>
-            <footer>
-                <cite class="pull-quote_citation">
-                    - Author Name
-                </cite>
-            <footer>
-        </aside>
-      notes:
-        - "Use a pull quote to highlight excerpts from the current work.
-          This is not to be confused with blockquote which quotes from an
-          external work."
-        - "Since a pull quote is an excerpt and repeats content from the
-          article it's contained within you should use the aside element."
-    - name: Large pull quote
-      markup: |
-        <aside class="pull-quote pull-quote__large">
-            <div class="pull-quote_body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Cum corrupti tempora nam nihil qui mollitia consectetur
-                corporis nemo culpa dolorum!
-            </div>
-            <footer>
-                <cite class="pull-quote_citation">
-                    - Author Name
-                </cite>
-            <footer>
-        </aside>
-  tags:
-    - cf-core
-*/
-.pull-quote_body {
-  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin-top: 0;
-  margin-bottom: 0.95454545em;
-  font-size: 1.375em;
-  line-height: 1.27272727;
-  margin-bottom: 0.54545455em;
-  color: #101820;
-}
-.pull-quote_body em,
-.pull-quote_body i {
-  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-}
-.lt-ie9 .pull-quote_body em,
-.lt-ie9 .pull-quote_body i {
-  font-style: normal !important;
-}
-.pull-quote_body strong,
-.pull-quote_body b {
-  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-}
-.lt-ie9 .pull-quote_body strong,
-.lt-ie9 .pull-quote_body b {
-  font-weight: normal !important;
-}
-@media only all and (max-width: 37.4375em) {
-  .pull-quote_body {
-    margin-top: 0;
-    margin-bottom: 1.16666667em;
-    font-size: 1.125em;
-    font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.22222222;
-  }
-  .lt-ie9 .pull-quote_body {
-    font-weight: normal !important;
-  }
-}
-.pull-quote_citation {
-  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0.35714286em;
-  font-size: 0.875em;
-  line-height: 1.57142857;
-  color: #75787b;
-}
-.lt-ie9 .pull-quote_citation {
-  font-weight: normal !important;
-}
-.pull-quote__large .pull-quote_body {
-  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin-top: 0;
-  margin-bottom: 0.73076923em;
-  font-size: 1.625em;
-  line-height: 1.26923077;
-  margin-bottom: 0.69230769em;
-}
-.pull-quote__large .pull-quote_body em,
-.pull-quote__large .pull-quote_body i {
-  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-}
-.lt-ie9 .pull-quote__large .pull-quote_body em,
-.lt-ie9 .pull-quote__large .pull-quote_body i {
-  font-style: normal !important;
-}
-.pull-quote__large .pull-quote_body strong,
-.pull-quote__large .pull-quote_body b {
-  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-}
-.lt-ie9 .pull-quote__large .pull-quote_body strong,
-.lt-ie9 .pull-quote__large .pull-quote_body b {
-  font-weight: normal !important;
-}
-@media only all and (max-width: 37.4375em) {
-  .pull-quote__large .pull-quote_body {
-    font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 0.95454545em;
-    font-size: 1.375em;
-    line-height: 1.27272727;
-  }
-  .pull-quote__large .pull-quote_body em,
-  .pull-quote__large .pull-quote_body i {
-    font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
-    font-style: italic;
-    font-weight: normal;
-  }
-  .lt-ie9 .pull-quote__large .pull-quote_body em,
-  .lt-ie9 .pull-quote__large .pull-quote_body i {
-    font-style: normal !important;
-  }
-  .pull-quote__large .pull-quote_body strong,
-  .pull-quote__large .pull-quote_body b {
-    font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-  }
-  .lt-ie9 .pull-quote__large .pull-quote_body strong,
-  .lt-ie9 .pull-quote__large .pull-quote_body b {
-    font-weight: normal !important;
-  }
-}
-@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
-  .pull-quote__large .pull-quote_body {
-    margin-top: 0;
-    margin-bottom: 1.16666667em;
-    font-size: 1.125em;
-    font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.22222222;
-  }
-  .lt-ie9 .pull-quote__large .pull-quote_body {
-    font-weight: normal !important;
   }
 }
 /* topdoc
@@ -5260,33 +5439,39 @@ label input[type="checkbox"] {
     - name: type="text"
       markup: |
         <input type="text" value="Lorem ipsum">
-        <input placeholder="Lorem ipsum" type="text" value="">
         <input class="focus" type="text" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="text" value="">
     - name: type="search"
       markup: |
         <input type="search" value="Lorem ipsum">
-        <input placeholder="Lorem ipsum" type="search" value="">
         <input class="focus" type="search" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="search" value="">
     - name: type="email"
       markup: |
         <input type="email" value="Lorem ipsum">
-        <input placeholder="Lorem ipsum" type="email" value="">
         <input class="focus" type="email" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="email" value="">
     - name: type="url"
       markup: |
         <input type="url" value="Lorem ipsum">
-        <input placeholder="Lorem ipsum" type="url" value="">
         <input class="focus" type="url" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="url" value="">
     - name: type="tel"
       markup: |
         <input type="tel" value="Lorem ipsum">
-        <input placeholder="Lorem ipsum" type="tel" value="">
         <input class="focus" type="tel" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="tel" value="">
     - name: type="number"
       markup: |
         <input type="number" value="1000">
-        <input placeholder="Lorem ipsum" type="number" value="">
         <input class="focus" type="number" value="1000">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="number" value="">
     - name: textarea
       markup: |
         <textarea>Lorem ipsum</textarea>
@@ -5322,7 +5507,7 @@ select[multiple] {
   font-family: Arial, sans-serif;
   font-size: 1em;
   background: #ffffff;
-  border: 1px solid #75787b;
+  border: 1px solid #5b3b57;
   border-radius: 0;
   vertical-align: top;
   -webkit-appearance: none;
@@ -5347,20 +5532,20 @@ textarea:focus,
 textarea.focus,
 select[multiple]:focus,
 select[multiple].focus {
-  border: 1px solid #0072ce;
-  outline: 1px solid #0072ce;
+  border: 1px solid #c7336e;
+  outline: 1px solid #c7336e;
   outline-offset: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 ::-webkit-input-placeholder {
-  color: #75787b;
+  color: grayscale(#c7336e);
 }
 ::-moz-placeholder {
-  color: #75787b;
+  color: grayscale(#c7336e);
 }
 :-ms-input-placeholder {
-  color: #75787b;
+  color: grayscale(#c7336e);
 }
 /* topdoc
   name: Images
@@ -5381,10 +5566,15 @@ img {
   name: Figure
   family: cf-core
   patterns:
+    - name: figure
+      markup: |
+        <figure>
+            <img src="http://placekitten.com/340/320">
+        </figure>
     - name: figure.figure__bordered
       markup: |
         <figure class="figure__bordered">
-            <img src="http://placekitten.com/300/300">
+            <img src="http://placekitten.com/340/320">
         </figure>
   tags:
     - cf-core
@@ -5397,41 +5587,10 @@ figure img {
   vertical-align: middle;
 }
 .figure__bordered img {
-  border: 1px solid #babbbd;
-}
-/* topdoc
-  name: Branded list modifier
-  family: cf-core
-  patterns:
-    - name: Branded list
-      markup: |
-        <ul class="list__branded">
-            <li>First item</li>
-            <li>Second item</li>
-            <li>Third item</li>
-        </ul>
-      codenotes:
-        - ".list__branded"
-      notes:
-        - "List that uses brand-color bullets"
-  tags:
-    - cf-core
-*/
-.list__branded li {
-  position: relative;
-  list-style-type: none;
-  padding-bottom: 0.75em;
-}
-.list__branded li:before {
-  content: "\25AA";
-  position: absolute;
-  color: #2cb34a;
-  font-size: 1.375em;
-  line-height: 1;
-  left: -0.86363636em;
+  border: 1px solid #5b3b57;
 }
 /* topdoc
   name: EOF
   eof: true
 */
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9zcmMvdmVuZG9yL2NmLWNvbmNhdC9jZi5sZXNzIiwiL3NyYy92ZW5kb3IvY2YtY29yZS9jZi1iYXNlLmxlc3MiLCIvc3JjL3ZlbmRvci9jZi1jb3JlL2NmLW1lZGlhLXF1ZXJpZXMubGVzcyIsIi9zcmMvdmVuZG9yL2NmLWNvcmUvY2YtdXRpbGl0aWVzLmxlc3MiLCIvc3JjL3ZlbmRvci9ub3JtYWxpemUtY3NzL25vcm1hbGl6ZS5jc3MiLCIvc3JjL3ZlbmRvci9ub3JtYWxpemUtbGVnYWN5LWFkZG9uL25vcm1hbGl6ZS1sZWdhY3ktYWRkb24uY3NzIiwiL3NyYy92ZW5kb3IvY2YtY29yZS9saWNlbnNlZC1mb250cy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQXNEQTtFQzBCSSxhQUFhLHlDQUFiO0VBQ0Esa0JBQUE7RUFDQSxpQkFBQTtFQTBJQSxtQkFBQTtFQUNBLHlCQUFBO0VBT0EsYUFBQTtFQUdBLDJCQUFBO0VBQ0Esa0JBQUE7RUFDQSx1QkFBQTtFRGpMQSwyQkFBQTs7QUMyQkEsT0FBUTtFQUNKLDhCQUFBOzs7Ozs7Ozs7Ozs7Ozs7QURUSixhQUFDO0FBQ0QsYUFBQztBQUNELGFBQUM7QUFDRCxhQUFDO0FBQ0QsYUFBQztBQUNELGFBQUM7RUFDRyxxQkFBQTtFQUNBLGtCQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBcUNKLEtBUkMsYUFRQTtBQUFELEtBUEMsZUFPQTtBQUFELEtBTkMsY0FNQTtBQUFELEtBTEMsWUFLQTtBQUFELEtBSkMsWUFJQTtBQUFELEtBSEMsZUFHQTtBQUFELE1BRkUsVUFFRDtBQUFELFFBQUM7RUFDRyx5QkFBQTtFQUNBLDBCQUFBOztBQUVKLEtBWkMsYUFZQTtBQUFELEtBWEMsZUFXQTtBQUFELEtBVkMsY0FVQTtBQUFELEtBVEMsWUFTQTtBQUFELEtBUkMsWUFRQTtBQUFELEtBUEMsZUFPQTtBQUFELE1BTkUsVUFNRDtBQUFELFFB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 */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9zcmMvdmVuZG9yL2NmLWNvbmNhdC9jZi5sZXNzIiwiL3NyYy92ZW5kb3IvY2YtY29yZS9jZi1iYXNlLmxlc3MiLCIvc3JjL3ZlbmRvci9jZi1jb3JlL2NmLW1lZGlhLXF1ZXJpZXMubGVzcyIsIi9zcmMvdmVuZG9yL2NmLWNvcmUvY2YtdXRpbGl0aWVzLmxlc3MiLCIvc3JjL3ZlbmRvci9ub3JtYWxpemUtY3NzL25vcm1hbGl6ZS5jc3MiLCIvc3JjL3ZlbmRvci9ub3JtYWxpemUtbGVnYWN5LWFkZG9uL25vcm1hbGl6ZS1sZWdhY3ktYWRkb24uY3NzIiwiL3NyYy92ZW5kb3IvY2YtY29yZS9saWNlbnNlZC1mb250cy5jc3MiLCIvc3JjL3ZlbmRvci9jZi1jb3JlL2NmLXZhcnMubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBc0RBO0VDMEJJLGFBQWEseUNBQWI7RUFDQSxrQkFBQTtFQUNBLGlCQUFBO0VBOElBLG1CQUFBO0VBQ0EseUJBQUE7RUFPQSxhQUFBO0VBR0EsMkJBQUE7RUFDQSxrQkFBQTtFQUNBLHVCQUFBO0VEckxBLDJCQUFBOztBQzJCQSxPQUFRO0VBQ0osOEJBQUE7Ozs7Ozs7Ozs7Ozs7OztBRFRKLGFBQUM7QUFDRCxhQUFDO0FBQ0QsYUFBQztBQUNELGFBQUM7QUFDRCxhQUFDO0FBQ0QsYUFBQztFQUNHLHFCQUFBO0VBQ0Esa0JBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFxQ0osS0FSQyxhQVFBO0FBQUQsS0FQQyxlQU9BO0FBQUQsS0FOQyxjQU1BO0FBQUQsS0FMQyxZQUtBO0FBQUQsS0FKQyxZQUlBO0FBQUQsS0FIQyxlQUdBO0FBQUQsTUFGRSxVQUVEO0FBQUQsUUFBQztFQUNHLHlCQUFBO0VBQ0EsMEJBQUE7O0FBRUosS0FaQyxhQVlBO0FBQUQsS0FYQyxlQVdBO0FBQUQsS0FWQyxjQVVBO0FBQUQsS0FUQyxZQVNBO0FBQUQsS0FSQyxZQVFBO0FB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 */

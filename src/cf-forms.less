@@ -64,7 +64,7 @@
   patterns:
     - name: .input__super
       markup: |
-        <input class="input__super" type="text" value="Super input"></input>
+        <input class="input__super" type="text" value="Super input" title="Test input"></input>
         <button class="btn btn__super">Super</button>
       notes:
         - "An input that matches the height of a super button."
@@ -96,7 +96,7 @@
         - "See the 'Form icons' section below for guidance on adding icons to
            states."
       markup: |
-        <input class="error" type="text" value="Invalid input">
+        <input class="error" type="text" value="Invalid input" title="Test input">
     - name: Success state
       codenotes:
         - .success
@@ -104,7 +104,7 @@
         - "See the 'Form icons' section below for guidance on adding icons to
            states."
       markup: |
-        <input class="success" type="text" value="Validated input">
+        <input class="success" type="text" value="Validated input" title="Test input">
     tags:
     - cf-forms
 */
@@ -137,7 +137,7 @@ textarea {
         - "Form input icons add small positioning tweaks to Capital Framework
           icons."
       markup: |
-        <input type="text" value="">
+        <input type="text" value="" title="Test input">
         <span class="cf-form_input-icon cf-icon cf-icon-email"></span>
     - name: Form input error icon
       notes:
@@ -147,7 +147,7 @@ textarea {
            fields that need immediate attention:
            https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role"
       markup: |
-        <input class="error" type="text" value="Invalid input">
+        <input class="error" type="text" value="Invalid input" title="Test input">
         <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
     - name: Form input success icon
       notes:
@@ -157,7 +157,7 @@ textarea {
            previously invalid input is now valid:
            https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role"
       markup: |
-        <input class="success" type="text" value="Validated input">
+        <input class="success" type="text" value="Validated input" title="Test input">
         <span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
     tags:
     - cf-forms
@@ -200,26 +200,26 @@ textarea {
       markup: |
         <div class="form-group">
             <div class="form-group_item">
-                <input type="text">
+                <input type="text" title="Test input">
             </div>
             <div class="form-group_item">
-                <input type="text">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="form-group_item">
-                <input type="text">
-            </div>
-            <div class="form-group_item">
-                <input type="text">
+                <input type="text" title="Test input">
             </div>
         </div>
         <div class="form-group">
             <div class="form-group_item">
-                <input type="text">
+                <input type="text" title="Test input">
             </div>
             <div class="form-group_item">
-                <input type="text">
+                <input type="text" title="Test input">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group_item">
+                <input type="text" title="Test input">
+            </div>
+            <div class="form-group_item">
+                <input type="text" title="Test input">
             </div>
         </div>
       codenotes:
@@ -230,13 +230,13 @@ textarea {
     - name: .form-group_item (element)
       markup: |
         <div class="form-group_item">
-            <input type="text">
+            <input type="text" title="Test input">
         </div>
         <div class="form-group_item">
-            <input type="text">
+            <input type="text" title="Test input">
         </div>
         <div class="form-group_item">
-            <input type="text">
+            <input type="text" title="Test input">
         </div>
       notes:
         - "Provides subtle margins between form elements within the same group."
@@ -245,19 +245,19 @@ textarea {
         <div class="form-group">
             <label class="form-label-header">Form group</label>
             <div class="form-group_item">
-                <input type="text" value="Form group item">
+                <input type="text" value="Form group item" title="Test input">
             </div>
             <div class="form-group_item">
-                <input type="text" value="Form group item">
+                <input type="text" value="Form group item" title="Test input">
             </div>
         </div>
         <div class="form-group">
             <label class="form-label-header">Form group</label>
             <div class="form-group_item">
-                <input type="text" value="Form group item">
+                <input type="text" value="Form group item" title="Test input">
             </div>
             <div class="form-group_item">
-                <input type="text" value="Form group item">
+                <input type="text" value="Form group item" title="Test input">
             </div>
         </div>
   tags:
@@ -281,7 +281,7 @@ textarea {
       markup: |
         <div class="input-with-btn">
             <div class="input-with-btn_input">
-                <input type="text">
+                <input type="text" title="Test input">
             </div>
             <div class="input-with-btn_btn">
                 <button class="btn">Search</button>
@@ -291,7 +291,7 @@ textarea {
       markup: |
         <div class="input-with-btn">
             <div class="input-with-btn_input">
-                <input class="input__super" type="text">
+                <input class="input__super" type="text" title="Test input">
             </div>
             <div class="input-with-btn_btn">
                 <button class="btn btn__super">Search</button>
@@ -356,7 +356,7 @@ textarea {
       markup: |
         <div class="btn-inside-input">
             <input type="text"
-                   value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable.">
+                   value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable." title="Test input">
             <button class="btn btn__link btn__secondary">
                 Clear
                 <span class="cf-icon cf-icon-delete"></span>
@@ -367,7 +367,7 @@ textarea {
         <div class="btn-inside-input">
             <input class="input__super"
                    type="text"
-                   value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable.">
+                   value="This is some really long text to make sure that the button doesn't overlap the content in such a way that this input becomes unusable." title="Test input">
             <button class="btn btn__super btn__link btn__secondary">
                 Clear
                 <span class="cf-icon cf-icon-delete"></span>
@@ -401,9 +401,14 @@ textarea {
         position: absolute;
         right: unit(15px / @btn-font-size, em);
         top: 0;
-        
+
         &__super {
             right: unit(15px / @super-btn-font-size, em);
+        }
+
+        /* pa11y fails unless the background color is explicitly set */
+        &__link.btn__secondary {
+            background-color: #fff;
         }
     }
 
