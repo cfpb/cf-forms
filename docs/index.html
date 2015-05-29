@@ -37,6 +37,7 @@
                 <ul class="docs-codenotes">
                   <li>
                     <pre class="docs-code"><code>@input-error
+@input-warning
 @input-success</code></pre>
                   </li>
                 </ul>
@@ -78,7 +79,7 @@
           </div>
           <div class="docs-css">
             <pre class="docs-code"><code data-language="css">.form-label-header {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   letter-spacing: 1px;
@@ -155,6 +156,28 @@
               </footer>
             </div>
             <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Warning state</h3>
+              <section class="docs-pattern_pattern">
+<input class="warning" type="text" value="Invalid input" title="Test input">
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;warning&quot; type=&quot;text&quot; value=&quot;Invalid input&quot; title=&quot;Test input&quot;&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-forms/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;input class=\&amp;quot;warning\&amp;quot; type=\&amp;quot;text\&amp;quot; value=\&amp;quot;Invalid input\&amp;quot; title=\&amp;quot;Test input\&amp;quot;&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>.warning</code></pre>
+                  </li>
+                </ul>
+                <ul class="docs-notes">
+                  <li>See the 'Form icons' section below for guidance on adding icons to states.</li>
+                </ul>
+              </footer>
+            </div>
+            <div class="docs-pattern">
               <h3 class="docs-pattern_header">Success state</h3>
               <section class="docs-pattern_pattern">
 <input class="success" type="text" value="Validated input" title="Test input">
@@ -188,6 +211,17 @@ select[multiple].error,
 textarea.error {
   border: 1px solid #ea130b;
   outline: 1px solid #ea130b;
+}
+input[type=&quot;text&quot;].warning,
+input[type=&quot;search&quot;].warning,
+input[type=&quot;email&quot;].warning,
+input[type=&quot;url&quot;].warning,
+input[type=&quot;tel&quot;].warning,
+input[type=&quot;number&quot;].warning,
+select[multiple].warning,
+textarea.warning {
+  border: 1px solid #ffb108;
+  outline: 1px solid #ffb108;
 }
 input[type=&quot;text&quot;].success,
 input[type=&quot;search&quot;].success,
@@ -245,6 +279,26 @@ textarea.success {
               </footer>
             </div>
             <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Form input warning icon</h3>
+              <section class="docs-pattern_pattern">
+<input class="warning" type="text" value="Invalid input" title="Test input">
+<span class="cf-form_input-icon cf-icon cf-icon-error-round" role="alert"></span>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;warning&quot; type=&quot;text&quot; value=&quot;Invalid input&quot; title=&quot;Test input&quot;&gt;
+&lt;span class=&quot;cf-form_input-icon cf-icon cf-icon-error-round&quot; role=&quot;alert&quot;&gt;&lt;/span&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-forms/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;input class=\&amp;quot;warning\&amp;quot; type=\&amp;quot;text\&amp;quot; value=\&amp;quot;Invalid input\&amp;quot; title=\&amp;quot;Test input\&amp;quot;&gt;\n&lt;span class=\&amp;quot;cf-form_input-icon cf-icon cf-icon-error-round\&amp;quot; role=\&amp;quot;alert\&amp;quot;&gt;&lt;/span&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+                <ul class="docs-notes">
+                  <li>The icon must be placed directly after the form input in the markup and the input must use the 'warning' class.</li>
+                  <li>For invalid fields only use the alert role to call attention to fields that need immediate attention: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role</li>
+                </ul>
+              </footer>
+            </div>
+            <div class="docs-pattern">
               <h3 class="docs-pattern_header">Form input success icon</h3>
               <section class="docs-pattern_pattern">
 <input class="success" type="text" value="Validated input" title="Test input">
@@ -274,6 +328,9 @@ textarea.success {
 }
 .error + .cf-form_input-icon {
   color: #ea130b;
+}
+.warning + .cf-form_input-icon {
+  color: #ffb108;
 }
 .success + .cf-form_input-icon {
   color: #009d38;
