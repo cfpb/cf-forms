@@ -1,6 +1,31 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.4.0 - 2015-07-16
+
+### Additions
+
+- Adds new input-warning color var
+- Adds error exclamation icon
+
+
+## 1.3.1 - 2015-06-05
+
+### Changed
+
+- Moved @import rules to top of source file to make compilation cleaner.
+
+
+## 1.3.0 - 2015-06-01
+
+### Changed
+
+- Build process now uses @import statements instead of Grunt concatenation.
+
+### Added
+
+- pa11y accessibility tests running in Travis.
+
 
 ## 1.2.0 - 2015-01-16
 

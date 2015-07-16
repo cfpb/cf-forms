@@ -19,6 +19,7 @@
     codenotes:
       - |
         @input-error
+        @input-warning
         @input-success
   - name: Sizing
     codenotes:
@@ -33,6 +34,9 @@
 
 // .error
 @input-error:                   #ea130b;
+
+// warning
+@input-warning:                 #ffb108;
 
 // .success
 @input-success:                 #009d38;
@@ -101,6 +105,14 @@
            states."
       markup: |
         <input class="error" type="text" value="Invalid input" title="Test input">
+    - name: Warning state
+      codenotes:
+        - .warning
+      notes:
+        - "See the 'Form icons' section below for guidance on adding icons to
+           states."
+      markup: |
+        <input class="warning" type="text" value="Invalid input" title="Test input">
     - name: Success state
       codenotes:
         - .success
@@ -124,6 +136,10 @@ textarea {
     &.error {
         border: 1px solid @input-error;
         outline: 1px solid @input-error;
+    }
+    &.warning {
+        border: 1px solid @input-warning;
+        outline: 1px solid @input-warning;
     }
     &.success {
         border: 1px solid @input-success;
@@ -153,6 +169,16 @@ textarea {
       markup: |
         <input class="error" type="text" value="Invalid input" title="Test input">
         <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
+    - name: Form input warning icon
+      notes:
+        - "The icon must be placed directly after the form input in the markup
+          and the input must use the 'warning' class."
+        - "For invalid fields only use the alert role to call attention to
+           fields that need immediate attention:
+           https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role"
+      markup: |
+        <input class="warning" type="text" value="Invalid input" title="Test input">
+        <span class="cf-form_input-icon cf-icon cf-icon-error-round" role="alert"></span>
     - name: Form input success icon
       notes:
         - "The icon must be placed directly after the form input in the markup
@@ -180,6 +206,10 @@ textarea {
 
 .error + .@{cf-forms_input-icon-class} {
     color: @input-error;
+}
+
+.warning + .@{cf-forms_input-icon-class} {
+    color: @input-warning;
 }
 
 .success + .@{cf-forms_input-icon-class} {
@@ -342,7 +372,7 @@ textarea {
             box-sizing: border-box;
             width: 100%;
         }
-        
+
         .btn__super {
             padding-left: unit(15px / @super-btn-font-size, em);
             padding-right: unit(15px / @super-btn-font-size, em);
@@ -384,7 +414,7 @@ textarea {
 .btn-inside-input {
 
     position: relative;
-    
+
     input[type="text"],
     input[type="search"],
     input[type="email"],
@@ -399,7 +429,7 @@ textarea {
             padding-right: unit(90px / @super-btn-font-size, em);
         }
     }
-    
+
     .btn {
         .u-link__no-border();
         position: absolute;
