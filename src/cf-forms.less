@@ -20,7 +20,7 @@
       - |
         @input-error
         @input-warning
-        @input-success
+        @input-disabled
   - name: Sizing
     codenotes:
       - |
@@ -38,8 +38,8 @@
 // warning
 @input-warning:                 #ffb108;
 
-// .success
-@input-success:                 #009d38;
+// .disabled
+@input-disabled:                 #babbbd;
 
 // Sizing variables
 
@@ -113,14 +113,14 @@
            states."
       markup: |
         <input class="warning" type="text" value="Invalid input" title="Test input">
-    - name: Success state
+    - name: Disabled state
       codenotes:
-        - .success
+        - .disabled
       notes:
         - "See the 'Form icons' section below for guidance on adding icons to
            states."
       markup: |
-        <input class="success" type="text" value="Validated input" title="Test input">
+        <input class="disabled" disabled="true" autocomplete="off" type="text" value="Validated input" title="Test input">
     tags:
     - cf-forms
 */
@@ -141,9 +141,9 @@ textarea {
         border: 1px solid @input-warning;
         outline: 1px solid @input-warning;
     }
-    &.success {
-        border: 1px solid @input-success;
-        outline: 1px solid @input-success;
+    &.disabled {
+        border: 1px solid @input-disabled;
+        outline: 1px solid @input-disabled;
     }
 }
 
@@ -210,10 +210,6 @@ textarea {
 
 .warning + .@{cf-forms_input-icon-class} {
     color: @input-warning;
-}
-
-.success + .@{cf-forms_input-icon-class} {
-    color: @input-success;
 }
 
 
