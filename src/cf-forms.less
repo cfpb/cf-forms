@@ -19,7 +19,6 @@
     codenotes:
       - |
         @input-error
-        @input-warning
         @input-disabled
         @input-disabled-bg
   - name: Sizing
@@ -34,10 +33,7 @@
 // Color variables
 
 // .error
-@input-error:                   #ea130b;
-
-// warning
-@input-warning:                 #ffb108;
+@input-error:                   #d14124;
 
 // .disabled
 @input-disabled:                #babbbd;
@@ -106,11 +102,6 @@
         - .error
       markup: |
         <input class="error" type="text" value="Invalid input" title="Test input">
-    - name: Warning state
-      codenotes:
-        - .warning
-      markup: |
-        <input class="warning" type="text" value="Invalid input" title="Test input">
     - name: Disabled state
       codenotes:
         - .disabled
@@ -131,10 +122,6 @@ textarea {
     &.error {
         border: 1px solid @input-error;
         outline: 1px solid @input-error;
-    }
-    &.warning {
-        border: 1px solid @input-warning;
-        outline: 1px solid @input-warning;
     }
     &.disabled {
         border: 1px solid @input-disabled;
