@@ -125,6 +125,73 @@ textarea {
     }
 }
 
+/* topdoc
+    name: Form icons
+    family: cf-forms
+    patterns:
+    - name: Form input icons
+      notes:
+        - "Form input icons add small positioning tweaks to Capital Framework
+          icons."
+      markup: |
+        <input type="text" value="" title="Test input">
+        <span class="cf-form_input-icon cf-icon cf-icon-email"></span>
+    - name: Form input error icon
+      notes:
+        - "The icon must be placed directly after the form input in the markup
+          and the input must use the 'error' class."
+        - "For invalid fields only use the alert role to call attention to
+           fields that need immediate attention:
+           https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role"
+      markup: |
+        <input class="error" type="text" value="Invalid input" title="Test input">
+        <span class="cf-form_input-icon cf-icon cf-icon-delete-round" role="alert"></span>
+    - name: Form input warning icon
+      notes:
+        - "The icon must be placed directly after the form input in the markup
+          and the input must use the 'warning' class."
+        - "For invalid fields only use the alert role to call attention to
+           fields that need immediate attention:
+           https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role"
+      markup: |
+        <input class="warning" type="text" value="Invalid input" title="Test input">
+        <span class="cf-form_input-icon cf-icon cf-icon-error-round" role="alert"></span>
+    - name: Form input success icon
+      notes:
+        - "The icon must be placed directly after the form input in the markup
+          and the input must use the 'error' class."
+        - "For valid inputs only use the alert role to indicate that a
+           previously invalid input is now valid:
+           https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role"
+      markup: |
+        <input class="success" type="text" value="Validated input" title="Test input">
+        <span class="cf-form_input-icon cf-icon cf-icon-approved-round"></span>
+    tags:
+    - cf-forms
+*/
+
+@cf-forms_input-icon-class: cf-form_input-icon;
+
+.@{cf-forms_input-icon-class} {
+    @font-size: 20px;
+
+    position: relative;
+    top: unit(6px / @font-size, em);
+    margin-left: unit(4px / @font-size, em);
+    font-size: unit(@font-size / @base-font-size-px, em);
+}
+
+.error + .@{cf-forms_input-icon-class} {
+    color: @input-error;
+}
+
+.warning + .@{cf-forms_input-icon-class} {
+    color: @input-warning;
+}
+
+.success + .@{cf-forms_input-icon-class} {
+    color: @input-success;
+}
 
 /* topdoc
   name: Form group
