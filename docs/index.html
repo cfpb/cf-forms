@@ -38,7 +38,8 @@
                   <li>
                     <pre class="docs-code"><code>@input-error
 @input-warning
-@input-success</code></pre>
+@input-success
+@input-disabled</code></pre>
                   </li>
                 </ul>
               </footer>
@@ -77,23 +78,6 @@
               </footer>
             </div>
           </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.form-label-header {
-  font-family: Arial, Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0.35714286em;
-  font-size: 0.875em;
-  line-height: 1.57142857;
-  margin-bottom: 0.71428571em;
-}
-.lt-ie9 .form-label-header {
-  font-weight: normal !important;
-}</code></pre>
-          </div>
         </div>
         <div id="super-input" class="docs-component">
           <h2 class="docs-component_header"><span>Super input</span></h2>
@@ -118,17 +102,6 @@
               </footer>
             </div>
           </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.input__super[type=&quot;text&quot;],
-.input__super[type=&quot;search&quot;],
-.input__super[type=&quot;email&quot;],
-.input__super[type=&quot;url&quot;],
-.input__super[type=&quot;tel&quot;],
-.input__super[type=&quot;number&quot;] {
-  padding: 0.55555556em;
-  font-size: 1.125em;
-}</code></pre>
-          </div>
         </div>
         <div id="input-states" class="docs-component">
           <h2 class="docs-component_header"><span>Input states</span></h2>
@@ -149,9 +122,6 @@
                   <li>
                     <pre class="docs-code"><code>.error</code></pre>
                   </li>
-                </ul>
-                <ul class="docs-notes">
-                  <li>See the 'Form icons' section below for guidance on adding icons to states.</li>
                 </ul>
               </footer>
             </div>
@@ -199,41 +169,25 @@
                 </ul>
               </footer>
             </div>
-          </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">input[type=&quot;text&quot;].error,
-input[type=&quot;search&quot;].error,
-input[type=&quot;email&quot;].error,
-input[type=&quot;url&quot;].error,
-input[type=&quot;tel&quot;].error,
-input[type=&quot;number&quot;].error,
-select[multiple].error,
-textarea.error {
-  border: 1px solid #ea130b;
-  outline: 1px solid #ea130b;
-}
-input[type=&quot;text&quot;].warning,
-input[type=&quot;search&quot;].warning,
-input[type=&quot;email&quot;].warning,
-input[type=&quot;url&quot;].warning,
-input[type=&quot;tel&quot;].warning,
-input[type=&quot;number&quot;].warning,
-select[multiple].warning,
-textarea.warning {
-  border: 1px solid #ffb108;
-  outline: 1px solid #ffb108;
-}
-input[type=&quot;text&quot;].success,
-input[type=&quot;search&quot;].success,
-input[type=&quot;email&quot;].success,
-input[type=&quot;url&quot;].success,
-input[type=&quot;tel&quot;].success,
-input[type=&quot;number&quot;].success,
-select[multiple].success,
-textarea.success {
-  border: 1px solid #009d38;
-  outline: 1px solid #009d38;
-}</code></pre>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Disabled state</h3>
+              <section class="docs-pattern_pattern">
+<input class="disabled" disabled="true" autocomplete="off" type="text" value="Validated input" title="Test input">
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;input class=&quot;disabled&quot; disabled=&quot;true&quot; autocomplete=&quot;off&quot; type=&quot;text&quot; value=&quot;Validated input&quot; title=&quot;Test input&quot;&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-forms/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;input class=\&amp;quot;disabled\&amp;quot; disabled=\&amp;quot;true\&amp;quot; autocomplete=\&amp;quot;off\&amp;quot; type=\&amp;quot;text\&amp;quot; value=\&amp;quot;Validated input\&amp;quot; title=\&amp;quot;Test input\&amp;quot;&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>.disabled</code></pre>
+                  </li>
+                </ul>
+              </footer>
+            </div>
           </div>
         </div>
         <div id="form-icons" class="docs-component">
@@ -318,23 +272,6 @@ textarea.success {
                 </ul>
               </footer>
             </div>
-          </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.cf-form_input-icon {
-  position: relative;
-  top: 0.3em;
-  margin-left: 0.2em;
-  font-size: 1.25em;
-}
-.error + .cf-form_input-icon {
-  color: #ea130b;
-}
-.warning + .cf-form_input-icon {
-  color: #ffb108;
-}
-.success + .cf-form_input-icon {
-  color: #009d38;
-}</code></pre>
           </div>
         </div>
         <div id="form-group" class="docs-component">
@@ -503,14 +440,6 @@ textarea.success {
               </footer>
             </div>
           </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.form-group + .form-group {
-  margin-top: 1.875em;
-}
-.form-group_item + .form-group_item {
-  margin-top: 0.9375em;
-}</code></pre>
-          </div>
         </div>
         <div id="input-with-button" class="docs-component">
           <h2 class="docs-component_header"><span>Input with button</span></h2>
@@ -571,116 +500,6 @@ textarea.success {
                 </form>
               </footer>
             </div>
-          </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">@media only all and (min-width: 30em) {
-  .input-with-btn {
-    display: block;
-    position: relative;
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-}
-.input-with-btn_input {
-  margin-bottom: 0.9375em;
-}
-@media only all and (min-width: 30em) {
-  .input-with-btn_input {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 75%;
-    border-right-width: 0;
-  }
-  .lt-ie8 .input-with-btn_input {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-@media only all and (min-width: 60em) {
-  .input-with-btn_input {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 83.33333333%;
-    border-right-width: 0;
-  }
-  .lt-ie8 .input-with-btn_input {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-.input-with-btn_input input {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-}
-.input-with-btn_btn {
-  margin-bottom: 0.9375em;
-}
-@media only all and (min-width: 30em) {
-  .input-with-btn_btn {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 25%;
-  }
-  .lt-ie8 .input-with-btn_btn {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-@media only all and (min-width: 60em) {
-  .input-with-btn_btn {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 16.66666667%;
-  }
-  .lt-ie8 .input-with-btn_btn {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-.input-with-btn_btn .btn {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-}
-.input-with-btn_btn .btn__super {
-  padding-left: 0.83333333em;
-  padding-right: 0.83333333em;
-}</code></pre>
           </div>
         </div>
         <div id="button-inside-input" class="docs-component">
@@ -744,44 +563,6 @@ textarea.success {
                 </form>
               </footer>
             </div>
-          </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.btn-inside-input {
-  position: relative;
-}
-.btn-inside-input input[type=&quot;text&quot;],
-.btn-inside-input input[type=&quot;search&quot;],
-.btn-inside-input input[type=&quot;email&quot;],
-.btn-inside-input input[type=&quot;url&quot;],
-.btn-inside-input input[type=&quot;tel&quot;],
-.btn-inside-input input[type=&quot;number&quot;] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  padding-right: 4.64285714em;
-}
-.btn-inside-input input[type=&quot;text&quot;].input__super,
-.btn-inside-input input[type=&quot;search&quot;].input__super,
-.btn-inside-input input[type=&quot;email&quot;].input__super,
-.btn-inside-input input[type=&quot;url&quot;].input__super,
-.btn-inside-input input[type=&quot;tel&quot;].input__super,
-.btn-inside-input input[type=&quot;number&quot;].input__super {
-  padding-right: 5em;
-}
-.btn-inside-input .btn {
-  border-bottom-width: 0 !important;
-  position: absolute;
-  right: 1.07142857em;
-  top: 0;
-  /* pa11y fails unless the background color is explicitly set */
-}
-.btn-inside-input .btn__super {
-  right: 0.83333333em;
-}
-.btn-inside-input .btn__link.btn__secondary {
-  background-color: #fff;
-}</code></pre>
           </div>
         </div>
       </div>
